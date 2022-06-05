@@ -45,7 +45,6 @@ export default {
 .home {
   width: 75%;
   margin-bottom: 180px;
-  overflow-y: hidden;
 
   .container {
     width: 80%;
