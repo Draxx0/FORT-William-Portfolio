@@ -1,13 +1,15 @@
 <template>
-  <div class="home">
+  <div class="projects">
     <SettingsMenu />
   </div>
 </template>
 
 <script>
+// @ is an alias to /src
 import SettingsMenu from "@/components/SettingsMenu.vue";
+
 export default {
-  name: "HomeView",
+  name: "ProjectsView",
   components: {
     SettingsMenu,
   },
