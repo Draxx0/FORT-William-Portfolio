@@ -1,0 +1,18 @@
+@mixin btn {
+  padding: 10px 40px;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #fff;
+  margin: auto auto auto 0;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+
+  &:hover {
+    transform: scale(105%);
+  }
+}

@@ -4,7 +4,7 @@
       <i class="fa-solid fa-gear fa-lg"></i>
     </div>
 
-    <div class="mode-menu-wrap">
+    <div class="mode-menu-wrap" @click="toggleMode">
       <i class="fa-solid fa-moon fa-lg"></i>
     </div>
   </div>
@@ -13,6 +13,30 @@
 <script>
 export default {
   name: "SettingsMenu",
+
+  data: function () {},
+
+  methods: {
+    toggleMode() {
+      const app = document.querySelector("#app");
+      const nav = document.querySelector("nav");
+      const modeIcon = document.querySelector(".mode-menu-wrap i");
+
+      if (app.classList.contains("light-mode")) {
+        modeIcon.classList.remove("fa-moon");
+        modeIcon.classList.add("fa-sun");
+        app.classList.remove("light-mode");
+        app.classList.add("dark-mode");
+        app.style.transition = "0.5s ease-in-out";
+        nav.style.transition = "0.5s ease-in-out";
+      } else {
+        modeIcon.classList.remove("fa-sun");
+        modeIcon.classList.add("fa-moon");
+        app.classList.remove("dark-mode");
+        app.classList.add("light-mode");
+      }
+    },
+  },
 };
 </script>
 
@@ -31,7 +55,6 @@ export default {
 
   .themes-menu-wrap,
   .mode-menu-wrap {
-    background-color: $light-mode-nav-background-color;
     border-radius: 50%;
     padding: 15px;
     transition: 0.3s;
@@ -40,13 +63,10 @@ export default {
     &:hover {
       transform: scale(112%);
     }
+  }
 
-    &:first-child {
-      animation: settingsRunning infinite 2s;
-    }
-    i {
-      color: $light-mode-text-color;
-    }
+  .themes-menu-wrap i {
+    animation: settingsRunning infinite 2s;
   }
 
   @keyframes settingsRunning {
