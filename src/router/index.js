@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import ProjectsView from "../views/ProjectsView.vue";
 import ContactView from "../views/ContactView.vue";
+import UnityCavescapeView from "../views/projects/UnityCavescapeView.vue";
 
 const routes = [
   {
@@ -24,6 +25,12 @@ const routes = [
     path: "/contact",
     name: "contact",
     component: ContactView,
+  },
+
+  {
+    path: "/projects/Unity-Cave'scape",
+    name: "projects-Unity-Cave'scape",
+    component: UnityCavescapeView,
   },
 ];
 

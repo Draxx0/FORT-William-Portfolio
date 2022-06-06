@@ -60,7 +60,6 @@ nav {
   justify-content: center;
   align-items: center;
   width: 450px;
-  padding: 20px 0;
   border-right: 0.5px solid $border-color;
   position: fixed;
   top: 0;
@@ -148,6 +147,7 @@ nav {
 
 .btn {
   @include btn;
+  background-color: $green;
 }
 
 .text {
@@ -185,6 +185,12 @@ nav {
     height: 6px;
     background-color: $green;
   }
+}
+
+.section-subtitle {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
 }
 
 //----------------------------------------------------- MODE COLORS -----------------------------------------------------
@@ -246,6 +252,31 @@ nav {
   .experience-school-card {
     background-color: $dark-mode-background-color !important;
     color: $dark-mode-text-color;
+  }
+
+  .project-card {
+    transition: 1s;
+    border-color: $dark-mode-nav-background-color !important;
+  }
+
+  .contact-me-content {
+    a {
+      transition: 1s;
+      color: $dark-mode-text-color !important;
+    }
+  }
+
+  .form-group {
+    input,
+    textarea {
+      transition: 1s;
+      background-color: $dark-mode-nav-background-color !important;
+      caret-color: $dark-mode-text-color !important;
+
+      &:focus {
+        color: $dark-mode-text-color !important;
+      }
+    }
   }
 }
 
