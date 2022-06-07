@@ -180,6 +180,19 @@ nav {
   font-size: 2rem;
 }
 
+.section-description {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 100px;
+}
+
+.section-img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
 //----------------------------------------------------- MODE COLORS -----------------------------------------------------
 
 .light-mode {
@@ -364,6 +377,11 @@ nav {
       border-right: 4px solid $green;
     }
   }
+
+  .video-container {
+    border: solid 2px $green;
+    border-radius: 5px;
+  }
 }
 
 .orange {
@@ -440,6 +458,11 @@ nav {
       border-right: 4px solid $orange;
     }
   }
+
+  .video-container {
+    border: solid 2px $orange;
+    border-radius: 5px;
+  }
 }
 
 .pink {
@@ -512,6 +535,11 @@ nav {
       border-bottom: 4px solid $pink;
       border-right: 4px solid $pink;
     }
+  }
+
+  .video-container {
+    border: solid 2px $pink;
+    border-radius: 5px;
   }
 }
 
@@ -586,6 +614,11 @@ nav {
       border-right: 4px solid $red;
     }
   }
+
+  .video-container {
+    border: solid 2px $red;
+    border-radius: 5px;
+  }
 }
 
 .blue {
@@ -658,6 +691,11 @@ nav {
       border-bottom: 4px solid $blue;
       border-right: 4px solid $blue;
     }
+  }
+
+  .video-container {
+    border: solid 2px $blue;
+    border-radius: 5px;
   }
 }
 

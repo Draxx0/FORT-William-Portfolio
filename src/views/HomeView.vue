@@ -16,9 +16,7 @@
           site je vois le contenue ?<br />
           <br />Depuis, je suis rentrée en bachelor et je m’éclate !
         </p>
-        <router-link to="/about" class="btn background-green">
-          Voir plus</router-link
-        >
+        <router-link to="/about" class="btn"> Voir plus</router-link>
       </div>
       <div class="right-container">
         <div class="img-wrap">
