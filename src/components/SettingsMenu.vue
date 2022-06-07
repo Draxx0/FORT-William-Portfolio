@@ -8,11 +8,11 @@
       <h3>Thèmes</h3>
 
       <div class="colors-container">
-        <div class="colors" @click="setColor(green)"></div>
-        <div class="colors" @click="setColor(orange)"></div>
-        <div class="colors" @click="setColor(pink)"></div>
-        <div class="colors" @click="setColor(blue)"></div>
-        <div class="colors" @click="setColor(red)"></div>
+        <div class="colors greenColor" @click="setColor(color)"></div>
+        <div class="colors orangeColor" @click="setColor(color)"></div>
+        <div class="colors pinkColor" @click="setColor(color)"></div>
+        <div class="colors blueColor" @click="setColor(color)"></div>
+        <div class="colors redColor" @click="setColor(color)"></div>
       </div>
     </div>
 
@@ -65,8 +65,74 @@ export default {
     },
 
     setColor() {
-      // const app = document.querySelector("#app");
+      
+      const app = document.querySelector("#app");
+
+      document.querySelector(".greenColor").addEventListener("click", () => {
+        app.classList.add("green");
+        app.classList.remove("orange", "red", "blue", "pink");
+        document.query
+      });
+
+      document.querySelector(".orangeColor").addEventListener("click", () => {
+        app.classList.add("orange");
+        app.classList.remove("green", "red", "blue", "pink");
+      });
+
+      document.querySelector(".redColor").addEventListener("click", () => {
+        app.classList.add("red");
+        app.classList.remove("green", "orange", "blue", "pink");
+      });
+
+      document.querySelector(".blueColor").addEventListener("click", () => {
+        app.classList.add("blue");
+        app.classList.remove("green", "orange", "red", "pink");
+      });
+
+      document.querySelector(".pinkColor").addEventListener("click", () => {
+        app.classList.add("pink");
+        app.classList.remove("green", "orange", "red", "blue");
+      });
+
+      // if (green) {
+      //   app.classList.add("green");
+      //   app.classList.remove("orange", "red", "blue", "pink");
+      // }
+      // if (orange) {
+      //   app.classList.add("orange");
+      //   app.classList.remove("orange", "red", "blue", "pink");
+      // }
+      // if (red) {
+      //   app.classList.add("red");
+      //   app.classList.remove("orange", "red", "blue", "pink");
+      // }
+      // if (blue) {
+      //   app.classList.add("blue");
+      //   app.classList.remove("orange", "red", "blue", "pink");
+      // }
+      // if (pink) {
+      //   app.classList.add("pink");
+      //   app.classList.remove("orange", "red", "blue", "pink");
+      // }
     },
+
+    hideSettingsMenuOnScroll() {
+      window.addEventListener("scroll", () => {
+        if (
+          document.querySelector(".themes-container").classList.contains("open")
+        ) {
+          document.querySelector(".themes-container").classList.remove("open");
+          const themeWrap = document.querySelector(".themes-menu-wrap");
+          themeWrap.style.transform = "translateX(0)";
+          const modeWrap = document.querySelector(".mode-menu-wrap");
+          modeWrap.style.transform = "translateX(0)";
+        }
+      });
+    },
+  },
+
+  mounted() {
+    this.hideSettingsMenuOnScroll();
   },
 };
 </script>

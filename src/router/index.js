@@ -4,6 +4,10 @@ import AboutView from "../views/AboutView.vue";
 import ProjectsView from "../views/ProjectsView.vue";
 import ContactView from "../views/ContactView.vue";
 import UnityCavescapeView from "../views/projects/UnityCavescapeView.vue";
+import WitchWeatherView from "../views/projects/WitchWeatherView.vue";
+import DigitalEvent2022View from "../views/projects/DigitalEvent2022View.vue";
+import CookByFrichtiView from "../views/projects/CookByFrichtiView.vue";
+import MemphisDesignView from "../views/projects/MemphisDesignView.vue";
 
 const routes = [
   {
@@ -29,8 +33,32 @@ const routes = [
 
   {
     path: "/projects/Unity-Cave'scape",
-    name: "projects-Unity-Cave'scape",
+    name: "project-Unity-Cave'scape",
     component: UnityCavescapeView,
+  },
+
+  {
+    path: "/projects/Witch-Weather",
+    name: "project-Witch-Weather",
+    component: WitchWeatherView,
+  },
+
+  {
+    path: "/projects/Digital-Event-2022",
+    name: "projects-Digital-Event-2022",
+    component: DigitalEvent2022View,
+  },
+
+  {
+    path: "/projects/Cook-by-Frichti",
+    name: "project-Cook-by-Frichti",
+    component: CookByFrichtiView,
+  },
+
+  {
+    path: "/projects/Memphis-Design",
+    name: "projects-Memphis-Design",
+    component: MemphisDesignView,
   },
 ];
 

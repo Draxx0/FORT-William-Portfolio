@@ -35,33 +35,38 @@ export default {
     return {
       projects: [
         {
-          imgUrl: "https://via.placeholder.com/400",
+          imgUrl:
+            "https://cdn.discordapp.com/attachments/935969848230547551/983651904968073237/Unity.png",
           title: "Unity - Cave'scape",
           path: "Unity-Cave'scape",
         },
 
         {
-          imgUrl: "https://via.placeholder.com/400",
+          imgUrl:
+            "https://cdn.discordapp.com/attachments/935969848230547551/983685136681930762/WitchWeather.png",
           title: "Witch Weather ?",
           path: "Witch-Weather",
         },
 
         {
-          imgUrl: "https://via.placeholder.com/400",
+          imgUrl:
+            "https://cdn.discordapp.com/attachments/935969848230547551/983685136304463872/The-last-chance.png",
           title: "Digital Event 2022",
           path: "Digital-Event-2022",
         },
 
         {
-          imgUrl: "https://via.placeholder.com/400",
+          imgUrl:
+            "https://cdn.discordapp.com/attachments/935969848230547551/983685135633358908/Cook-frichti.png",
           title: "Cook by Frichti",
           path: "Cook-by-Frichti",
         },
 
         {
-          imgUrl: "https://via.placeholder.com/400",
+          imgUrl:
+            "https://cdn.discordapp.com/attachments/935969848230547551/983685135952117800/Memphis.png",
           title: "Memphis Vote",
-          path: "Memphis-Vote",
+          path: "Memphis-Design",
         },
       ],
     };
@@ -93,20 +98,26 @@ export default {
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
         transition: 0.3s;
         cursor: pointer;
+        transition: 0.5s ease-in-out;
 
         &:hover > .project-card-title {
           animation: fromBottom 0.6s ease-in-out;
           opacity: 1;
         }
 
+        &:hover > .project-card-img {
+          filter: brightness(50%);
+        }
+
         .project-card-img {
           width: 100%;
           height: 100%;
+          object-fit: cover;
           border-radius: 5px;
           transition: 0.3s ease-in-out;
-
+          z-index: 4;
           &:hover {
-            filter: brightness(50%);
+            filter: brightness(50%) !important;
           }
         }
 
@@ -114,10 +125,13 @@ export default {
           font-family: "Popins", sans-serif;
           font-weight: 600;
           position: absolute;
-          left: 30%;
-          top: 40%;
+          position: absolute;
+          top: 35%;
+          left: 15%;
           opacity: 0;
           color: $dark-mode-text-color;
+          font-weight: 500;
+          font-size: 2rem;
         }
 
         a {

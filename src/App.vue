@@ -25,6 +25,8 @@
   <router-view />
 </template>
 
+<script></script>
+
 <style lang="scss">
 //----------------------------------------------------- IMPORTS -----------------------------------------------------
 
@@ -81,8 +83,6 @@ nav {
         content: "";
         width: 33px;
         height: 33px;
-        border-top: 4px solid $green;
-        border-left: 4px solid $green;
         transition: 0.5s ease-in-out;
       }
 
@@ -94,8 +94,6 @@ nav {
         content: "";
         width: 33px;
         height: 33px;
-        border-bottom: 4px solid $green;
-        border-right: 4px solid $green;
         transition: 0.5s ease-in-out;
       }
     }
@@ -134,20 +132,11 @@ nav {
       bottom: -5px;
       background-color: $border-color;
     }
-
-    &:hover {
-      color: $green;
-    }
-
-    &.router-link-exact-active {
-      color: $green;
-    }
   }
 }
 
 .btn {
   @include btn;
-  background-color: $green;
 }
 
 .text {
@@ -173,7 +162,6 @@ nav {
     content: "";
     width: 25%;
     height: 6px;
-    background-color: $green;
   }
 
   &::after {
@@ -183,7 +171,6 @@ nav {
     content: "";
     width: 10%;
     height: 6px;
-    background-color: $green;
   }
 }
 
@@ -209,6 +196,24 @@ nav {
     background-color: $light-mode-nav-background-color;
     color: $light-mode-text-color;
   }
+
+  .form-group {
+    input,
+    textarea {
+      transition: 1s;
+      background-color: $light-mode-nav-background-color;
+      caret-color: $light-mode-text-color;
+
+      &:focus {
+        font-weight: 600;
+        color: $light-mode-text-color;
+      }
+      &:not(:focus) {
+        font-weight: 600;
+        color: $light-mode-text-color;
+      }
+    }
+  }
 }
 
 .dark-mode {
@@ -223,10 +228,6 @@ nav {
       color: $dark-mode-text-color;
 
       &:hover {
-        color: $green;
-      }
-
-      &.router-link-exact-active {
         color: $green;
       }
     }
@@ -270,55 +271,409 @@ nav {
     input,
     textarea {
       transition: 1s;
-      background-color: $dark-mode-nav-background-color !important;
-      caret-color: $dark-mode-text-color !important;
+      background-color: $dark-mode-nav-background-color;
+      caret-color: $dark-mode-text-color;
 
       &:focus {
-        color: $dark-mode-text-color !important;
+        font-weight: 600;
+        color: $dark-mode-text-color;
+      }
+      &:not(:focus) {
+        font-weight: 600;
+        color: $dark-mode-text-color;
       }
     }
+  }
+
+  .themes-container {
+    background-color: $dark-mode-nav-background-color !important;
+    color: $dark-mode-text-color !important;
   }
 }
 
 //----------------------------------------------------- THEME COLORS -----------------------------------------------------
 
 .green {
-  color: $green;
-}
+  .btn {
+    background-color: $green;
+  }
+  .skill-bar-fill {
+    background-color: $green;
+  }
+  .colored {
+    color: $green;
+  }
 
-.background-green {
-  background-color: $green;
+  .card-year {
+    &::before {
+      background-color: $green;
+    }
+    &::after {
+      background-color: $green;
+    }
+  }
+
+  .contact-me-content {
+    a {
+      &::before {
+        background-color: $green;
+      }
+    }
+  }
+
+  .section-title {
+    &::before {
+      background-color: $green;
+    }
+    &::after {
+      background-color: $green;
+    }
+  }
+
+  nav {
+    a {
+      &:hover {
+        color: $green;
+      }
+      &.router-link-exact-active {
+        color: $green;
+      }
+    }
+  }
+
+  .logo {
+    h1 {
+      &::before {
+        border-top: 4px solid $green;
+        border-left: 4px solid $green;
+      }
+      &::after {
+        border-bottom: 4px solid $green;
+        border-right: 4px solid $green;
+      }
+    }
+  }
+
+  .img-wrap {
+    &::before {
+      border-top: 4px solid $green;
+      border-left: 4px solid $green;
+    }
+    &::after {
+      border-bottom: 4px solid $green;
+      border-right: 4px solid $green;
+    }
+  }
 }
 
 .orange {
-  color: $orange;
-}
+  .btn {
+    background-color: $orange;
+  }
+  .skill-bar-fill {
+    background-color: $orange;
+  }
+  .colored {
+    color: $orange;
+  }
 
-.background-orange {
-  background-color: $orange;
+  .card-year {
+    &::before {
+      background-color: $orange;
+    }
+    &::after {
+      background-color: $orange;
+    }
+  }
+
+  .contact-me-content {
+    a {
+      &:hover {
+        color: $green;
+      }
+      &::before {
+        background-color: $orange;
+      }
+    }
+  }
+
+  .section-title {
+    &::before {
+      background-color: $orange;
+    }
+    &::after {
+      background-color: $orange;
+    }
+  }
+
+  nav {
+    a {
+      &:hover {
+        color: $orange;
+      }
+      &.router-link-exact-active {
+        color: $orange;
+      }
+    }
+  }
+
+  .logo {
+    h1 {
+      &::before {
+        border-top: 4px solid $orange;
+        border-left: 4px solid $orange;
+      }
+      &::after {
+        border-bottom: 4px solid $orange;
+        border-right: 4px solid $orange;
+      }
+    }
+  }
+
+  .img-wrap {
+    &::before {
+      border-top: 4px solid $orange;
+      border-left: 4px solid $orange;
+    }
+    &::after {
+      border-bottom: 4px solid $orange;
+      border-right: 4px solid $orange;
+    }
+  }
 }
 
 .pink {
-  color: $pink;
-}
+  .btn {
+    background-color: $pink;
+  }
+  .skill-bar-fill {
+    background-color: $pink;
+  }
+  .colored {
+    color: $pink;
+  }
 
-.background-pink {
-  background-color: $pink;
+  .card-year {
+    &::before {
+      background-color: $pink;
+    }
+    &::after {
+      background-color: $pink;
+    }
+  }
+
+  .contact-me-content {
+    a {
+      &::before {
+        background-color: $pink;
+      }
+    }
+  }
+
+  .section-title {
+    &::before {
+      background-color: $pink;
+    }
+    &::after {
+      background-color: $pink;
+    }
+  }
+
+  nav {
+    a {
+      &:hover {
+        color: $pink;
+      }
+      &.router-link-exact-active {
+        color: $pink;
+      }
+    }
+  }
+
+  .logo {
+    h1 {
+      &::before {
+        border-top: 4px solid $pink;
+        border-left: 4px solid $pink;
+      }
+      &::after {
+        border-bottom: 4px solid $pink;
+        border-right: 4px solid $pink;
+      }
+    }
+  }
+
+  .img-wrap {
+    &::before {
+      border-top: 4px solid $pink;
+      border-left: 4px solid $pink;
+    }
+    &::after {
+      border-bottom: 4px solid $pink;
+      border-right: 4px solid $pink;
+    }
+  }
 }
 
 .red {
-  color: $red;
-}
+  .btn {
+    background-color: $red;
+  }
+  .skill-bar-fill {
+    background-color: $red;
+  }
+  .colored {
+    color: $red;
+  }
 
-.background-red {
-  background-color: $red;
+  .card-year {
+    &::before {
+      background-color: $red;
+    }
+    &::after {
+      background-color: $red;
+    }
+  }
+
+  .contact-me-content {
+    a {
+      &::before {
+        background-color: $red;
+      }
+    }
+  }
+
+  .section-title {
+    &::before {
+      background-color: $red;
+    }
+    &::after {
+      background-color: $red;
+    }
+  }
+
+  nav {
+    a {
+      &:hover {
+        color: $red;
+      }
+      &.router-link-exact-active {
+        color: $red;
+      }
+    }
+  }
+
+  .logo {
+    h1 {
+      &::before {
+        border-top: 4px solid $red;
+        border-left: 4px solid $red;
+      }
+      &::after {
+        border-bottom: 4px solid $red;
+        border-right: 4px solid $red;
+      }
+    }
+  }
+
+  .img-wrap {
+    &::before {
+      border-top: 4px solid $red;
+      border-left: 4px solid $red;
+    }
+    &::after {
+      border-bottom: 4px solid $red;
+      border-right: 4px solid $red;
+    }
+  }
 }
 
 .blue {
-  color: $blue;
+  .btn {
+    background-color: $blue;
+  }
+  .skill-bar-fill {
+    background-color: $blue;
+  }
+  .colored {
+    color: $blue;
+  }
+
+  .card-year {
+    &::before {
+      background-color: $blue;
+    }
+    &::after {
+      background-color: $blue;
+    }
+  }
+
+  .contact-me-content {
+    a {
+      &::before {
+        background-color: $blue;
+      }
+    }
+  }
+
+  .section-title {
+    &::before {
+      background-color: $blue;
+    }
+    &::after {
+      background-color: $blue;
+    }
+  }
+
+  nav {
+    a {
+      &:hover {
+        color: $blue;
+      }
+      &.router-link-exact-active {
+        color: $blue;
+      }
+    }
+  }
+
+  .logo {
+    h1 {
+      &::before {
+        border-top: 4px solid $blue;
+        border-left: 4px solid $blue;
+      }
+      &::after {
+        border-bottom: 4px solid $blue;
+        border-right: 4px solid $blue;
+      }
+    }
+  }
+
+  .img-wrap {
+    &::before {
+      border-top: 4px solid $blue;
+      border-left: 4px solid $blue;
+    }
+    &::after {
+      border-bottom: 4px solid $blue;
+      border-right: 4px solid $blue;
+    }
+  }
 }
 
-.background-blue {
-  background-color: $blue;
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $border-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background: gray;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 </style>

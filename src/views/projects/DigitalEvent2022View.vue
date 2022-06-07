@@ -1,7 +1,7 @@
 <template>
-  <div class="Unity">
+  <div class="DigitalEvent">
     <SettingsMenu />
-    <h1>UNITY </h1>
+    <h1>DIGITAL EVENT</h1>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 import SettingsMenu from "@/components/SettingsMenu.vue";
 
 export default {
-  name: "project-Unity-Cave'scape",
+  name: "project-Digital-Event-2022",
   components: {
     SettingsMenu,
   },

@@ -1,7 +1,7 @@
 <template>
-  <div class="Unity">
+  <div class="WitchWeather">
     <SettingsMenu />
-    <h1>UNITY </h1>
+    <h1>WITCH WEATHER</h1>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 import SettingsMenu from "@/components/SettingsMenu.vue";
 
 export default {
-  name: "project-Unity-Cave'scape",
+  name: "project-Witch-Weather",
   components: {
     SettingsMenu,
   },

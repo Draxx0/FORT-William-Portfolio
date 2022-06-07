@@ -6,7 +6,7 @@
       <div class="left-container">
         <h1 class="title">
           Bonjour, je suis <span class="art-text">William</span><br />
-          <span class="theme-color">frontend Developper</span>
+          <span class="colored">frontend Developper</span>
         </h1>
 
         <p class="text">
@@ -70,10 +70,6 @@ export default {
           font-size: 3rem;
           font-weight: 600;
         }
-
-        .theme-color {
-          color: $green;
-        }
       }
 
       .text {
@@ -103,9 +99,6 @@ export default {
           content: "";
           width: 65px;
           height: 65px;
-          border-top: 4px solid $green;
-          border-left: 4px solid $green;
-          transition: 0.5s ease-in-out;
         }
 
         &::after {
@@ -116,9 +109,6 @@ export default {
           content: "";
           width: 65px;
           height: 65px;
-          border-bottom: 4px solid $green;
-          border-right: 4px solid $green;
-          transition: 0.5s ease-in-out;
         }
       }
     }

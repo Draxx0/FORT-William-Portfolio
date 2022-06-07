@@ -6,19 +6,19 @@
       <h1 class="section-title">Me contacter</h1>
 
       <div class="contact-container">
-        <h2 class="contact-title">Avez vous une questions ?</h2>
+        <h2 class="contact-title colored">Avez vous une questions ?</h2>
         <h3>Je suis disponible</h3>
       </div>
 
       <div class="contact-me-container">
         <div class="contact-me-content">
-          <i class="fa-solid fa-phone fa-2x"></i>
+          <i class="fa-solid fa-phone fa-2x colored"></i>
           <h3 class="contact-me-content-title">Par téléphone</h3>
           <h4 class="contact-me-content-text">06 83 10 03 51</h4>
         </div>
 
         <div class="contact-me-content">
-          <i class="fa-solid fa-envelope fa-2x"></i>
+          <i class="fa-solid fa-envelope fa-2x colored"></i>
           <h3 class="contact-me-content-title">Par mail</h3>
           <a
             class="contact-me-content-text"
@@ -28,7 +28,7 @@
         </div>
 
         <div class="contact-me-content">
-          <i class="fa-brands fa-linkedin fa-2x"></i>
+          <i class="fa-brands fa-linkedin fa-2x colored"></i>
           <h3 class="contact-me-content-title">Sur Linkedin</h3>
           <a
             class="contact-me-content-text"
@@ -40,24 +40,29 @@
       </div>
 
       <div class="contact-container">
-        <h2 class="contact-title">Envoyez moi un mail</h2>
+        <h2 class="contact-title colored">Envoyez moi un mail</h2>
         <h3>Je les consultes souvent</h3>
       </div>
 
       <form action="">
         <div class="form-group">
           <label for="name">Prénom - Nom</label>
-          <input type="text" id="name" class="form-control" />
+          <input type="text" id="name" class="form-control" required />
         </div>
 
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" class="form-control" />
+          <input type="email" id="email" class="form-control" required />
         </div>
 
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" class="form-control" rows="15"></textarea>
+          <textarea
+            id="message"
+            class="form-control"
+            rows="15"
+            required
+          ></textarea>
         </div>
 
         <button type="submit" class="btn">Envoyer</button>
@@ -93,7 +98,6 @@ export default {
       align-items: center;
       font-family: "Poppins", sans-serif;
       .contact-title {
-        color: $green;
         font-size: 1.8rem;
         margin: 0;
       }
@@ -121,10 +125,6 @@ export default {
           grid-column: 1 / span 2;
         }
 
-        i {
-          color: $green;
-        }
-
         a {
           position: relative;
           text-decoration: none;
@@ -140,7 +140,6 @@ export default {
             height: 3px;
             border-radius: 25px;
             transition: 0.5s;
-            background-color: $green;
           }
 
           &:hover::before {
@@ -180,12 +179,6 @@ export default {
           border: solid 0.5px $border-color;
           border-radius: 50px;
           padding: 15px;
-          caret-color: $light-mode-text-color;
-
-          &:focus {
-            font-weight: 600;
-            color: $light-mode-text-color;
-          }
         }
 
         textarea {
@@ -194,7 +187,6 @@ export default {
           border-radius: 15px;
           resize: none;
           padding: 15px;
-          caret-color: $light-mode-text-color;
         }
 
         label {

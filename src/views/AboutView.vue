@@ -7,7 +7,7 @@
 
       <div class="introduction-container">
         <h2 class="title">
-          Je suis FORT William <span class="green"> Frontend Developper</span>
+          Je suis FORT William <span class="colored"> Frontend Developper</span>
         </h2>
 
         <p class="text">
@@ -53,10 +53,10 @@
       </div>
 
       <div class="btn-container">
-        <a download="Fort William - CV" class="btn background-green"
+        <a download="Fort William - CV" class="btn"
           >Télécharger mon CV Not Working</a
         >
-        <router-link to="/contact" class="btn background-green">
+        <router-link to="/contact" class="btn">
           Me contacter</router-link
         >
       </div>
@@ -311,7 +311,6 @@ export default {
 
         .skill-bar-fill {
           height: 15px;
-          background-color: $green;
           border-radius: 25px;
         }
       }
@@ -352,7 +351,6 @@ export default {
                 display: block;
                 width: 20px;
                 height: 20px;
-                background-color: $green;
                 border-radius: 50%;
                 margin-right: 10px;
               }
@@ -365,7 +363,6 @@ export default {
                 display: block;
                 width: 10px;
                 height: 380px;
-                background-color: $green;
                 margin-right: 10px;
               }
             }
