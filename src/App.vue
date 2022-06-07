@@ -3,6 +3,7 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
   />
+  <SettingsMenu />
   <nav>
     <div class="logo">
       <h1><span>W</span>illiam</h1>
@@ -25,7 +26,16 @@
   <router-view />
 </template>
 
-<script></script>
+<script>
+import SettingsMenu from "./components/SettingsMenu.vue";
+
+export default {
+  name: "App",
+  components: {
+    SettingsMenu,
+  },
+};
+</script>
 
 <style lang="scss">
 //----------------------------------------------------- IMPORTS -----------------------------------------------------
@@ -54,6 +64,7 @@ body {
   width: 100%;
   height: 100%;
   margin-left: 400px;
+  transition: 0.5s ease-in-out;
 }
 
 nav {
@@ -67,6 +78,7 @@ nav {
   top: 0;
   left: 0;
   height: 100%;
+  transition: 0.5s ease-in-out;
 
   .logo {
     width: auto;

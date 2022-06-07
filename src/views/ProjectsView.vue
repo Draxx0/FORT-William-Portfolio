@@ -1,6 +1,5 @@
 <template>
   <div class="projects">
-    <SettingsMenu />
 
     <div class="container">
       <h1 class="section-title">Projets</h1>
@@ -23,13 +22,9 @@
 </template>
 
 <script>
-import SettingsMenu from "@/components/SettingsMenu.vue";
 
 export default {
   name: "ProjectsView",
-  components: {
-    SettingsMenu,
-  },
 
   data: () => {
     return {

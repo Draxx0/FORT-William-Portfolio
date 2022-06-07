@@ -1,6 +1,5 @@
 <template>
   <div class="WitchWeather">
-    <SettingsMenu />
     <div class="container">
       <h1 class="section-title">Witch Weather ?</h1>
       <h3 class="section-subtitle colored">
@@ -45,12 +44,8 @@
 </style>
 
 <script>
-import SettingsMenu from "@/components/SettingsMenu.vue";
 
 export default {
   name: "project-Witch-Weather",
-  components: {
-    SettingsMenu,
-  },
 };
 </script>

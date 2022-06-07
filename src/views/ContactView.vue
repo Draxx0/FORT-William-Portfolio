@@ -1,6 +1,5 @@
 <template>
   <div class="contact">
-    <SettingsMenu />
 
     <div class="container">
       <h1 class="section-title">Me contacter</h1>
@@ -73,13 +72,9 @@
 
 <script>
 // @ is an alias to /src
-import SettingsMenu from "@/components/SettingsMenu.vue";
 
 export default {
   name: "ContactView",
-  components: {
-    SettingsMenu,
-  },
 };
 </script>
 

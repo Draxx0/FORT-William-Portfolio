@@ -1,6 +1,5 @@
 <template>
   <div class="DigitalEvent">
-    <SettingsMenu />
     <div class="container">
       <h1 class="section-title">The Last Chance</h1>
       <h3 class="section-subtitle colored">
@@ -33,13 +32,9 @@
 </template>
 
 <script>
-import SettingsMenu from "@/components/SettingsMenu.vue";
 
 export default {
   name: "project-Digital-Event-2022",
-  components: {
-    SettingsMenu,
-  },
 };
 </script>
 

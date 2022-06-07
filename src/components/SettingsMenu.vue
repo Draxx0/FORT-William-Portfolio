@@ -8,16 +8,18 @@
       <h3>Thèmes</h3>
 
       <div class="colors-container">
-        <div class="colors greenColor" @click="setColor(color)"></div>
-        <div class="colors orangeColor" @click="setColor(color)"></div>
-        <div class="colors pinkColor" @click="setColor(color)"></div>
-        <div class="colors blueColor" @click="setColor(color)"></div>
-        <div class="colors redColor" @click="setColor(color)"></div>
+        <div
+          :class="['colors', color]"
+          v-for="color in colorTheme"
+          :key="color"
+          @click="setColor(color)"
+        ></div>
       </div>
     </div>
 
-    <div class="mode-menu-wrap" @click="toggleMode">
-      <i class="fa-solid fa-moon fa-lg"></i>
+    <div class="mode-menu-wrap" @click="toggleMode()">
+      <i :class="['fa-solid', 'fa-lg', isLightMode ? 'fa-moon' : 'fa-sun']"></i>
+      <!-- <div :class="{'green': isLightMode}"></div> -->
     </div>
   </div>
 </template>
@@ -26,27 +28,26 @@
 export default {
   name: "SettingsMenu",
 
-  data: function () {},
+  data: function () {
+    return {
+      colorTheme: ["green", "orange", "pink", "blue", "red"],
+      isLightMode: true,
+    };
+  },
 
   methods: {
     toggleMode() {
       const app = document.querySelector("#app");
-      const nav = document.querySelector("nav");
-      const modeIcon = document.querySelector(".mode-menu-wrap i");
 
-      if (app.classList.contains("light-mode")) {
-        modeIcon.classList.remove("fa-moon");
-        modeIcon.classList.add("fa-sun");
+      if (this.isLightMode) {
         app.classList.remove("light-mode");
         app.classList.add("dark-mode");
-        app.style.transition = "0.5s ease-in-out";
-        nav.style.transition = "0.5s ease-in-out";
       } else {
-        modeIcon.classList.remove("fa-sun");
-        modeIcon.classList.add("fa-moon");
         app.classList.remove("dark-mode");
         app.classList.add("light-mode");
       }
+
+      this.isLightMode = !this.isLightMode;
     },
 
     openThemeContainer() {
@@ -64,56 +65,16 @@ export default {
       }
     },
 
-    setColor() {
-      
+    setColor(color) {
       const app = document.querySelector("#app");
 
-      document.querySelector(".greenColor").addEventListener("click", () => {
-        app.classList.add("green");
-        app.classList.remove("orange", "red", "blue", "pink");
-        document.query
+      app.classList.forEach((appClass) => {
+        if (appClass !== "light-mode" && appClass !== "dark-mode") {
+          app.classList.remove(appClass);
+        }
       });
-
-      document.querySelector(".orangeColor").addEventListener("click", () => {
-        app.classList.add("orange");
-        app.classList.remove("green", "red", "blue", "pink");
-      });
-
-      document.querySelector(".redColor").addEventListener("click", () => {
-        app.classList.add("red");
-        app.classList.remove("green", "orange", "blue", "pink");
-      });
-
-      document.querySelector(".blueColor").addEventListener("click", () => {
-        app.classList.add("blue");
-        app.classList.remove("green", "orange", "red", "pink");
-      });
-
-      document.querySelector(".pinkColor").addEventListener("click", () => {
-        app.classList.add("pink");
-        app.classList.remove("green", "orange", "red", "blue");
-      });
-
-      // if (green) {
-      //   app.classList.add("green");
-      //   app.classList.remove("orange", "red", "blue", "pink");
-      // }
-      // if (orange) {
-      //   app.classList.add("orange");
-      //   app.classList.remove("orange", "red", "blue", "pink");
-      // }
-      // if (red) {
-      //   app.classList.add("red");
-      //   app.classList.remove("orange", "red", "blue", "pink");
-      // }
-      // if (blue) {
-      //   app.classList.add("blue");
-      //   app.classList.remove("orange", "red", "blue", "pink");
-      // }
-      // if (pink) {
-      //   app.classList.add("pink");
-      //   app.classList.remove("orange", "red", "blue", "pink");
-      // }
+      app.classList.add(color);
+      console.log(app.classList);
     },
 
     hideSettingsMenuOnScroll() {

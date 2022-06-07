@@ -6,12 +6,8 @@
 </template>
 
 <script>
-import SettingsMenu from "@/components/SettingsMenu.vue";
 
 export default {
   name: "project-Memphis-Design",
-  components: {
-    SettingsMenu,
-  },
 };
 </script>

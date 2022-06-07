@@ -1,7 +1,5 @@
 <template>
   <div class="about">
-    <SettingsMenu />
-
     <div class="container">
       <h1 class="section-title">Qui-suis-je ?</h1>
 
@@ -53,12 +51,8 @@
       </div>
 
       <div class="btn-container">
-        <a download="Fort William - CV" class="btn"
-          >Télécharger mon CV Not Working</a
-        >
-        <router-link to="/contact" class="btn">
-          Me contacter</router-link
-        >
+        <a class="btn" @click="downloadCV()">Télécharger mon CV</a>
+        <router-link to="/contact" class="btn"> Me contacter</router-link>
       </div>
 
       <div class="skills-container">
@@ -115,13 +109,8 @@
 </template>
 
 <script>
-import SettingsMenu from "@/components/SettingsMenu.vue";
-
 export default {
   name: "AboutView",
-  components: {
-    SettingsMenu,
-  },
 
   data() {
     return {
@@ -208,7 +197,14 @@ export default {
     };
   },
 
-  methods: {},
+  methods: {
+    downloadCV() {
+      const link = document.createElement("a");
+      link.href = "CV.pdf";
+      link.setAttribute("download", "FORT - William CV.pdf");
+      link.click();
+    },
+  },
 };
 </script>
 

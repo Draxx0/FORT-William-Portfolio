@@ -1,6 +1,5 @@
 <template>
   <div class="Unity">
-    <SettingsMenu />
     <div class="container">
       <h1 class="section-title">Cave'scape</h1>
       <h3 class="section-subtitle colored">
@@ -51,12 +50,7 @@
 </style>
 
 <script>
-import SettingsMenu from "@/components/SettingsMenu.vue";
-
 export default {
   name: "project-Unity-Cave'scape",
-  components: {
-    SettingsMenu,
-  },
 };
 </script>
