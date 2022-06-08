@@ -1,12 +1,33 @@
 <template>
   <div class="cookbyfrichti">
-    <h1>COOK</h1>
+    <div class="container">
+      <h1 class="section-title">Cook By Frichti</h1>
+      <h3 class="section-subtitle colored">
+        Créer une application mêlant Streaming Audio & Frichti
+      </h3>
+      <p class="section-description">
+        Au cour d'une semaine de projet au sein de l'école supérieur du digital
+        j'ai travaillé sur une application que nous avons réalisé sur Adobe
+        XD.<br />
+      </p>
+      <img src="@/assets/img/Cook-frichti.png" alt="" class="section-img" />
+    </div>
   </div>
 </template>
 
 <script>
-
 export default {
   name: "project-Cook-by-Frichti",
 };
 </script>
+
+<style lang="scss">
+.cookbyfrichti {
+  width: 75%;
+
+  .container {
+    width: 80%;
+    margin: 50px auto;
+  }
+}
+</style>

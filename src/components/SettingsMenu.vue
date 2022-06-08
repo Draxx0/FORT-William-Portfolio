@@ -18,7 +18,7 @@
     </div>
 
     <div class="mode-menu-wrap" @click="toggleMode()">
-      <i :class="['fa-solid', 'fa-lg', isLightMode ? 'fa-moon' : 'fa-sun']"></i>
+      <i :class="['fa-solid', 'fa-lg', isDarkMode ? 'fa-sun' : 'fa-moon']"></i>
       <!-- <div :class="{'green': isLightMode}"></div> -->
     </div>
   </div>
@@ -30,8 +30,8 @@ export default {
 
   data: function () {
     return {
-      colorTheme: ["green", "orange", "pink", "blue", "red"],
-      isLightMode: true,
+      colorTheme: ["green", "orange", "pink", "blue", "red", "yellow"],
+      isDarkMode: true,
     };
   },
 
@@ -39,15 +39,15 @@ export default {
     toggleMode() {
       const app = document.querySelector("#app");
 
-      if (this.isLightMode) {
-        app.classList.remove("light-mode");
-        app.classList.add("dark-mode");
-      } else {
+      if (this.isDarkMode) {
         app.classList.remove("dark-mode");
         app.classList.add("light-mode");
+      } else {
+        app.classList.remove("light-mode");
+        app.classList.add("dark-mode");
       }
 
-      this.isLightMode = !this.isLightMode;
+      this.isDarkMode = !this.isDarkMode;
     },
 
     openThemeContainer() {
@@ -142,7 +142,7 @@ export default {
     transform: translateX(200%);
 
     &.open {
-      transform: translateX(0%);
+      transform: translateX(15%);
     }
     h3 {
       margin: 0;
@@ -192,6 +192,14 @@ export default {
       height: 24px;
       border-radius: 50%;
       background-color: $red;
+      cursor: pointer;
+    }
+
+    .colors:nth-child(6) {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $yellow;
       cursor: pointer;
     }
   }

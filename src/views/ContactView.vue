@@ -171,14 +171,12 @@ export default {
 
         input {
           outline: none;
-          border: solid 0.5px $border-color;
           border-radius: 50px;
           padding: 15px;
         }
 
         textarea {
           outline: none;
-          border: solid 0.5px $border-color;
           border-radius: 15px;
           resize: none;
           padding: 15px;

@@ -21,6 +21,8 @@
       <router-link to="/contact"
         ><i class="fa-solid fa-envelope"></i>Contact</router-link
       >
+
+      <!-- <h1>{{ weatherData.current}}</h1> -->
     </div>
   </nav>
   <router-view />
@@ -34,6 +36,50 @@ export default {
   components: {
     SettingsMenu,
   },
+
+  data() {
+    return {
+      userLat: "",
+      userLong: "",
+      weatherData: [],
+    };
+  },
+
+  methods: {
+    getUserPosition() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            this.userLat = position.coords.latitude.toString();
+            this.userLong = position.coords.longitude.toString();
+            console.log(this.userLat, this.userLong);
+            console.log(
+              `https://api.weatherapi.com/v1/current.json?key=11cd5cbd029b4c72b0e75746220806&q=${this.userLat},${this.userLong}`
+            );
+          },
+          (error) => {
+            console.log(error);
+          }
+        );
+      } else {
+        console.log("Geolocation is not supported by this browser.");
+      }
+    },
+  },
+
+  // mounted() {
+  //   this.getUserPosition();
+  //   fetch(
+  //     `https://api.weatherapi.com/v1/current.json?key=11cd5cbd029b4c72b0e75746220806&q=${this.userLat},${this.userLong}`
+  //     `https://api.weatherapi.com/v1/current.json?key=11cd5cbd029b4c72b0e75746220806&q=48.8567,2.3508`
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       this.weatherData = data;
+  //       console.log(this.weatherData);
+  //     })
+  //     .catch((error) => console.error(error));
+  // },
 };
 </script>
 
@@ -394,6 +440,19 @@ nav {
     border: solid 2px $green;
     border-radius: 5px;
   }
+
+  form {
+    input,
+    textarea {
+      border: solid 0.5px $border-color;
+    }
+    input:valid {
+      border-color: $green;
+    }
+    textarea:valid {
+      border-color: $green;
+    }
+  }
 }
 
 .orange {
@@ -475,6 +534,19 @@ nav {
     border: solid 2px $orange;
     border-radius: 5px;
   }
+
+  form {
+    input,
+    textarea {
+      border: solid 0.5px $border-color;
+    }
+    input:valid {
+      border-color: $orange;
+    }
+    textarea:valid {
+      border-color: $orange;
+    }
+  }
 }
 
 .pink {
@@ -552,6 +624,19 @@ nav {
   .video-container {
     border: solid 2px $pink;
     border-radius: 5px;
+  }
+
+  form {
+    input,
+    textarea {
+      border: solid 0.5px $border-color;
+    }
+    input:valid {
+      border-color: $pink;
+    }
+    textarea:valid {
+      border-color: $pink;
+    }
   }
 }
 
@@ -631,6 +716,19 @@ nav {
     border: solid 2px $red;
     border-radius: 5px;
   }
+
+  form {
+    input,
+    textarea {
+      border: solid 0.5px $border-color;
+    }
+    input:valid {
+      border-color: $red;
+    }
+    textarea:valid {
+      border-color: $red;
+    }
+  }
 }
 
 .blue {
@@ -708,6 +806,110 @@ nav {
   .video-container {
     border: solid 2px $blue;
     border-radius: 5px;
+  }
+
+  form {
+    input,
+    textarea {
+      border: solid 0.5px $border-color;
+    }
+    input:valid {
+      border-color: $blue;
+    }
+    textarea:valid {
+      border-color: $blue;
+    }
+  }
+}
+
+.yellow {
+  .btn {
+    background-color: $yellow;
+  }
+  .skill-bar-fill {
+    background-color: $yellow;
+  }
+  .colored {
+    color: $yellow;
+  }
+
+  .card-year {
+    &::before {
+      background-color: $yellow;
+    }
+    &::after {
+      background-color: $yellow;
+    }
+  }
+
+  .contact-me-content {
+    a {
+      &::before {
+        background-color: $yellow;
+      }
+    }
+  }
+
+  .section-title {
+    &::before {
+      background-color: $yellow;
+    }
+    &::after {
+      background-color: $yellow;
+    }
+  }
+
+  nav {
+    a {
+      &:hover {
+        color: $yellow;
+      }
+      &.router-link-exact-active {
+        color: $yellow;
+      }
+    }
+  }
+
+  .logo {
+    h1 {
+      &::before {
+        border-top: 4px solid $yellow;
+        border-left: 4px solid $yellow;
+      }
+      &::after {
+        border-bottom: 4px solid $yellow;
+        border-right: 4px solid $yellow;
+      }
+    }
+  }
+
+  .img-wrap {
+    &::before {
+      border-top: 4px solid $yellow;
+      border-left: 4px solid $yellow;
+    }
+    &::after {
+      border-bottom: 4px solid $yellow;
+      border-right: 4px solid $yellow;
+    }
+  }
+
+  .video-container {
+    border: solid 2px $yellow;
+    border-radius: 5px;
+  }
+
+  form {
+    input,
+    textarea {
+      border: solid 0.5px $border-color;
+    }
+    input:valid {
+      border-color: $yellow;
+    }
+    textarea:valid {
+      border-color: $yellow;
+    }
   }
 }
 

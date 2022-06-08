@@ -33,6 +33,7 @@
         fond d’une dangereuse caverne… <br /><br />Notre projet à abouti à un
         oral.
       </p>
+      <img src="@/assets/img/Unity.png" alt="" class="section-img">
     </div>
   </div>
 </template>

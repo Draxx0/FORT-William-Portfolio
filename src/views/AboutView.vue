@@ -170,7 +170,7 @@ export default {
         },
 
         {
-          year: "2021",
+          year: "2021 - 2024",
           type: "Bachelor",
           text: "Bachelor Développeur Web ( ESD Bordeaux )",
         },

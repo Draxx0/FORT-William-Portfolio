@@ -1,6 +1,5 @@
 <template>
   <div class="projects">
-
     <div class="container">
       <h1 class="section-title">Projets</h1>
 
@@ -22,7 +21,6 @@
 </template>
 
 <script>
-
 export default {
   name: "ProjectsView",
 
@@ -38,7 +36,7 @@ export default {
 
         {
           imgUrl:
-            "https://cdn.discordapp.com/attachments/935969848230547551/983685136681930762/WitchWeather.png",
+            "https://cdn.discordapp.com/attachments/935969848230547551/984098251571601518/WitchWeather.png",
           title: "Witch Weather ?",
           path: "Witch-Weather",
         },
@@ -80,13 +78,14 @@ export default {
     margin: 50px auto;
 
     .projects-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      grid-gap: 35px;
+      width: 100%;
 
       .project-card {
         position: relative;
-        width: 30%;
+        width: 100%;
         height: 287px;
         border-radius: 10px;
         border: 6px solid $light-mode-nav-background-color;
@@ -122,7 +121,7 @@ export default {
           position: absolute;
           position: absolute;
           top: 35%;
-          left: 15%;
+          left: 30%;
           opacity: 0;
           color: $dark-mode-text-color;
           font-weight: 500;
