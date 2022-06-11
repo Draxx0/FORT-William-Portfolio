@@ -42,7 +42,7 @@
         <h3>Je les consultes souvent</h3>
       </div>
 
-      <!-- <form action="">
+      <form action="">
         <div class="form-group">
           <label for="name">Prénom - Nom</label>
           <input type="text" id="name" class="form-control" required />
@@ -64,15 +64,6 @@
         </div>
 
         <button type="submit" class="btn">Envoyer</button>
-      </form> -->
-
-      <form action="sendEmail.php" method="post">
-        First Name: <input type="text" name="first_name" /><br />
-        Last Name: <input type="text" name="last_name" /><br />
-        Email: <input type="text" name="email" /><br />
-        Message:<br /><textarea rows="5" name="message" cols="30"></textarea
-        ><br />
-        <input type="submit" name="submit" value="Submit" />
       </form>
     </div>
   </div>
