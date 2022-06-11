@@ -22,7 +22,7 @@
         ><i class="fa-solid fa-envelope"></i>Contact</router-link
       >
 
-      <h1>{{ weatherData.current }}</h1>
+      <!-- <h1>{{ weatherData.current }}</h1> -->
     </div>
   </nav>
   <router-view />
@@ -261,6 +261,7 @@ nav {
   border-radius: 5px;
   margin-bottom: 50px;
 }
+
 
 //----------------------------------------------------- MODE COLORS -----------------------------------------------------
 

@@ -1,14 +1,12 @@
 <template>
   <div class="home">
-    <!-- <SettingsMenu /> -->
 
     <div class="container">
       <div class="left-container">
         <h1 class="title">
           Bonjour, je suis <span class="art-text">William</span><br />
-          <span class="colored">frontend Developper</span>
+          <span class="colored">Front End Developper</span>
         </h1>
-
         <p class="text">
           Etudiant en première année de développement web à l’école supérieur du
           digital, j’étais relativement curieuxde savoir comment fonctionner un
@@ -28,12 +26,21 @@
 </template>
 
 <script>
+
 export default {
   name: "HomeView",
-};
+
+  data: function () {
+    return {
+
+    };
+  },
+
+}
 </script>
 
 <style lang="scss">
+
 @import "@/styles/variables.scss";
 
 .home {
@@ -81,12 +88,14 @@ export default {
       .img-wrap {
         position: relative;
         width: fit-content;
+
         img {
           width: 397px;
           height: 431px;
           object-fit: cover;
           border-radius: 5px;
         }
+
         &::before {
           position: absolute;
           top: -25px;
@@ -107,6 +116,22 @@ export default {
           height: 65px;
         }
       }
+    }
+  }
+
+  .auto-type {
+    text-transform: uppercase;
+    border-right: solid white 10px;
+    animation: cursor 1s ease-in-out infinite;
+  }
+
+  @keyframes cursor {
+    from {
+      border-color: white;
+    }
+
+    to {
+      border-color: transparent;
     }
   }
 }
