@@ -30,8 +30,8 @@
           </h3>
 
           <h3 class="about-me-items">
-            <span class="bold">École d'enseignement :</span> École supérieur du
-            digital - Bordeaux
+            <span class="bold">École :</span> École supérieur du digital -
+            Bordeaux
           </h3>
         </div>
 
@@ -235,7 +235,7 @@ export default {
 
     .about-me-container {
       display: flex;
-      gap: 25px;
+      gap: 150px;
       margin: 25px 0 45px 0;
 
       .about-me-left-container,

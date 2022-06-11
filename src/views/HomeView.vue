@@ -73,6 +73,8 @@ export default {
     }
 
     .right-container {
+      display: flex;
+      justify-content: center;
       width: 50%;
       height: 100%;
 

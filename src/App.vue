@@ -22,7 +22,7 @@
         ><i class="fa-solid fa-envelope"></i>Contact</router-link
       >
 
-      <!-- <h1>{{ weatherData.current}}</h1> -->
+      <h1>{{ weatherData.current }}</h1>
     </div>
   </nav>
   <router-view />
@@ -46,40 +46,51 @@ export default {
   },
 
   methods: {
-    getUserPosition() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-          (position) => {
-            this.userLat = position.coords.latitude.toString();
-            this.userLong = position.coords.longitude.toString();
-            console.log(this.userLat, this.userLong);
-            console.log(
-              `https://api.weatherapi.com/v1/current.json?key=11cd5cbd029b4c72b0e75746220806&q=${this.userLat},${this.userLong}`
-            );
-          },
-          (error) => {
-            console.log(error);
-          }
-        );
-      } else {
-        console.log("Geolocation is not supported by this browser.");
-      }
-    },
+    // async getUserPosition() {
+    //   if (navigator.geolocation) {
+    //     navigator.geolocation.getCurrentPosition(
+    //       (position) => {
+    //         this.userLat = position.coords.latitude.toString();
+    //         this.userLong = position.coords.longitude.toString();
+    //         console.log(this.userLat, this.userLong);
+    //         console.log(
+    //           `https://api.weatherapi.com/v1/current.json?key=11cd5cbd029b4c72b0e75746220806&q=${this.userLat},${this.userLong}`
+    //         );
+    //       },
+    //       (error) => {
+    //         console.log(error);
+    //       }
+    //     );
+    //   } else {
+    //     console.log("Geolocation is not supported by this browser.");
+    //   }
+
+    //   console.log(this.userLat, this.userLong);
+
+    //   let response = await fetch(
+    //     `https://api.weatherapi.com/v1/current.json?key=11cd5cbd029b4c72b0e75746220806&q=${this.userLat},${this.userLong}`
+    //   );
+    //   const data = await response.json();
+    //   this.weatherData = data;
+    //   console.log(this.weatherData);
+    // },
   },
 
-  // mounted() {
-  //   this.getUserPosition();
-  //   fetch(
-  //     `https://api.weatherapi.com/v1/current.json?key=11cd5cbd029b4c72b0e75746220806&q=${this.userLat},${this.userLong}`
-  //     `https://api.weatherapi.com/v1/current.json?key=11cd5cbd029b4c72b0e75746220806&q=48.8567,2.3508`
-  //   )
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       this.weatherData = data;
-  //       console.log(this.weatherData);
-  //     })
-  //     .catch((error) => console.error(error));
-  // },
+  mounted() {
+    // this.getUserPosition();
+    // this.getUserPosition();
+    // console.log(this.getUserPosition());
+    // fetch(
+    //   `https://api.weatherapi.com/v1/current.json?key=11cd5cbd029b4c72b0e75746220806&q=${this.userLat},${this.userLong}`
+    //   `https://api.weatherapi.com/v1/current.json?key=11cd5cbd029b4c72b0e75746220806&q=48.8567,2.3508`
+    // )
+    //   .then((response) => response.json())
+    //   .then((data) => {
+    //     this.weatherData = data;
+    //     console.log(this.weatherData);
+    //   })
+    //   .catch((error) => console.error(error));
+  },
 };
 </script>
 
