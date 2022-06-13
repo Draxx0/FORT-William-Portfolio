@@ -33,6 +33,17 @@
         fond d’une dangereuse caverne… <br /><br />Notre projet à abouti à un
         oral.
       </p>
+      <div class="stacks-container">
+        <h3 class="section-subtitle colored">Stack utilisées</h3>
+        <ul class="section-list">
+          <li class="section-list-item">
+            <img src="../../../public/img/csharp.svg" alt="" /> C#
+          </li>
+          <li class="section-list-item">
+            <img src="../../../public/img/unity.webp" alt="" /> Unity
+          </li>
+        </ul>
+      </div>
       <img src="../../../public/img/Unity.png" alt="" class="section-img" />
 
       <div class="links-container">
