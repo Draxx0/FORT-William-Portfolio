@@ -1,10 +1,8 @@
 <template>
-  <div class="Unity">
+  <div class="Titanime">
     <div class="container">
-      <h1 class="section-title">Cave'scape</h1>
-      <h3 class="section-subtitle colored">
-        Une semaine pour créer un platformer 2D
-      </h3>
+      <h1 class="section-title">Titanime</h1>
+      <h3 class="section-subtitle colored">Un site de "Streaming d'Anime"</h3>
       <p class="section-description">
         Au cour d'une semaine de projet au sein de l'école supérieur du digital
         j'ai travaillé sur Unity.<br />
@@ -24,19 +22,35 @@
         encore des plateformes sur lesquels on peut activer ou désactiver les
         collisions. Le décor que nous avons créer est basé sur les assets créer
         par <strong>Maoot</strong><br /><br />
-
-        <strong>Histoire du jeu :</strong><br /><br />
-
-        Crowd un ancien roi à décidé de surtaxer son peuple, n'étant en aucun
-        cas dans la possibilité de payer ces taxes d'un prix exorbitant le
-        peuple se leva contre la monarchie renversent le roi et le jetant au
-        fond d’une dangereuse caverne… <br /><br />Notre projet à abouti à un
-        oral.
       </p>
-      <img src="../../../public/img/Unity.png" alt="" class="section-img" />
+
+      <div class="stacks-container">
+        <h3 class="section-subtitle colored">Stack utilisées</h3>
+        <ul class="section-list">
+          <li class="section-list-item">
+            <img src="../../../public/img/html.webp" alt="" /> HTML
+          </li>
+          <li class="section-list-item">
+            <img src="../../../public/img/sass.png" alt="" /> SASS
+          </li>
+          <li class="section-list-item">
+            <img src="../../../public/img/Javascript.png" alt="" /> JavaScript
+          </li>
+        </ul>
+      </div>
+      <video
+        class="video-container"
+        controls
+        poster="../../../public/img/titanime.png"
+      >
+        <source
+          src="https://cdn.discordapp.com/attachments/935969848230547551/985919646806995004/screen-capture.webm"
+          type="video/webm"
+        />
+      </video>
 
       <div class="links-container">
-        <router-link to="/projects/Witch-Weather" @click="scrollTop">
+        <router-link to="/projects/Delivery" @click="scrollTop">
           Projets Suivant<i class="fa-solid fa-arrow-right-long"></i
         ></router-link>
       </div>
@@ -46,7 +60,7 @@
 
 <style lang="scss">
 @import "@/styles/variables.scss";
-.Unity {
+.Titanime {
   width: 75%;
 
   .container {
@@ -70,7 +84,7 @@
 
 <script>
 export default {
-  name: "project-Unity-Cave'scape",
+  name: "project-Titanime",
 
   methods: {
     scrollTop() {

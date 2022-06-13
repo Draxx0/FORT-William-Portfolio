@@ -26,13 +26,13 @@
         <h3 class="section-subtitle colored">Stack utilisées</h3>
         <ul class="section-list">
           <li class="section-list-item">
-            <img src="../../assets/img/angular.png" alt="" /> Angular
+            <img src="../../../public/img/angular.png" alt="" /> Angular
           </li>
           <li class="section-list-item">
-            <img src="../../assets/img/sass.png" alt="" /> SASS
+            <img src="../../../public/img/sass.png" alt="" /> SASS
           </li>
           <li class="section-list-item">
-            <img src="../../assets/img/nodejs.png" alt="" /> Node JS
+            <img src="../../../public/img/nodejs.png" alt="" /> Node JS
           </li>
         </ul>
       </div>
@@ -42,7 +42,7 @@
       <video
         class="video-container"
         controls
-        poster="../../assets/img/WitchWeather.png"
+        poster="../../../public/img/WitchWeather.png"
       >
         <source src="../../assets/video/WitchWeather.webm" type="video/webm" />
       </video>

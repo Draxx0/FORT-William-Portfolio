@@ -5,14 +5,33 @@
 
       <h2 class="section-subtitle">Mes derniers projets :</h2>
 
+      <h3 class="section-subtitle">Projets d'écoles</h3>
+
       <div class="projects-container">
         <div
           class="project-card"
-          v-for="(project, index) in projects"
+          v-for="(project, index) in projectsEsd"
           :key="index"
         >
           <img :src="project.imgUrl" alt="" class="project-card-img" />
           <router-link :to="'/projects/' + project.path"></router-link>
+          <h3 class="project-card-title">{{ project.title }}</h3>
+        </div>
+      </div>
+
+      <h3 class="section-subtitle">Projets Autodidacte</h3>
+
+      <div class="projects-container">
+        <div
+          class="project-card"
+          v-for="(project, index) in myProjects"
+          :key="index"
+        >
+          <img :src="project.imgUrl" class="project-card-img" />
+          <router-link
+            :to="'/projects/' + project.path"
+            @click="scrollToTop()"
+          ></router-link>
           <h3 class="project-card-title">{{ project.title }}</h3>
         </div>
       </div>
@@ -26,7 +45,7 @@ export default {
 
   data: () => {
     return {
-      projects: [
+      projectsEsd: [
         {
           imgUrl:
             "https://cdn.discordapp.com/attachments/935969848230547551/983651904968073237/Unity.png",
@@ -62,7 +81,34 @@ export default {
           path: "Memphis-Design",
         },
       ],
+      myProjects: [
+        {
+          imgUrl:
+            "https://cdn.discordapp.com/attachments/935969848230547551/985925825377501184/titanime.png",
+          title: "Titanime",
+          path: "Titanime",
+        },
+
+        {
+          imgUrl:
+            "https://cdn.discordapp.com/attachments/935969848230547551/985916561430814770/Delivery.png",
+          title: "Delivery Intégration",
+          path: "Delivery",
+        },
+
+        {
+          imgUrl:
+            "https://cdn.discordapp.com/attachments/935969848230547551/985916561430814770/Delivery.png",
+          title: "Delivery",
+          path: "Delivery",
+        },
+      ],
     };
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
   },
 };
 </script>
@@ -79,7 +125,7 @@ export default {
 
     .projects-container {
       display: grid;
-      grid-template-columns: repeat(2, auto);
+      grid-template-columns: repeat(3, auto);
       grid-gap: 35px;
       width: 100%;
 
@@ -121,7 +167,7 @@ export default {
           position: absolute;
           position: absolute;
           top: 35%;
-          left: 30%;
+          left: 16%;
           opacity: 0;
           color: $dark-mode-text-color;
           font-weight: 500;

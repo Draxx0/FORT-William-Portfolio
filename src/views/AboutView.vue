@@ -61,7 +61,11 @@
         <div class="skills-grid">
           <div class="skill" v-for="skill in skills" :key="skill.name">
             <div class="skill-row">
-              <span class="skill-name">{{ skill.name }}</span>
+              <span class="skill-name"
+                >{{ skill.name }}
+                <img :src="'img/' + skill.img" class="skill-img" alt=""
+              /></span>
+
               <span class="skill-average">{{ skill.pourcentage }}%</span>
             </div>
             <div class="skill-bar">
@@ -120,42 +124,52 @@ export default {
         {
           name: "HTML",
           pourcentage: 85,
+          img: "Html.webp",
         },
         {
           name: "CSS",
           pourcentage: 85,
+          img: "CSS.png",
         },
         {
           name: "Javascript",
           pourcentage: 55,
+          img: "Javascript.png",
         },
         {
           name: "Git",
           pourcentage: 80,
+          img: "Git.png",
         },
         {
           name: "Vue JS",
           pourcentage: 30,
+          img: "vue.png",
         },
         {
           name: "React JS",
           pourcentage: 10,
+          img: "React.png",
         },
         {
           name: "Angular JS",
           pourcentage: 15,
+          img: "angular.png",
         },
         {
           name: "Node JS",
           pourcentage: 25,
+          img: "nodejs.png",
         },
         {
           name: "PHP",
           pourcentage: 15,
+          img: "php.png",
         },
         {
           name: "C#",
           pourcentage: 5,
+          img: "csharp.svg",
         },
       ],
       schools: [
@@ -291,10 +305,18 @@ export default {
         .skill-row {
           display: flex;
           justify-content: space-between;
+          margin-bottom: 10px;
 
           .skill-name {
+            display: flex;
+            align-items: center;
+            gap: 15px;
             font-family: "Poppins", sans-serif;
             font-weight: 500;
+
+            .skill-img {
+              width: 30px;
+            }
           }
 
           .skill-average {

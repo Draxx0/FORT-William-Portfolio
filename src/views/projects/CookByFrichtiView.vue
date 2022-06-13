@@ -10,7 +10,7 @@
         j'ai travaillé sur une application que nous avons réalisé sur Adobe
         XD.<br />
       </p>
-      <img src="@/assets/img/Cook-frichti.png" alt="" class="section-img" />
+      <img src="../../../public/img/Cook-frichti.png" alt="" class="section-img" />
 
         <div class="links-container">
         <router-link to="/projects/Digital-Event-2022" @click="scrollToTop()">

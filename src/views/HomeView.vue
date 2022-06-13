@@ -17,7 +17,7 @@
       </div>
       <div class="right-container">
         <div class="img-wrap">
-          <img src="@/assets/img/me.jpg" alt="" class="profil-picture" />
+          <img src="../../public/img/me.jpg" alt="" class="profil-picture" />
         </div>
       </div>
     </div>

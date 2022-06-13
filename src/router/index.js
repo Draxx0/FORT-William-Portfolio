@@ -8,6 +8,8 @@ import WitchWeatherView from "../views/projects/WitchWeatherView.vue";
 import DigitalEvent2022View from "../views/projects/DigitalEvent2022View.vue";
 import CookByFrichtiView from "../views/projects/CookByFrichtiView.vue";
 import MemphisDesignView from "../views/projects/MemphisDesignView.vue";
+import DeliveryView from "../views/projects/DeliveryView.vue";
+import TitanimeView from "../views/projects/TitanimeView.vue";
 
 const routes = [
   {
@@ -59,6 +61,18 @@ const routes = [
     path: "/projects/Memphis-Design",
     name: "projects-Memphis-Design",
     component: MemphisDesignView,
+  },
+
+  {
+    path: "/projects/Delivery",
+    name: "projects-Delivery",
+    component: DeliveryView,
+  },
+
+  {
+    path: "/projects/Titanime",
+    name: "projects-Titanime",
+    component: TitanimeView,
   },
 ];
 

@@ -10,16 +10,16 @@
       <h1><span>W</span>illiam</h1>
     </div>
     <div class="menu">
-      <router-link to="/"
-        ><i class="fa-solid fa-house"></i> Accueil</router-link
+      <router-link to="/" @click="scrollToTop">
+        <i class="fa-solid fa-house"></i> Accueil</router-link
       >
-      <router-link to="/about"
+      <router-link to="/about" @click="scrollToTop"
         ><i class="fa-solid fa-user-graduate"></i>A propos</router-link
       >
-      <router-link to="/projects"
+      <router-link to="/projects" @click="scrollToTop"
         ><i class="fa-solid fa-folder-open"></i>Projets</router-link
       >
-      <router-link to="/contact"
+      <router-link to="/contact" @click="scrollToTop"
         ><i class="fa-solid fa-envelope"></i>Contact</router-link
       >
     </div>
@@ -36,6 +36,12 @@ export default {
   components: {
     SettingsMenu,
     WeatherApi,
+  },
+
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
   },
 };
 </script>
@@ -266,32 +272,32 @@ nav {
   }
 }
 
-// .weather-menu {
-//   padding: 15px;
-//   z-index: 99999;
-//   position: fixed;
-//   bottom: 50px;
-//   right: 50px;
-//   font-family: "Poppins", sans-serif;
-//   display: flex;
-//   flex-direction: row-reverse;
-//   align-items: center;
-//   gap: 25px;
+.project-link {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  width: fit-content;
+  margin: auto;
+  display: flex;
+  text-decoration: none;
 
-//   .overlay {
-//     // background-color: rgba(#fff, #fff, #fff, 0.4);
-//     filter: blur(10px);
-//   }
+  &::before {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    content: "";
+    display: block;
+    width: 30%;
+    height: 4px;
+    border-radius: 15px;
+    transition: 0.3s ease-in-out;
+  }
 
-//   img {
-//     width: 64px;
-//   }
-
-//   h1 {
-//     font-size: 1.5rem;
-//     font-weight: bold;
-//   }
-// }
+  &:hover::before {
+    width: 100%;
+  }
+}
 
 //----------------------------------------------------- MODE COLORS -----------------------------------------------------
 
@@ -331,6 +337,10 @@ nav {
     a {
       color: $light-mode-text-color;
     }
+  }
+
+  .project-link {
+    color: $light-mode-text-color;
   }
 }
 
@@ -412,6 +422,10 @@ nav {
     a {
       color: $dark-mode-text-color;
     }
+  }
+
+  .project-link {
+    color: $dark-mode-text-color;
   }
 }
 
@@ -512,6 +526,12 @@ nav {
       i {
         color: $green;
       }
+    }
+  }
+
+  .project-link {
+    &::before {
+      background-color: $green;
     }
   }
 }
@@ -616,6 +636,12 @@ nav {
       }
     }
   }
+
+  .project-link {
+    &::before {
+      background-color: $orange;
+    }
+  }
 }
 
 .pink {
@@ -713,6 +739,12 @@ nav {
       i {
         color: $pink;
       }
+    }
+  }
+
+  .project-link {
+    &::before {
+      background-color: $pink;
     }
   }
 }
@@ -814,6 +846,12 @@ nav {
       }
     }
   }
+
+  .project-link {
+    &::before {
+      background-color: $red;
+    }
+  }
 }
 
 .blue {
@@ -913,6 +951,12 @@ nav {
       }
     }
   }
+
+  .project-link {
+    &::before {
+      background-color: $blue;
+    }
+  }
 }
 
 .yellow {
@@ -1010,6 +1054,12 @@ nav {
       i {
         color: $yellow;
       }
+    }
+  }
+
+  .project-link {
+    &::before {
+      background-color: $yellow;
     }
   }
 }
