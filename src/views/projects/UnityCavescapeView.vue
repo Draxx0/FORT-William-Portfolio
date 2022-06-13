@@ -40,7 +40,7 @@
             <img src="../../../public/img/csharp.svg" alt="" /> C#
           </li>
           <li class="section-list-item">
-            <img src="../../../public/img/unity.webp" alt="" /> Unity
+            <img src="../../../public/img/unitystack.png" alt="" /> Unity
           </li>
         </ul>
       </div>

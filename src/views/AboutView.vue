@@ -124,7 +124,7 @@ export default {
         {
           name: "HTML",
           pourcentage: 85,
-          img: "Html.webp",
+          img: "html.png",
         },
         {
           name: "CSS",
@@ -139,7 +139,7 @@ export default {
         {
           name: "Git",
           pourcentage: 80,
-          img: "Git.png",
+          img: "git.png",
         },
         {
           name: "Vue JS",
