@@ -24,17 +24,55 @@
         notre Leader Dev Cyriac Du Chatenet nous sommes parvenu à nos fin.
       </p>
 
-      <video class="video-container" controls poster="../../assets/img/The-last-chance.png">
+      <div class="stacks-container">
+        <h3 class="section-subtitle colored">Stack utilisées</h3>
+        <ul class="section-list">
+          <li class="section-list-item">
+            <img src="../../assets/img/React.png" alt="" /> React
+          </li>
+          <li class="section-list-item">
+            <img src="../../assets/img/sass.png" alt="" /> SASS
+          </li>
+          <li class="section-list-item">
+            <img src="../../assets/img/firebase.png" alt="" /> Firebase
+          </li>
+        </ul>
+      </div>
+
+      <h3 class="section-subtitle colored">Rendu</h3>
+
+      <video
+        class="video-container"
+        controls
+        poster="../../assets/img/The-last-chance.png"
+      >
         <source src="../../assets/video/lastchance.mp4" type="video/mp4" />
       </video>
+
+      <div class="links-container">
+        <router-link to="/projects/Witch-Weather" @click="scrollToTop()">
+          <i class="fa-solid fa-arrow-left-long"></i>Projets
+          Précèdents</router-link
+        >
+        <router-link to="/projects/Cook-by-Frichti" @click="scrollToTop()">
+          Projets Suivant<i class="fa-solid fa-arrow-right-long"></i
+        ></router-link>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
   name: "project-Digital-Event-2022",
+   methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
+    // goBack() {
+    //   this.$router.push("/projects");
+    // },
+  },
 };
 </script>
 
@@ -45,10 +83,6 @@ export default {
   .container {
     width: 80%;
     margin: 50px auto;
-
-    .video-container {
-      width: 100%;
-    }
   }
 }
 </style>

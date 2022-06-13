@@ -52,7 +52,9 @@
 
       <div class="btn-container">
         <a class="btn" @click="downloadCV()">Télécharger mon CV</a>
-        <router-link to="/contact" class="btn"> Me contacter</router-link>
+        <router-link to="/contact" class="btn" @click="scrollToTop()">
+          Me contacter</router-link
+        >
       </div>
 
       <div class="skills-container">
@@ -203,6 +205,9 @@ export default {
       link.href = "CV.pdf";
       link.setAttribute("download", "FORT - William CV.pdf");
       link.click();
+    },
+    scrollToTop() {
+      window.scrollTo(0, 0);
     },
   },
 };

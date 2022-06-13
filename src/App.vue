@@ -64,9 +64,7 @@ export default {
     //   } else {
     //     console.log("Geolocation is not supported by this browser.");
     //   }
-
     //   console.log(this.userLat, this.userLong);
-
     //   let response = await fetch(
     //     `https://api.weatherapi.com/v1/current.json?key=11cd5cbd029b4c72b0e75746220806&q=${this.userLat},${this.userLong}`
     //   );
@@ -262,6 +260,63 @@ nav {
   margin-bottom: 50px;
 }
 
+.video-container {
+  width: 100%;
+}
+
+.stacks-container {
+  margin-bottom: 100px;
+  .section-list {
+    list-style: none;
+    padding: 0;
+
+    .section-list-item {
+      display: flex;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      gap: 25px;
+      margin: 0 0 10px 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 20px 0;
+
+      img {
+        width: 64px;
+      }
+    }
+  }
+}
+
+.links-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  font-family: "Poppins", sans-serif;
+
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 15px;
+    font-size: 1.3rem;
+    i {
+      transition: 0.3s ease-in-out;
+    }
+
+    &:hover {
+      &:nth-child(1) {
+        i {
+          transform: translateX(-10px);
+        }
+      }
+      &:nth-child(2) {
+        i {
+          transform: translateX(10px);
+        }
+      }
+    }
+  }
+}
 
 //----------------------------------------------------- MODE COLORS -----------------------------------------------------
 
@@ -295,6 +350,11 @@ nav {
         font-weight: 600;
         color: $light-mode-text-color;
       }
+    }
+  }
+  .links-container {
+    a {
+      color: $light-mode-text-color;
     }
   }
 }
@@ -371,6 +431,12 @@ nav {
   .themes-container {
     background-color: $dark-mode-nav-background-color !important;
     color: $dark-mode-text-color !important;
+  }
+
+  .links-container {
+    a {
+      color: $dark-mode-text-color;
+    }
   }
 }
 
@@ -463,6 +529,14 @@ nav {
     }
     textarea:valid {
       border-color: $green;
+    }
+  }
+
+  .links-container {
+    a {
+      i {
+        color: $green;
+      }
     }
   }
 }
@@ -559,6 +633,14 @@ nav {
       border-color: $orange;
     }
   }
+
+  .links-container {
+    a {
+      i {
+        color: $orange;
+      }
+    }
+  }
 }
 
 .pink {
@@ -648,6 +730,14 @@ nav {
     }
     textarea:valid {
       border-color: $pink;
+    }
+  }
+
+  .links-container {
+    a {
+      i {
+        color: $pink;
+      }
     }
   }
 }
@@ -741,6 +831,14 @@ nav {
       border-color: $red;
     }
   }
+
+  .links-container {
+    a {
+      i {
+        color: $red;
+      }
+    }
+  }
 }
 
 .blue {
@@ -832,6 +930,14 @@ nav {
       border-color: $blue;
     }
   }
+
+  .links-container {
+    a {
+      i {
+        color: $blue;
+      }
+    }
+  }
 }
 
 .yellow {
@@ -921,6 +1027,14 @@ nav {
     }
     textarea:valid {
       border-color: $yellow;
+    }
+  }
+
+  .links-container {
+    a {
+      i {
+        color: $yellow;
+      }
     }
   }
 }

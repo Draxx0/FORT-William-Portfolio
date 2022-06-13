@@ -12,7 +12,7 @@
         <div class="contact-me-content">
           <i class="fa-solid fa-phone fa-2x colored"></i>
           <h3 class="contact-me-content-title">Par téléphone</h3>
-          <h4 class="contact-me-content-text">06 83 10 03 51</h4>
+          <a class="contact-me-content-text" href="telto:0683100351">06 83 10 03 51</a>
         </div>
 
         <div class="contact-me-content">

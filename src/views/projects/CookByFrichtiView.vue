@@ -11,6 +11,16 @@
         XD.<br />
       </p>
       <img src="@/assets/img/Cook-frichti.png" alt="" class="section-img" />
+
+        <div class="links-container">
+        <router-link to="/projects/Digital-Event-2022" @click="scrollToTop()">
+          <i class="fa-solid fa-arrow-left-long"></i>Projets
+          Précèdents</router-link
+        >
+        <router-link to="/projects/Memphis-Design" @click="scrollToTop()">
+          Projets Suivant<i class="fa-solid fa-arrow-right-long"></i
+        ></router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -18,6 +28,14 @@
 <script>
 export default {
   name: "project-Cook-by-Frichti",
+   methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
+    // goBack() {
+    //   this.$router.push("/projects");
+    // },
+  },
 };
 </script>
 

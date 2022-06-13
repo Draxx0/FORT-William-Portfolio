@@ -33,7 +33,13 @@
         fond d’une dangereuse caverne… <br /><br />Notre projet à abouti à un
         oral.
       </p>
-      <img src="@/assets/img/Unity.png" alt="" class="section-img">
+      <img src="@/assets/img/Unity.png" alt="" class="section-img" />
+
+      <div class="links-container">
+        <router-link to="/projects/Witch-Weather" @click="scrollTop">
+          Projets Suivant<i class="fa-solid fa-arrow-right-long"></i
+        ></router-link>
+      </div>
     </div>
   </div>
 </template>
@@ -47,11 +53,29 @@
     width: 80%;
     margin: 50px auto;
   }
+
+  .links-container {
+    justify-content: flex-end;
+
+    a {
+      &:hover {
+        i {
+          transform: translateX(10px);
+        }
+      }
+    }
+  }
 }
 </style>
 
 <script>
 export default {
   name: "project-Unity-Cave'scape",
+
+  methods: {
+    scrollTop() {
+      window.scrollTo(0, 0);
+    },
+  },
 };
 </script>
