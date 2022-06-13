@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-
     <div class="container">
       <div class="left-container">
         <h1 class="title">
@@ -26,21 +25,16 @@
 </template>
 
 <script>
-
 export default {
   name: "HomeView",
 
   data: function () {
-    return {
-
-    };
+    return {};
   },
-
-}
+};
 </script>
 
 <style lang="scss">
-
 @import "@/styles/variables.scss";
 
 .home {

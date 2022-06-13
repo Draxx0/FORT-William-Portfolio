@@ -4,6 +4,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
   />
   <SettingsMenu />
+  <WeatherApi />
   <nav>
     <div class="logo">
       <h1><span>W</span>illiam</h1>
@@ -21,8 +22,6 @@
       <router-link to="/contact"
         ><i class="fa-solid fa-envelope"></i>Contact</router-link
       >
-
-      <!-- <h1>{{ weatherData.current }}</h1> -->
     </div>
   </nav>
   <router-view />
@@ -30,64 +29,13 @@
 
 <script>
 import SettingsMenu from "./components/SettingsMenu.vue";
+import WeatherApi from "./components/WeatherApi.vue";
 
 export default {
   name: "App",
   components: {
     SettingsMenu,
-  },
-
-  data() {
-    return {
-      userLat: "",
-      userLong: "",
-      weatherData: [],
-    };
-  },
-
-  methods: {
-    // async getUserPosition() {
-    //   if (navigator.geolocation) {
-    //     navigator.geolocation.getCurrentPosition(
-    //       (position) => {
-    //         this.userLat = position.coords.latitude.toString();
-    //         this.userLong = position.coords.longitude.toString();
-    //         console.log(this.userLat, this.userLong);
-    //         console.log(
-    //           `https://api.weatherapi.com/v1/current.json?key=11cd5cbd029b4c72b0e75746220806&q=${this.userLat},${this.userLong}`
-    //         );
-    //       },
-    //       (error) => {
-    //         console.log(error);
-    //       }
-    //     );
-    //   } else {
-    //     console.log("Geolocation is not supported by this browser.");
-    //   }
-    //   console.log(this.userLat, this.userLong);
-    //   let response = await fetch(
-    //     `https://api.weatherapi.com/v1/current.json?key=11cd5cbd029b4c72b0e75746220806&q=${this.userLat},${this.userLong}`
-    //   );
-    //   const data = await response.json();
-    //   this.weatherData = data;
-    //   console.log(this.weatherData);
-    // },
-  },
-
-  mounted() {
-    // this.getUserPosition();
-    // this.getUserPosition();
-    // console.log(this.getUserPosition());
-    // fetch(
-    //   `https://api.weatherapi.com/v1/current.json?key=11cd5cbd029b4c72b0e75746220806&q=${this.userLat},${this.userLong}`
-    //   `https://api.weatherapi.com/v1/current.json?key=11cd5cbd029b4c72b0e75746220806&q=48.8567,2.3508`
-    // )
-    //   .then((response) => response.json())
-    //   .then((data) => {
-    //     this.weatherData = data;
-    //     console.log(this.weatherData);
-    //   })
-    //   .catch((error) => console.error(error));
+    WeatherApi,
   },
 };
 </script>
@@ -317,6 +265,33 @@ nav {
     }
   }
 }
+
+// .weather-menu {
+//   padding: 15px;
+//   z-index: 99999;
+//   position: fixed;
+//   bottom: 50px;
+//   right: 50px;
+//   font-family: "Poppins", sans-serif;
+//   display: flex;
+//   flex-direction: row-reverse;
+//   align-items: center;
+//   gap: 25px;
+
+//   .overlay {
+//     // background-color: rgba(#fff, #fff, #fff, 0.4);
+//     filter: blur(10px);
+//   }
+
+//   img {
+//     width: 64px;
+//   }
+
+//   h1 {
+//     font-size: 1.5rem;
+//     font-weight: bold;
+//   }
+// }
 
 //----------------------------------------------------- MODE COLORS -----------------------------------------------------
 
