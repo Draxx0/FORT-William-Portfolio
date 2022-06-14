@@ -12,7 +12,9 @@
         <div class="contact-me-content">
           <i class="fa-solid fa-phone fa-2x colored"></i>
           <h3 class="contact-me-content-title">Par téléphone</h3>
-          <a class="contact-me-content-text" href="tel:+33683100351">06 83 10 03 51</a>
+          <a class="contact-me-content-text" href="tel:0683100351"
+            >06 83 10 03 51</a
+          >
         </div>
 
         <div class="contact-me-content">
@@ -70,7 +72,6 @@
 </template>
 
 <script>
-
 export default {
   name: "ContactView",
 };
