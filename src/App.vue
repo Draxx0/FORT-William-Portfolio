@@ -316,6 +316,11 @@ nav {
     color: $light-mode-text-color;
   }
 
+  .project-card {
+    transition: 1s;
+    border: 2px solid;
+  }
+
   .form-group {
     input,
     textarea {
@@ -371,6 +376,11 @@ nav {
     }
   }
 
+  .project-card {
+    transition: 1s;
+    border: 2px solid;
+  }
+
   .title {
     color: $dark-mode-text-color;
   }
@@ -381,11 +391,6 @@ nav {
   .experience-school-card {
     background-color: $dark-mode-background-color !important;
     color: $dark-mode-text-color;
-  }
-
-  .project-card {
-    transition: 1s;
-    border-color: $dark-mode-nav-background-color !important;
   }
 
   .contact-me-content {
@@ -440,6 +445,10 @@ nav {
   }
   .colored {
     color: $green;
+  }
+
+  .project-card {
+    border-color: $green;
   }
 
   .card-year {
@@ -565,6 +574,10 @@ nav {
         background-color: $orange;
       }
     }
+  }
+
+  .project-card {
+    border-color: $orange;
   }
 
   .section-title {
@@ -747,6 +760,10 @@ nav {
       background-color: $pink;
     }
   }
+
+  .project-card {
+    border-color: $pink;
+  }
 }
 
 .red {
@@ -808,6 +825,10 @@ nav {
         border-right: 4px solid $red;
       }
     }
+  }
+
+  .project-card {
+    border-color: $red;
   }
 
   .img-wrap {
@@ -880,6 +901,10 @@ nav {
         background-color: $blue;
       }
     }
+  }
+
+  .project-card {
+    border-color: $blue;
   }
 
   .section-title {
@@ -985,6 +1010,10 @@ nav {
         background-color: $yellow;
       }
     }
+  }
+
+  .project-card {
+    border-color: $yellow;
   }
 
   .section-title {

@@ -216,8 +216,8 @@ export default {
   methods: {
     downloadCV() {
       const link = document.createElement("a");
-      link.href = "CV.pdf";
-      link.setAttribute("download", "FORT - William CV.pdf");
+      link.href = "CV - FORT William.pdf";
+      link.setAttribute("download", "CV - FORT William.pdf");
       link.click();
     },
     scrollToTop() {
