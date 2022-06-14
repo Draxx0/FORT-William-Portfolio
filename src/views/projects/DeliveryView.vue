@@ -4,29 +4,20 @@
       <h1 class="section-title">Delivery</h1>
       <h3 class="section-subtitle colored">Intégration d'une maquette</h3>
       <p class="section-description">
-        Durant deux semaines j’ai participé à la création de A à Z d’un escape
-        game en ligne. Période de Covid-19 oblige nous nous somme tenus à créer
-        un escape game sur le net ou le joueur devrait en 30 minutes réussir à
-        terminer celui-ci. Lors de ces deux semaines nous avions plusieurs
-        équipes, les scénaristes afin d’imaginer l’histoire et son déroulement,
-        les créatifs afin de créer l’identité visuel de l’escape game et enfin
-        l’équipe dont j’ai fais partit, les développeurs afin de coder et rendre
-        fonctionnel l’escape game.<br /><br />
-        Lors de cet évènement, pour créer l’escape game il était au début prévue
-        que nous utilisions Construct, un moteur de jeux vidéos adapté au web.
-        Cependant après avoir reçu le cours d’introduction à Construct, le
-        leader de notre team de 4 développeurs nous a proposé de partir plutôt
-        sur React. Problème étant que nous, les 3 autres développeurs n’avais
-        encore jamais touché à React auparavant. Au final nous nous sommes
-        dirigé vers du React aidé de notre Intervenant Thomas Mouchelet et de
-        notre Leader Dev Cyriac Du Chatenet nous sommes parvenu à nos fin.
+        Quand j'ai du temps libre j'aime travailler sur des intégrations HTML -
+        CSS/SCSS - JS afin de me challenger je me balade souvent sur Dribble
+        afin de trouver la pépite que j'intégrerais, cette fois c'est sur
+        youtube que j'ai trouver cette template, j'ai récupèrer le projet from
+        scratch sur github et je me suis lancé.<br /><br />
+        Le speech est assez claire une landing page d'un site de livraison que
+        j'intégrerais en HTML SCSS JS avec un poil de GSAP.
       </p>
 
       <div class="stacks-container">
         <h3 class="section-subtitle colored">Stack utilisées</h3>
         <ul class="section-list">
           <li class="section-list-item">
-            <img src="../../../public/img/html.webp" alt="" /> HTML
+            <img src="../../../public/img/html.png" alt="" /> HTML
           </li>
           <li class="section-list-item">
             <img src="../../../public/img/sass.png" alt="" /> SASS
