@@ -12,9 +12,7 @@
         <div class="contact-me-content">
           <i class="fa-solid fa-phone fa-2x colored"></i>
           <h3 class="contact-me-content-title">Par téléphone</h3>
-          <a class="contact-me-content-text" href="tel:0683100351"
-            >06 83 10 03 51</a
-          >
+          <h3 class="contact-me-content-text">06 83 10 03 51</h3>
         </div>
 
         <div class="contact-me-content">
@@ -149,6 +147,7 @@ export default {
           font-size: 1.2rem;
           font-weight: bold;
           margin: 0;
+          padding: 0;
         }
       }
     }
