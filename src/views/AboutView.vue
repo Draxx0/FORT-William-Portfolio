@@ -9,12 +9,11 @@
         </h2>
 
         <p class="text">
-          J’ai un atrait pour les jolies visuel, j’aime coder de belle
+          J’ai un attrait pour les jolis visuels, j’aime coder de belle
           maquettes<br />
           afin de leur donner vie ! je suis quelqu’un de perseverant, quand
           je<br />
-          fais des erreurs je lâche rarement avant d’avoir trouver le
-          pourquoi<br />
+          fais des erreurs je lâche rarement avant d’avoir trouvé le pourquoi<br />
           du comment !
         </p>
       </div>
@@ -36,17 +35,7 @@
         </div>
 
         <div class="about-me-right-container">
-          <h3 class="about-me-items">
-            <span class="bold">Age :</span> 10Janvier 2003
-          </h3>
-
-          <h3 class="about-me-items">
-            <span class="bold">Email :</span> williamfort.lmgl@gmail.com
-          </h3>
-
-          <h3 class="about-me-items">
-            <span class="bold">Téléphone :</span> 06 83 10 03 51
-          </h3>
+          <h3 class="about-me-items"><span class="bold">Age :</span> 19 ans</h3>
         </div>
       </div>
 
@@ -254,7 +243,7 @@ export default {
 
     .about-me-container {
       display: flex;
-      gap: 150px;
+      flex-direction: column;
       margin: 25px 0 45px 0;
 
       .about-me-left-container,

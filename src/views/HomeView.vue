@@ -7,10 +7,9 @@
           <span class="colored">Front End Developper</span>
         </h1>
         <p class="text">
-          Etudiant en première année de développement web à l’école supérieur du
-          digital, j’étais relativement curieuxde savoir comment fonctionner un
-          site web par quel procédé passe t-on pour que quand j’arrive sur un
-          site je vois le contenue ?<br />
+          Étudiant en première année de développement web à l’école supérieure du
+          digital, j’étais relativement curieux de savoir comment fonctionne un
+          site web, par quel procédé passe-t-on pour créer tous ces super sites web modernes ?<br />
           <br />Depuis, je suis rentrée en bachelor et je m’éclate !
         </p>
         <router-link to="/about" class="btn"> Voir plus</router-link>

@@ -8,17 +8,17 @@
         </h3>
         <p class="section-description">
           Pendant une semaine nous avions pour objectif de créer une application
-          web basé sur une API, mon équipe et moi avons créer une app météo
+          web basé sur une API, mon équipe et moi avons crée une app météo
           faisant appel à une API nommé « Weather API » nous renvoyant les
-          informations relative à la météo en fonction de la ville. Afin
+          informations relatives à la météo en fonction de la ville. Afin
           d’accueillir les informations de l’API il nous fallait du Front End
           évidemment, Angular a été le framework utilisé mais il nous a
           également fallu du Backend afin de récupérer les informations que nous
-          renvoyé l’API, nous avons donc utilisé NodeJs Express. Une application
-          sur laquelle vous pourrez sélectionner une des villes sur le menu en
-          haut à droite, que vous pourrez également ajouter à vos favoris garder
-          en mémoire via le LocalStorage du JavaScript. L’image de fond changera
-          en fonction du temps !
+          renvoyé l’API, nous avons donc utilisées NodeJs Express. Une
+          application sur laquelle vous pourrez sélectionner une des villes sur
+          le menu en haut à droite, que vous pourrez également ajouter à vos
+          favoris garder en mémoire via le LocalStorage du JavaScript. L’image
+          de fond changera en fonction du temps !
         </p>
       </div>
 
