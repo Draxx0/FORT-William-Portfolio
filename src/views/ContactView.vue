@@ -79,6 +79,7 @@ export default {
 @import "@/styles/variables.scss";
 .contact {
   width: 75%;
+  margin-bottom: 56px;
 
   .container {
     width: 80%;
