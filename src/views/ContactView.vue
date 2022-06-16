@@ -37,7 +37,7 @@
         </div>
       </div>
 
-      <div class="contact-container">
+      <!-- <div class="contact-container">
         <h2 class="contact-title colored">Envoyez moi un mail</h2>
         <h3>Je les consultes souvent</h3>
       </div>
@@ -64,7 +64,7 @@
         </div>
 
         <button type="submit" class="btn">Envoyer</button>
-      </form>
+      </form> -->
     </div>
   </div>
 </template>
