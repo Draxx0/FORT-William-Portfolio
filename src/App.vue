@@ -310,10 +310,20 @@ nav {
     color: $light-mode-text-color;
   }
 
+  .btn {
+    &:hover {
+      box-shadow: inset 0 0 0 2px #000;
+    }
+  }
+
   .themes-menu-wrap,
   .mode-menu-wrap {
     background-color: $light-mode-nav-background-color;
     color: $light-mode-text-color;
+
+    &:hover {
+      box-shadow: inset 0 0 0 2px #000;
+    }
   }
 
   .project-card {
@@ -366,10 +376,20 @@ nav {
     }
   }
 
+  .btn {
+    &:hover {
+      box-shadow: inset 0 0 0 2px #fff;
+    }
+  }
+
   .themes-menu-wrap,
   .mode-menu-wrap {
     background-color: $dark-mode-nav-background-color;
     transition: 0.5s ease-in-out;
+
+    &:hover {
+      box-shadow: inset 0 0 0 2px #fff;
+    }
 
     i {
       color: $dark-mode-text-color;

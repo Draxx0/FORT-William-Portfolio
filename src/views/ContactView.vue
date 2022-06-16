@@ -36,35 +36,6 @@
           >
         </div>
       </div>
-
-      <!-- <div class="contact-container">
-        <h2 class="contact-title colored">Envoyez moi un mail</h2>
-        <h3>Je les consultes souvent</h3>
-      </div>
-
-      <form action="">
-        <div class="form-group">
-          <label for="name">Prénom - Nom</label>
-          <input type="text" id="name" class="form-control" required />
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" class="form-control" required />
-        </div>
-
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            class="form-control"
-            rows="15"
-            required
-          ></textarea>
-        </div>
-
-        <button type="submit" class="btn">Envoyer</button>
-      </form> -->
     </div>
   </div>
 </template>

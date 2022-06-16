@@ -117,10 +117,6 @@ export default {
     padding: 15px;
     transition: 0.3s;
     cursor: pointer;
-
-    &:hover {
-      transform: scale(112%);
-    }
   }
 
   .themes-menu-wrap i {
@@ -138,7 +134,7 @@ export default {
     transition: all 0.3s ease-in-out;
     padding: 15px;
     background-color: $light-mode-nav-background-color;
-    border: solid 0.5px $border-color;
+    border: solid 3px $border-color;
     transform: translateX(200%);
 
     &.open {

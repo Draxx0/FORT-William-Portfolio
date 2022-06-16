@@ -7,12 +7,12 @@
   color: #fff;
   margin: auto auto auto 0;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1rem;
 
   &:hover {
-    transform: scale(105%);
+    box-shadow: inset 0 0 0 2px #fff;
   }
 }

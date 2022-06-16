@@ -131,17 +131,17 @@ export default {
           img: "git.png",
         },
         {
-          name: "Vue JS",
+          name: "Vue",
           pourcentage: 30,
           img: "vue.png",
         },
         {
-          name: "React JS",
+          name: "React",
           pourcentage: 10,
           img: "React.png",
         },
         {
-          name: "Angular JS",
+          name: "Angular",
           pourcentage: 15,
           img: "angular.png",
         },
