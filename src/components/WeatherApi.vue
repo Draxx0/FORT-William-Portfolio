@@ -87,6 +87,15 @@ export default {
   .weather-menu {
     left: 5%;
     bottom: 0;
+
+    h1 {
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    img {
+      width: 48px;
+    }
   }
 }
 </style>
