@@ -20,6 +20,35 @@
     <div class="mode-menu-wrap" @click="toggleMode()">
       <i :class="['fa-solid', 'fa-lg', isDarkMode ? 'fa-sun' : 'fa-moon']"></i>
     </div>
+
+    <div class="mobile-nav-wrap" @click="openNavMobile()">
+      <i
+        :class="[
+          'fa-solid',
+          'fa-lg',
+          isOpen ? 'fa-rectangle-xmark' : 'fa-bars',
+        ]"
+      ></i>
+    </div>
+
+    <div class="mobile-nav-container">
+      <h3>Menu</h3>
+
+      <div class="mobile-menu">
+        <router-link to="/" @click="scrollToTop">
+          <i class="fa-solid fa-house"></i> Accueil</router-link
+        >
+        <router-link to="/about" @click="scrollToTop"
+          ><i class="fa-solid fa-user-graduate"></i>A propos</router-link
+        >
+        <router-link to="/projects" @click="scrollToTop"
+          ><i class="fa-solid fa-folder-open"></i>Projets</router-link
+        >
+        <router-link to="/contact" @click="scrollToTop"
+          ><i class="fa-solid fa-envelope"></i>Contact</router-link
+        >
+      </div>
+    </div>
   </div>
 </template>
 
@@ -31,6 +60,7 @@ export default {
     return {
       colorTheme: ["green", "orange", "pink", "blue", "red", "yellow"],
       isDarkMode: true,
+      isOpen: false,
     };
   },
 
@@ -52,16 +82,25 @@ export default {
     openThemeContainer() {
       const themeWrap = document.querySelector(".themes-menu-wrap");
       const modeWrap = document.querySelector(".mode-menu-wrap");
+      const navWrap = document.querySelector(".mobile-nav-wrap");
       const themesContainer = document.querySelector(".themes-container");
       themesContainer.classList.toggle("open");
 
       if (themesContainer.classList.contains("open")) {
         themeWrap.style.transform = "translateX(-200px)";
         modeWrap.style.transform = "translateX(-200px)";
+        navWrap.style.transform = "translateX(-200px)";
       } else {
         themeWrap.style.transform = "translateX(0)";
         modeWrap.style.transform = "translateX(0)";
+        navWrap.style.transform = "translateX(0)";
       }
+    },
+
+    openNavMobile() {
+      const navContainer = document.querySelector(".mobile-nav-container");
+      navContainer.classList.toggle("open");
+      this.isOpen = !this.isOpen;
     },
 
     setColor(color) {
@@ -117,12 +156,16 @@ export default {
     cursor: pointer;
   }
 
+  .mobile-nav-wrap {
+    display: none;
+  }
+
   .themes-menu-wrap i {
     animation: settingsRunning infinite 2s;
   }
 
   .themes-container {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 25px;
     position: absolute;
@@ -143,6 +186,16 @@ export default {
       font-family: "Popins", sans-serif;
       font-weight: 600;
     }
+  }
+
+  .mobile-nav-container {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
   }
 
   .colors-container {
@@ -205,6 +258,50 @@ export default {
 
     to {
       transform: rotate(360deg);
+    }
+  }
+}
+
+@media screen and (max-width: 1334px) {
+  .settings-menu {
+    .mobile-nav-wrap {
+      display: block;
+      border-radius: 50%;
+      padding: 15px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    .mobile-nav-container {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      position: fixed;
+      top: 40%;
+      right: 0%;
+      z-index: 9999;
+      transition: all 0.3s ease-in-out;
+      padding: 15px;
+      transform: translateX(200%);
+
+      &.open {
+        transform: translateX(0%);
+      }
+      h3 {
+        margin: 0;
+        font-family: "Popins", sans-serif;
+        font-weight: 600;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+        font-size: 1.2rem;
+        font-family: "Popins", sans-serif;
+        font-weight: 600;
+        text-decoration: none;
+      }
     }
   }
 }

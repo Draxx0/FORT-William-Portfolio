@@ -327,7 +327,8 @@ nav {
   }
 
   .themes-menu-wrap,
-  .mode-menu-wrap {
+  .mode-menu-wrap,
+  .mobile-nav-wrap {
     background-color: $light-mode-nav-background-color;
     color: $light-mode-text-color;
 
@@ -373,6 +374,15 @@ nav {
       background-color: $light-mode-text-color;
     }
   }
+
+  .mobile-nav-container {
+    background-color: $light-mode-nav-background-color;
+    border: solid 3px $border-color;
+
+    a {
+      color: $light-mode-text-color;
+    }
+  }
 }
 
 .dark-mode {
@@ -399,7 +409,8 @@ nav {
   }
 
   .themes-menu-wrap,
-  .mode-menu-wrap {
+  .mode-menu-wrap,
+  .mobile-nav-wrap {
     background-color: $dark-mode-nav-background-color;
     transition: 0.5s ease-in-out;
 
@@ -472,6 +483,15 @@ nav {
   .section-subtitle {
     &::before {
       background-color: $dark-mode-text-color;
+    }
+  }
+
+  .mobile-nav-container {
+    background-color: $dark-mode-nav-background-color;
+    border: solid 3px $border-color;
+
+    a {
+      color: $dark-mode-text-color;
     }
   }
 }
