@@ -165,7 +165,7 @@ export default {
   }
 
   .themes-container {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 25px;
     position: absolute;
