@@ -9,31 +9,32 @@
       </div>
 
       <div class="contact-me-container">
-        <div class="contact-me-content">
-          <i class="fa-solid fa-phone fa-2x colored"></i>
-          <h3 class="contact-me-content-title">Par téléphone</h3>
-          <h3 class="contact-me-content-text">06 83 10 03 51</h3>
-        </div>
+        <div class="wrapper">
+          <div class="contact-me-content">
+            <i class="fa-solid fa-phone fa-2x colored"></i>
+            <h3 class="contact-me-content-title">Par téléphone</h3>
+            <h3 class="contact-me-content-text">06 83 10 03 51</h3>
+          </div>
 
-        <div class="contact-me-content">
-          <i class="fa-solid fa-envelope fa-2x colored"></i>
-          <h3 class="contact-me-content-title">Par mail</h3>
-          <a
-            class="contact-me-content-text"
-            href="mailto:williamfort.lmgl@gmail.com"
-            >williamfort.lmgl@gmail.com</a
-          >
-        </div>
-
-        <div class="contact-me-content">
-          <i class="fa-brands fa-linkedin fa-2x colored"></i>
-          <h3 class="contact-me-content-title">Sur Linkedin</h3>
-          <a
-            class="contact-me-content-text"
-            href="https://www.linkedin.com/in/william-fort/"
-            target="_blank"
-            >https://www.linkedin.com/in/william-fort/</a
-          >
+          <div class="contact-me-content">
+            <i class="fa-solid fa-envelope fa-2x colored"></i>
+            <h3 class="contact-me-content-title">Par mail</h3>
+            <a
+              class="contact-me-content-text"
+              href="mailto:williamfort.lmgl@gmail.com"
+              >williamfort.lmgl@gmail.com</a
+            >
+          </div>
+          <div class="contact-me-content">
+            <i class="fa-brands fa-linkedin fa-2x colored"></i>
+            <h3 class="contact-me-content-title">Sur Linkedin</h3>
+            <a
+              class="contact-me-content-text"
+              href="https://www.linkedin.com/in/william-fort/"
+              target="_blank"
+              >https://www.linkedin.com/in/william-fort/</a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -50,7 +51,7 @@ export default {
 @import "@/styles/variables.scss";
 .contact {
   width: 75%;
-  margin-bottom: 56px;
+  height: 100vh;
 
   .container {
     width: 80%;
@@ -71,16 +72,20 @@ export default {
     }
 
     .contact-me-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 1fr;
-      margin-top: 100px;
+      margin-top: 150px;
       width: 100%;
-      margin-bottom: 150px;
+
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-content: center;
+        grid-template-rows: 1fr;
+      }
       .contact-me-content {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 25px;
         font-family: "Popins", sans-serif;
         font-weight: 600;
 
@@ -156,6 +161,100 @@ export default {
           font-size: 1.2rem;
           font-weight: bold;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1334px) {
+  .contact {
+    width: 100%;
+    height: 116vh;
+
+    .container {
+      .contact-me-container {
+        display: flex;
+        flex-direction: column;
+        gap: 75px;
+        margin: 50px auto auto auto;
+        align-items: center;
+        padding-bottom: 50px;
+
+        .wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 75px;
+        }
+
+        .contact-me-content {
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 493px) {
+  .contact {
+    .container {
+      .contact-container {
+        .contact-title {
+          font-size: 1.5rem;
+        }
+        h3 {
+          font-size: 1.2rem;
+        }
+      }
+
+      .contact-me-container {
+        .contact-me-content {
+          .contact-me-content-title {
+            font-size: 1.3rem;
+          }
+          .contact-me-content-text {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .contact {
+    .container {
+      .contact-container {
+        .contact-title {
+          font-size: 1.3rem;
+        }
+        h3 {
+          font-size: 1rem;
+        }
+      }
+
+      .contact-me-container {
+        .contact-me-content {
+          .contact-me-content-title {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 364px) {
+  .contact {
+    .container {
+      .contact-container {
+        .contact-title {
+          font-size: 1rem;
+        }
+        h3 {
+          font-size: 0.9rem;
+        }
+      }
+      .section-title {
+        font-size: 2rem;
       }
     }
   }

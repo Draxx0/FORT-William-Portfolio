@@ -82,4 +82,11 @@ export default {
     font-weight: bold;
   }
 }
+
+@media screen and (max-width: 1334px) {
+  .weather-menu {
+    left: 5%;
+    bottom: 0;
+  }
+}
 </style>

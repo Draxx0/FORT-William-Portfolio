@@ -68,6 +68,16 @@ body {
   }
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  padding: 0;
+  margin: 0;
+}
+
 #app {
   display: flex;
   width: 100%;
@@ -357,6 +367,12 @@ nav {
   .project-link {
     color: $light-mode-text-color;
   }
+
+  .section-subtitle {
+    &::before {
+      background-color: $light-mode-text-color;
+    }
+  }
 }
 
 .dark-mode {
@@ -398,7 +414,7 @@ nav {
 
   .project-card {
     transition: 1s;
-    border: 2px solid;
+    border: 4px solid;
   }
 
   .title {
@@ -451,6 +467,12 @@ nav {
 
   .project-link {
     color: $dark-mode-text-color;
+  }
+
+  .section-subtitle {
+    &::before {
+      background-color: $dark-mode-text-color;
+    }
   }
 }
 
@@ -1127,5 +1149,19 @@ nav {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+// --------------------------------------------------RESPONSIVE--------------------------------------------------
+
+@media screen and (max-width: 1334px) {
+  #app {
+    margin: 0;
+  }
+  nav {
+    display: none;
+  }
+  .weather-menu {
+    display: none;
+  }
 }
 </style>

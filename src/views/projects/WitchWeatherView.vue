@@ -70,6 +70,16 @@
   .container {
     width: 80%;
     margin: 50px auto;
+
+    .section-subtitle {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1334px) {
+  .WitchWeather {
+    width: 100%;
   }
 }
 </style>

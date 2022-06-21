@@ -39,7 +39,7 @@ export default {
 
 .home {
   width: 75%;
-  margin-bottom: 180px;
+  margin-bottom: 202px;
 
   .container {
     width: 80%;
@@ -112,20 +112,66 @@ export default {
       }
     }
   }
+}
 
-  .auto-type {
-    text-transform: uppercase;
-    border-right: solid white 10px;
-    animation: cursor 1s ease-in-out infinite;
-  }
+@media screen and (max-width: 1500px) {
+  .home {
+    .container {
+      flex-direction: column-reverse;
+      margin: 50px auto auto auto;
 
-  @keyframes cursor {
-    from {
-      border-color: white;
+      .left-container {
+        width: 100%;
+      }
+
+      .right-container {
+        justify-content: flex-start;
+      }
+
+      .profil-picture {
+        width: 70%;
+      }
     }
+  }
+}
 
-    to {
-      border-color: transparent;
+@media screen and (max-width: 1419px) {
+  .home {
+    .container {
+      .right-container {
+        .img-wrap::before {
+          display: none;
+        }
+        .img-wrap::after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1304px) {
+  .home {
+    width: 100%;
+    .container {
+      width: 80%;
+      margin: 50px auto 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home {
+    .container {
+      .right-container {
+        width: 100%;
+        justify-content: center;
+        .img-wrap {
+          .profil-picture {
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }

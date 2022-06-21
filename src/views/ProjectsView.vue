@@ -4,7 +4,7 @@
       <h1 class="section-title">Projets</h1>
 
       <div class="projects-section">
-        <h2 class="section-subtitle">Projets d'écoles :</h2>
+        <h2 class="section-subtitle">Projets École</h2>
 
         <div class="projects-container">
           <div
@@ -20,7 +20,7 @@
       </div>
 
       <div class="projects-section">
-        <h2 class="section-subtitle">Projets Autodidacte :</h2>
+        <h2 class="section-subtitle">Projets Autodidacte</h2>
 
         <div class="projects-container">
           <div
@@ -117,6 +117,22 @@ export default {
   .container {
     width: 80%;
     margin: 50px auto;
+
+    .section-subtitle {
+      position: relative;
+      margin-bottom: 50px;
+      text-align: center;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+      }
+    }
     .projects-section {
       margin-bottom: 100px;
       .projects-container {
@@ -175,6 +191,24 @@ export default {
             left: 0;
             z-index: 2;
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1334px) {
+  .projects {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    .container {
+      .projects-section {
+        .projects-container {
+          grid-template-columns: repeat(1, auto);
         }
       }
     }

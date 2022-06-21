@@ -19,24 +19,19 @@
       </div>
 
       <div class="about-me-container">
-        <div class="about-me-left-container">
-          <h3 class="about-me-items">
-            <span class="bold">Date de naissance :</span> 10Janvier 2003
-          </h3>
+        <h3 class="about-me-items">
+          <span class="bold">Date de naissance :</span> 10Janvier 2003
+        </h3>
 
-          <h3 class="about-me-items">
-            <span class="bold">Ville d'habitation :</span> Bordeaux
-          </h3>
+        <h3 class="about-me-items">
+          <span class="bold">Ville d'habitation :</span> Bordeaux
+        </h3>
 
-          <h3 class="about-me-items">
-            <span class="bold">École :</span> École supérieur du digital -
-            Bordeaux
-          </h3>
-        </div>
+        <h3 class="about-me-items">
+          <span class="bold">École :</span> École supérieur du digital
+        </h3>
 
-        <div class="about-me-right-container">
-          <h3 class="about-me-items"><span class="bold">Age :</span> 19 ans</h3>
-        </div>
+        <h3 class="about-me-items"><span class="bold">Age :</span> 19 ans</h3>
       </div>
 
       <div class="btn-container">
@@ -66,8 +61,8 @@
           </div>
         </div>
       </div>
-
       <div class="experience-school-container">
+        <h3 class="experience-school-title">Formations</h3>
         <div class="experience-school-card">
           <div
             class="card-content"
@@ -85,6 +80,7 @@
           </div>
         </div>
 
+        <h3 class="experience-school-title">Expériences</h3>
         <div class="experience-school-card">
           <div class="card-content" v-for="stage in stages" :key="stage.year">
             <span class="card-year"
@@ -244,28 +240,23 @@ export default {
     .about-me-container {
       display: flex;
       flex-direction: column;
-      margin: 25px 0 45px 0;
+      margin: 50px 0 45px 0;
+      gap: 25px;
 
-      .about-me-left-container,
-      .about-me-right-container {
-        display: flex;
-        flex-direction: column;
+      .about-me-items {
+        position: relative;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
 
-        .about-me-items {
-          position: relative;
-          font-family: "Poppins", sans-serif;
-          font-weight: 500;
-
-          &::before {
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            content: "";
-            display: block;
-            width: 500px;
-            height: 1px;
-            background-color: $border-color;
-          }
+        &::before {
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          content: "";
+          display: block;
+          width: 500px;
+          height: 1px;
+          background-color: $border-color;
         }
       }
     }
@@ -330,9 +321,13 @@ export default {
 
     .experience-school-container {
       display: flex;
-      justify-content: space-between;
-      margin-top: 100px;
-      gap: 25px;
+      flex-direction: column;
+
+      .experience-school-title {
+        margin: 100px 0 25px 0;
+        font-family: "Poppins", sans-serif;
+        text-transform: uppercase;
+      }
 
       .experience-school-card {
         position: relative;
@@ -340,7 +335,7 @@ export default {
         border: solid 0.5px $border-color;
         border-radius: 15px;
         width: 50%;
-        padding: 30px 60px;
+        padding: 40px 60px;
 
         .card-content {
           display: flex;
@@ -395,6 +390,179 @@ export default {
             font-family: "Poppins", sans-serif;
             font-weight: 500;
             font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1334px) {
+  .about {
+    width: 100%;
+    .container {
+      .experience-school-container {
+        width: fit-content;
+        .experience-school-card {
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 945px) {
+  .about {
+    .container {
+      .skills-container {
+        .skills-grid {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+      .about-me-container {
+        .about-me-items {
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+      .experience-school-container {
+        flex-direction: column;
+        width: fit-content;
+
+        .experience-school-card {
+          width: fit-content;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 693px) {
+  .about {
+    .container {
+      .experience-school-container {
+        .experience-school-card {
+          .card-content {
+            .card-year:nth-child(1)::after {
+              height: 410px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 659px) {
+  .about {
+    .container {
+      .experience-school-container {
+        .experience-school-card {
+          .card-content {
+            .card-year:nth-child(1)::after {
+              height: 430px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 618px) {
+  .about {
+    .container {
+      .btn-container {
+        a {
+          padding: 10px;
+        }
+      }
+      .experience-school-container {
+        .experience-school-card {
+          .card-content {
+            .card-year:nth-child(1)::after {
+              height: 440px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 547px) {
+  .about {
+    .container {
+      .experience-school-container {
+        .experience-school-card {
+          .card-content {
+            .card-year:nth-child(1)::after {
+              height: 500px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .about {
+    .container {
+      .btn-container {
+        a {
+          font-size: 0.8rem;
+        }
+      }
+      .experience-school-container {
+        .experience-school-card {
+          .card-content {
+            .card-year:nth-child(1)::after {
+              height: 520px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .about {
+    .container {
+      .btn-container {
+        a {
+          font-size: 0.8rem;
+        }
+      }
+      .experience-school-container {
+        .experience-school-card {
+          .card-content {
+            .card-year:nth-child(1)::after {
+              height: 550px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .about {
+    .container {
+      .btn-container {
+        a {
+          font-size: 0.7rem;
+        }
+      }
+      .experience-school-container {
+        .experience-school-card {
+          .card-content {
+            .card-year:nth-child(1)::after {
+              height: 666px;
+            }
           }
         }
       }

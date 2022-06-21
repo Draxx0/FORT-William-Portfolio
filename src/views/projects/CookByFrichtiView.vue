@@ -10,9 +10,13 @@
         j'ai travaillé sur une application que nous avons réalisé sur Adobe
         XD.<br />
       </p>
-      <img src="../../../public/img/Cook-frichti.png" alt="" class="section-img" />
+      <img
+        src="../../../public/img/Cook-frichti.png"
+        alt=""
+        class="section-img"
+      />
 
-        <div class="links-container">
+      <div class="links-container">
         <router-link to="/projects/Digital-Event-2022" @click="scrollToTop()">
           <i class="fa-solid fa-arrow-left-long"></i>Projets
           Précèdents</router-link
@@ -28,13 +32,10 @@
 <script>
 export default {
   name: "project-Cook-by-Frichti",
-   methods: {
+  methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
     },
-    // goBack() {
-    //   this.$router.push("/projects");
-    // },
   },
 };
 </script>
@@ -46,6 +47,16 @@ export default {
   .container {
     width: 80%;
     margin: 50px auto;
+
+    .section-subtitle {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1334px) {
+  .cookbyfrichti {
+    width: 100%;
   }
 }
 </style>

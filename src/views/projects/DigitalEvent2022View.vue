@@ -65,13 +65,10 @@
 <script>
 export default {
   name: "project-Digital-Event-2022",
-   methods: {
+  methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
     },
-    // goBack() {
-    //   this.$router.push("/projects");
-    // },
   },
 };
 </script>
@@ -83,6 +80,16 @@ export default {
   .container {
     width: 80%;
     margin: 50px auto;
+
+    .section-subtitle {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1334px) {
+  .DigitalEvent {
+    width: 100%;
   }
 }
 </style>

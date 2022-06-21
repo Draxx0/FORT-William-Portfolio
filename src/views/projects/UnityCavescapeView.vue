@@ -63,6 +63,10 @@
   .container {
     width: 80%;
     margin: 50px auto;
+
+    .section-subtitle {
+      margin-bottom: 20px;
+    }
   }
 
   .links-container {
@@ -75,6 +79,12 @@
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1334px) {
+  .Unity {
+    width: 100%;
   }
 }
 </style>

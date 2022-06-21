@@ -19,7 +19,6 @@
 
     <div class="mode-menu-wrap" @click="toggleMode()">
       <i :class="['fa-solid', 'fa-lg', isDarkMode ? 'fa-sun' : 'fa-moon']"></i>
-      <!-- <div :class="{'green': isLightMode}"></div> -->
     </div>
   </div>
 </template>
@@ -74,7 +73,6 @@ export default {
         }
       });
       app.classList.add(color);
-      console.log(app.classList);
     },
 
     hideSettingsMenuOnScroll() {
