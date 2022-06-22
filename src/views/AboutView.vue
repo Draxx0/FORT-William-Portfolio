@@ -20,7 +20,7 @@
 
       <div class="about-me-container">
         <h3 class="about-me-items">
-          <span class="bold">Date de naissance :</span> 10Janvier 2003
+          <span class="bold">Date de naissance :</span> 10 Janvier 2003
         </h3>
 
         <h3 class="about-me-items">
