@@ -4,7 +4,7 @@
       <h1 class="section-title">Me contacter</h1>
 
       <div class="contact-container">
-        <h2 class="contact-title colored">Avez vous une questions ?</h2>
+        <h2 class="contact-title colored">Avez vous une question ?</h2>
         <h3>Je suis disponible</h3>
       </div>
 
