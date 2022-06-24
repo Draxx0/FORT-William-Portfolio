@@ -8,12 +8,7 @@
       <h3>Thèmes</h3>
 
       <div class="colors-container">
-        <div
-          :class="['colors', color]"
-          v-for="color in colorTheme"
-          :key="color"
-          @click="setColor(color)"
-        ></div>
+        <div :class="['colors', color]" v-for="color in colorTheme" :key="color" @click="setColor(color)"></div>
       </div>
     </div>
 
@@ -22,13 +17,11 @@
     </div>
 
     <div class="mobile-nav-wrap" @click="openNavMobile()">
-      <i
-        :class="[
+      <i :class="[
           'fa-solid',
           'fa-lg',
           isOpen ? 'fa-rectangle-xmark' : 'fa-bars',
-        ]"
-      ></i>
+        ]"></i>
     </div>
 
     <div class="mobile-nav-container">
@@ -36,17 +29,11 @@
 
       <div class="mobile-menu">
         <router-link to="/" @click="scrollToTop">
-          <i class="fa-solid fa-house"></i> Accueil</router-link
-        >
-        <router-link to="/about" @click="scrollToTop"
-          ><i class="fa-solid fa-user-graduate"></i>A propos</router-link
-        >
-        <router-link to="/projects" @click="scrollToTop"
-          ><i class="fa-solid fa-folder-open"></i>Projets</router-link
-        >
-        <router-link to="/contact" @click="scrollToTop"
-          ><i class="fa-solid fa-envelope"></i>Contact</router-link
-        >
+          <i class="fa-solid fa-house"></i> Accueil
+        </router-link>
+        <router-link to="/about" @click="scrollToTop"><i class="fa-solid fa-user-graduate"></i>A propos</router-link>
+        <router-link to="/projects" @click="scrollToTop"><i class="fa-solid fa-folder-open"></i>Projets</router-link>
+        <router-link to="/contact" @click="scrollToTop"><i class="fa-solid fa-envelope"></i>Contact</router-link>
       </div>
     </div>
   </div>
@@ -124,8 +111,14 @@ export default {
           themeWrap.style.transform = "translateX(0)";
           const modeWrap = document.querySelector(".mode-menu-wrap");
           modeWrap.style.transform = "translateX(0)";
+          const mobileMenu = document.querySelector('.mobile-nav-wrap')
+          mobileMenu.style.transform = "translateX(0)"
         }
       });
+    },
+
+    scrollToTop() {
+      window.scrollTo(0, 0);
     },
   },
 
