@@ -85,11 +85,23 @@ export default {
 
 @media screen and (max-width: 1334px) {
   .weather-menu {
-    left: 5%;
-    bottom: 0;
+    left: 3%;
+    bottom: 1%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 25px;
+      filter: blur(2px);
+      z-index: -1;
+    }
 
     h1 {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       font-weight: bold;
     }
 

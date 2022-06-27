@@ -182,8 +182,9 @@ export default {
       transform: translateX(15%);
     }
     h3 {
+      transition: all 0.3s ease-in-out;
       margin: 0;
-      font-family: "Popins", sans-serif;
+      font-family: "Montserrat", sans-serif;
       font-weight: 600;
     }
   }
@@ -289,7 +290,7 @@ export default {
       }
       h3 {
         margin: 0;
-        font-family: "Popins", sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-weight: 600;
       }
       a {
@@ -298,7 +299,7 @@ export default {
         gap: 10px;
         margin: 0;
         font-size: 1.2rem;
-        font-family: "Popins", sans-serif;
+        font-family: "Montserrat", sans-serif;
         font-weight: 600;
         text-decoration: none;
       }

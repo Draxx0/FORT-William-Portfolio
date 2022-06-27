@@ -331,6 +331,7 @@ nav {
   .mobile-nav-wrap {
     background-color: $light-mode-nav-background-color;
     color: $light-mode-text-color;
+    transition: 0.2s all ease-in-out;
 
     &:hover {
       box-shadow: inset 0 0 0 2px #000;
@@ -340,6 +341,14 @@ nav {
   .project-card {
     transition: 1s;
     border: 2px solid;
+  }
+
+  .weather-menu::before {
+    background-color: $light-mode-nav-background-color;
+
+    h1 {
+      color: black;
+    }
   }
 
   .form-group {
@@ -402,6 +411,10 @@ nav {
     }
   }
 
+  .weather-menu::before {
+    background-color: $dark-mode-nav-background-color;
+  }
+
   .btn {
     &:hover {
       box-shadow: inset 0 0 0 2px #fff;
@@ -412,7 +425,7 @@ nav {
   .mode-menu-wrap,
   .mobile-nav-wrap {
     background-color: $dark-mode-nav-background-color;
-    transition: 0.5s ease-in-out;
+    transition: 0.2s ease-in-out;
 
     &:hover {
       box-shadow: inset 0 0 0 2px #fff;
