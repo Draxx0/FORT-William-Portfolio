@@ -20,7 +20,7 @@
       <i :class="[
           'fa-solid',
           'fa-lg',
-          isOpen ? 'fa-rectangle-xmark' : 'fa-bars',
+          isOpen ? 'fa-solid fa-circle-xmark' : 'fa-bars',
         ]"></i>
     </div>
 

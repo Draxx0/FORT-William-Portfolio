@@ -1,8 +1,4 @@
 <template>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-  />
   <SettingsMenu />
   <WeatherApi />
   <nav>
@@ -350,24 +346,6 @@ nav {
       color: black;
     }
   }
-
-  .form-group {
-    input,
-    textarea {
-      transition: 1s;
-      background-color: $light-mode-nav-background-color;
-      caret-color: $light-mode-text-color;
-
-      &:focus {
-        font-weight: 600;
-        color: $light-mode-text-color;
-      }
-      &:not(:focus) {
-        font-weight: 600;
-        color: $light-mode-text-color;
-      }
-    }
-  }
   .links-container {
     a {
       color: $light-mode-text-color;
@@ -460,24 +438,6 @@ nav {
     }
   }
 
-  .form-group {
-    input,
-    textarea {
-      transition: 1s;
-      background-color: $dark-mode-nav-background-color;
-      caret-color: $dark-mode-text-color;
-
-      &:focus {
-        font-weight: 600;
-        color: $dark-mode-text-color;
-      }
-      &:not(:focus) {
-        font-weight: 600;
-        color: $dark-mode-text-color;
-      }
-    }
-  }
-
   .themes-container {
     background-color: $dark-mode-nav-background-color !important;
     color: $dark-mode-text-color !important;
@@ -515,8 +475,11 @@ nav {
   .btn {
     background-color: $green;
   }
-  .skill-bar-fill {
-    background-color: $green;
+
+  .skill-level {
+    &::before {
+      background-color: $green;
+    }
   }
   .colored {
     color: $green;
@@ -592,19 +555,6 @@ nav {
     border-radius: 5px;
   }
 
-  form {
-    input,
-    textarea {
-      border: solid 0.5px $border-color;
-    }
-    input:valid {
-      border-color: $green;
-    }
-    textarea:valid {
-      border-color: $green;
-    }
-  }
-
   .links-container {
     a {
       i {
@@ -624,8 +574,10 @@ nav {
   .btn {
     background-color: $orange;
   }
-  .skill-bar-fill {
-    background-color: $orange;
+  .skill-level {
+    &::before {
+      background-color: $orange;
+    }
   }
   .colored {
     color: $orange;
@@ -704,19 +656,6 @@ nav {
     border-radius: 5px;
   }
 
-  form {
-    input,
-    textarea {
-      border: solid 0.5px $border-color;
-    }
-    input:valid {
-      border-color: $orange;
-    }
-    textarea:valid {
-      border-color: $orange;
-    }
-  }
-
   .links-container {
     a {
       i {
@@ -736,8 +675,11 @@ nav {
   .btn {
     background-color: $pink;
   }
-  .skill-bar-fill {
-    background-color: $pink;
+
+  .skill-level {
+    &::before {
+      background-color: $pink;
+    }
   }
   .colored {
     color: $pink;
@@ -809,19 +751,6 @@ nav {
     border-radius: 5px;
   }
 
-  form {
-    input,
-    textarea {
-      border: solid 0.5px $border-color;
-    }
-    input:valid {
-      border-color: $pink;
-    }
-    textarea:valid {
-      border-color: $pink;
-    }
-  }
-
   .links-container {
     a {
       i {
@@ -845,8 +774,11 @@ nav {
   .btn {
     background-color: $red;
   }
-  .skill-bar-fill {
-    background-color: $red;
+
+  .skill-level {
+    &::before {
+      background-color: $red;
+    }
   }
   .colored {
     color: $red;
@@ -922,19 +854,6 @@ nav {
     border-radius: 5px;
   }
 
-  form {
-    input,
-    textarea {
-      border: solid 0.5px $border-color;
-    }
-    input:valid {
-      border-color: $red;
-    }
-    textarea:valid {
-      border-color: $red;
-    }
-  }
-
   .links-container {
     a {
       i {
@@ -954,8 +873,11 @@ nav {
   .btn {
     background-color: $blue;
   }
-  .skill-bar-fill {
-    background-color: $blue;
+
+  .skill-level {
+    &::before {
+      background-color: $blue;
+    }
   }
   .colored {
     color: $blue;
@@ -1031,19 +953,6 @@ nav {
     border-radius: 5px;
   }
 
-  form {
-    input,
-    textarea {
-      border: solid 0.5px $border-color;
-    }
-    input:valid {
-      border-color: $blue;
-    }
-    textarea:valid {
-      border-color: $blue;
-    }
-  }
-
   .links-container {
     a {
       i {
@@ -1063,8 +972,10 @@ nav {
   .btn {
     background-color: $yellow;
   }
-  .skill-bar-fill {
-    background-color: $yellow;
+  .skill-level {
+    &::before {
+      background-color: $yellow;
+    }
   }
   .colored {
     color: $yellow;
@@ -1138,19 +1049,6 @@ nav {
   .video-container {
     border: solid 2px $yellow;
     border-radius: 5px;
-  }
-
-  form {
-    input,
-    textarea {
-      border: solid 0.5px $border-color;
-    }
-    input:valid {
-      border-color: $yellow;
-    }
-    textarea:valid {
-      border-color: $yellow;
-    }
   }
 
   .links-container {

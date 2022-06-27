@@ -49,14 +49,7 @@
                 >{{ skill.name }}
                 <img :src="'img/' + skill.img" class="skill-img" alt=""
               /></span>
-
-              <span class="skill-average">{{ skill.pourcentage }}%</span>
-            </div>
-            <div class="skill-bar">
-              <div
-                class="skill-bar-fill"
-                :style="{ width: skill.pourcentage + '%' }"
-              ></div>
+              <span class="skill-level">{{ skill.level }}</span>
             </div>
           </div>
         </div>
@@ -108,52 +101,52 @@ export default {
       skills: [
         {
           name: "HTML",
-          pourcentage: 85,
+          level: "Avancé",
           img: "html.png",
         },
         {
           name: "CSS",
-          pourcentage: 85,
+          level: "Avancé",
           img: "CSS.png",
         },
         {
           name: "Javascript",
-          pourcentage: 55,
+          level: "Intermédiaire",
           img: "Javascript.png",
         },
         {
           name: "Git",
-          pourcentage: 80,
+          level: "Avancé",
           img: "git.png",
         },
         {
           name: "Vue",
-          pourcentage: 30,
+          level: "Intermédiaire",
           img: "vue.png",
         },
         {
           name: "React",
-          pourcentage: 10,
+          level: "Débutant",
           img: "React.png",
         },
         {
           name: "Angular",
-          pourcentage: 15,
+          level: "Débutant",
           img: "angular.png",
         },
         {
           name: "Node JS",
-          pourcentage: 25,
+          level: "Débutant",
           img: "nodejs.png",
         },
         {
           name: "PHP",
-          pourcentage: 15,
+          level: "Débutant",
           img: "php.png",
         },
         {
           name: "C#",
-          pourcentage: 5,
+          level: "Débutant",
           img: "csharp.svg",
         },
       ],
@@ -284,7 +277,8 @@ export default {
 
         .skill-row {
           display: flex;
-          justify-content: space-between;
+          flex-direction: column;
+          gap: 25px;
           margin-bottom: 10px;
 
           .skill-name {
@@ -293,28 +287,30 @@ export default {
             gap: 15px;
             font-family: "Poppins", sans-serif;
             font-weight: 500;
+            font-size: 1.5rem;
 
             .skill-img {
               width: 30px;
             }
           }
-
-          .skill-average {
+          .skill-level {
+            position: relative;
             font-family: "Poppins", sans-serif;
             font-weight: 500;
+            font-size: 1.3rem;
+            width: fit-content;
+
+            &::before {
+              position: absolute;
+              content: "";
+              display: block;
+              left: 0;
+              bottom: -5px;
+              width: 100%;
+              height: 4px;
+              border-radius: 25px;
+            }
           }
-        }
-
-        .skill-bar {
-          background-color: $border-color;
-          border-radius: 25px;
-          width: 100%;
-          height: 15px;
-        }
-
-        .skill-bar-fill {
-          height: 15px;
-          border-radius: 25px;
         }
       }
     }

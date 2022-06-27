@@ -75,13 +75,6 @@ export default {
           title: "Cook by Frichti",
           path: "Cook-by-Frichti",
         },
-
-        {
-          imgUrl:
-            "https://cdn.discordapp.com/attachments/935969848230547551/983685135952117800/Memphis.png",
-          title: "Memphis Vote",
-          path: "Memphis-Design",
-        },
       ],
       myProjects: [
         {
