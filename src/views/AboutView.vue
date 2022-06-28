@@ -13,7 +13,8 @@
           maquettes<br />
           afin de leur donner vie ! Je suis quelqu’un de perseverant, quand
           je<br />
-          fais des erreurs je lâche rarement avant d’avoir trouvé le pourquoi<br />
+          fais des erreurs je ne lâche jamais avant d'avoir trouvé le
+          pourquoi<br />
           du comment !
         </p>
       </div>
@@ -152,9 +153,9 @@ export default {
       ],
       schools: [
         {
-          year: "2021",
-          type: "Baccalauréat",
-          text: "Baccalauréat Professionnel Système Numérique Option Réseaux informatiques et systèmes communicants - Mention Bien",
+          year: "2021 - 2024",
+          type: "Bachelor",
+          text: "Bachelor Développeur Web ( ESD Bordeaux )",
         },
 
         {
@@ -164,12 +165,18 @@ export default {
         },
 
         {
-          year: "2021 - 2024",
-          type: "Bachelor",
-          text: "Bachelor Développeur Web ( ESD Bordeaux )",
+          year: "2021",
+          type: "Baccalauréat",
+          text: "Baccalauréat Professionnel Système Numérique Option Réseaux informatiques et systèmes communicants - Mention Bien",
         },
       ],
       stages: [
+        {
+          year: "2022",
+          type: "Stage - Agence Backstages",
+          text: "Développement Frontend HTML / CSS / JS refonte du site de l’agence - création du site SAGC",
+        },
+
         {
           year: "2019",
           type: "Stage - Direction générale de l’armement",
@@ -180,12 +187,6 @@ export default {
           year: "2019",
           type: "Stage - Microtek",
           text: "Montages / Dépannages / Déploiements sur sites de matériels informatiques",
-        },
-
-        {
-          year: "2022",
-          type: "Stage - Agence Backstages",
-          text: "Développement Frontend HTML / CSS / JS refonte du site de l’agence - création du site SAGC",
         },
       ],
     };
