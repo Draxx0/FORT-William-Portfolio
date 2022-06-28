@@ -21,9 +21,6 @@
           <i class="fa-solid fa-arrow-left-long"></i>Projets
           Précèdents</router-link
         >
-        <router-link to="/projects/Memphis-Design" @click="scrollToTop()">
-          Projets Suivant<i class="fa-solid fa-arrow-right-long"></i
-        ></router-link>
       </div>
     </div>
   </div>
