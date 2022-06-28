@@ -2,7 +2,7 @@
 
 Voici mon portfolio, vous pouvez retrouver le lien ici :
 
-<a href="https://portfolio-vue-two.vercel.app/#/">Mon Portfolio</a>
+<a href="https://fort-william-portfolio.vercel.app/#/" target="_blank">Mon Portfolio</a>
 
 ## Langages utilisées :
 <div>
@@ -12,4 +12,4 @@ Voici mon portfolio, vous pouvez retrouver le lien ici :
 
 ### API Utilisée :
 
-<a href="https://www.weatherapi.com/"> Weather API </a>
+<a href="https://www.weatherapi.com/" target="_blank"> Weather API </a>
