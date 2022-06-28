@@ -11,7 +11,7 @@
         <p class="text">
           J’ai un attrait pour les jolis visuels, j’aime coder de belle
           maquettes<br />
-          afin de leur donner vie ! je suis quelqu’un de perseverant, quand
+          afin de leur donner vie ! Je suis quelqu’un de perseverant, quand
           je<br />
           fais des erreurs je lâche rarement avant d’avoir trouvé le pourquoi<br />
           du comment !
@@ -28,7 +28,7 @@
         </h3>
 
         <h3 class="about-me-items">
-          <span class="bold">École :</span> École supérieur du digital
+          <span class="bold">École :</span> École supérieure du digital
         </h3>
 
         <h3 class="about-me-items"><span class="bold">Age :</span> 19 ans</h3>
@@ -172,7 +172,7 @@ export default {
       stages: [
         {
           year: "2019",
-          type: "Stage - Direction général de l’armement",
+          type: "Stage - Direction générale de l’armement",
           text: "Aide au déploiement réseau",
         },
 
