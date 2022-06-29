@@ -13,7 +13,9 @@
           sites web modernes ?<br />
           <br />Depuis, je suis rentrée en bachelor et je m’éclate !
         </p>
-        <router-link to="/about" class="btn"> Voir plus</router-link>
+        <router-link to="/about" class="btn" @click="scrollToTop()">
+          Voir plus</router-link
+        >
       </div>
       <div class="right-container">
         <div class="img-wrap">
@@ -30,6 +32,12 @@ export default {
 
   data: function () {
     return {};
+  },
+
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
   },
 };
 </script>
