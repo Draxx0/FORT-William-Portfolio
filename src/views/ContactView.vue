@@ -169,7 +169,7 @@ export default {
 @media screen and (max-width: 1334px) {
   .contact {
     width: 100%;
-    height: 136vh;
+    height: 100%;
 
     .container {
       .contact-me-container {
