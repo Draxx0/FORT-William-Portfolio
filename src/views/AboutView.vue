@@ -38,35 +38,63 @@
       <div class="btn-container">
         <a class="btn" @click="downloadCV()">Télécharger mon CV</a>
         <router-link to="/contact" class="btn" @click="scrollToTop()">
-          Me contacter</router-link
-        >
+          Me contacter</router-link>
       </div>
 
-      <div class="skills-container">
+      <!-- <div class="skills-container">
         <div class="skills-grid">
           <div class="skill" v-for="skill in skills" :key="skill.name">
             <div class="skill-row">
-              <span class="skill-name"
-                >{{ skill.name }}
-                <img :src="'img/' + skill.img" class="skill-img" alt=""
-              /></span>
+              <span class="skill-name">{{ skill.name }}
+                <img :src="'img/' + skill.img" class="skill-img" alt="" /></span>
               <span class="skill-level">{{ skill.level }}</span>
             </div>
           </div>
         </div>
+      </div> -->
+
+      <div class="skills-container">
+        <h3 class="skill-type">Frontend</h3>
+
+        <div class="skills-row">
+          <div class="skill-flex" v-for="skill in skillsFront" :key="skill.name">
+            <span class="skill-name">{{skill.name}}</span>
+            <img :src="'img/' + skill.img" class="skill-img">
+            <span class="skill-hours">{{skill.hours}}</span>
+          </div>
+        </div>
       </div>
+
+      <div class="skills-container">
+        <h3 class="skill-type">Backend</h3>
+
+        <div class="skills-row">
+          <div class="skill-flex" v-for="skill in skillsBack" :key="skill.name">
+            <span class="skill-name">{{skill.name}}</span>
+            <img :src="'img/' + skill.img" class="skill-img">
+            <span class="skill-hours">{{skill.hours}}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-container">
+        <h3 class="skill-type">Autre compétences</h3>
+
+        <div class="skills-row">
+          <div class="skill-flex" v-for="skill in otherSkills" :key="skill.name">
+            <span class="skill-name">{{skill.name}}</span>
+            <img :src="'img/' + skill.img" class="skill-img">
+              <span class="skill-hours">{{skill.hours}}</span>
+          </div>
+        </div>
+      </div>
+
       <div class="experience-school-container">
         <h3 class="experience-school-title">Formations</h3>
         <div class="experience-school-card">
-          <div
-            class="card-content"
-            v-for="school in schools"
-            :key="school.year"
-          >
-            <span class="card-year"
-              ><i class="fa-solid fa-calendar fa-lg"></i>
-              {{ school.year }}</span
-            >
+          <div class="card-content" v-for="school in schools" :key="school.year">
+            <span class="card-year"><i class="fa-solid fa-calendar fa-lg"></i>
+              {{ school.year }}</span>
             <div class="card-info">
               <span class="card-type">{{ school.type }}</span>
               <span class="card-text">{{ school.text }}</span>
@@ -77,9 +105,7 @@
         <h3 class="experience-school-title">Expériences</h3>
         <div class="experience-school-card">
           <div class="card-content" v-for="stage in stages" :key="stage.year">
-            <span class="card-year"
-              ><i class="fa-solid fa-calendar fa-lg"></i> {{ stage.year }}</span
-            >
+            <span class="card-year"><i class="fa-solid fa-calendar fa-lg"></i> {{ stage.year }}</span>
             <div class="card-info">
               <span class="card-type">{{ stage.type }}</span>
               <span class="card-text">{{ stage.text }}</span>
@@ -102,55 +128,94 @@ export default {
       skills: [
         {
           name: "HTML",
-          level: "Avancé",
+          type: "front", 
           img: "html.png",
+          hours: "125h"
         },
         {
           name: "CSS",
-          level: "Avancé",
+          type: "front", 
           img: "CSS.png",
+          hours: "125h"
         },
         {
           name: "Javascript",
-          level: "Intermédiaire",
+          type: "front", 
           img: "Javascript.png",
+          hours: "65h"
+        },
+        {
+          name: "Typescript",
+          type: "front", 
+          img: "typescript.png",
+          hours: "10h"
         },
         {
           name: "Git",
-          level: "Avancé",
+          type: "other", 
           img: "git.png",
         },
         {
           name: "Vue",
-          level: "Intermédiaire",
+          type: "front", 
           img: "vue.png",
+          hours: "45h"
         },
         {
           name: "React",
-          level: "Débutant",
+          type: "front",
           img: "React.png",
+          hours: "5h"
         },
         {
           name: "Angular",
-          level: "Débutant",
+          type: "front",
           img: "angular.png",
+          hours: "10h"
         },
         {
           name: "Node JS",
-          level: "Débutant",
+          type: "back",
           img: "nodejs.png",
+          hours: "10h"
         },
         {
           name: "PHP",
-          level: "Débutant",
+          type: "back",
           img: "php.png",
+          hours: "20h"
         },
         {
           name: "C#",
-          level: "Débutant",
+          type: "other",
           img: "csharp.svg",
+          hours: "5h"
+        },
+
+        {
+          name: "Figma",
+          type: "other",
+          img: "figma.png",
+          hours: "35h"
+        },
+
+        {
+          name: "Adobe XD",
+          type: "other",
+          img: "adobexd.png",
+          hours: "10h"
+        },
+        
+        {
+          name: "Photoshop",
+          type: "other",
+          img: "photoshop.png",
+          hours: "15h"
         },
       ],
+      skillsFront: [],
+      skillsBack: [],
+      otherSkills: [],
       schools: [
         {
           year: "2021 - 2024",
@@ -203,10 +268,36 @@ export default {
       window.scrollTo(0, 0);
     },
   },
+
+  mounted() {
+    this.skillsFront = this.skills.filter(skill => skill.type === "front");
+    this.skillsBack = this.skills.filter(skill => skill.type === "back");
+    this.otherSkills = this.skills.filter(skill => skill.type === "other");
+
+    console.log(this.skillsBack);
+  }
 };
 </script>
 
 <style lang="scss">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @import "@/styles/variables.scss";
 
 .about {
@@ -229,94 +320,126 @@ export default {
       .text {
         font-family: "Poppins", sans-serif;
       }
-    }
-
-    .about-me-container {
-      display: flex;
-      flex-direction: column;
-      margin: 50px 0 45px 0;
-      gap: 25px;
-
-      .about-me-items {
-        position: relative;
-        font-family: "Poppins", sans-serif;
-        font-weight: 500;
-
-        &::before {
-          position: absolute;
-          left: 0;
-          bottom: -5px;
-          content: "";
-          display: block;
-          width: 500px;
-          height: 1px;
-          background-color: $border-color;
         }
-      }
-    }
-
-    .btn-container {
-      display: flex;
-      gap: 50px;
-
-      a {
-        margin: 0;
-      }
-    }
-
-    .skills-container {
-      display: flex;
-      gap: 25px;
-      width: 100%;
-      margin-top: 100px;
-
-      .skills-grid {
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 25px;
-
-        .skill-row {
+    
+        .about-me-container {
           display: flex;
           flex-direction: column;
+          margin: 50px 0 45px 0;
           gap: 25px;
-          margin-bottom: 10px;
-
-          .skill-name {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-family: "Poppins", sans-serif;
-            font-weight: 500;
-            font-size: 1.5rem;
-
-            .skill-img {
-              width: 30px;
-            }
-          }
-          .skill-level {
+    
+          .about-me-items {
             position: relative;
             font-family: "Poppins", sans-serif;
             font-weight: 500;
-            font-size: 1.3rem;
-            width: fit-content;
-
+    
             &::before {
               position: absolute;
-              content: "";
-              display: block;
               left: 0;
               bottom: -5px;
-              width: 100%;
-              height: 4px;
-              border-radius: 25px;
+              content: "";
+              display: block;
+              width: 500px;
+              height: 1px;
+              background-color: $border-color;
             }
           }
         }
-      }
-    }
+    
+        .btn-container {
+          display: flex;
+          gap: 50px;
+    
+          a {
+            margin: 0;
+          }
+        }
+    
+        .skills-container {
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+          width: 100%;
+          margin-top: 100px;
+    
+    
+          .skill-type {
+            position: relative;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-size: 36px;
+            width: fit-content;
+    
+            &::before {
+              position: absolute;
+              left: 0;
+              bottom: -5px;
+              content: "";
+              display: block;
+              width: 30%;
+              height: 4px;
+            }
+          }
+    
+    
+          .skills-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            grid-gap: 100px;
+            margin-top: 50px;
+    
+            .skill-flex {
+              display: flex;
+              align-items: center;
+              gap: 25px;
+    
+              .skill-name {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                font-family: "Poppins", sans-serif;
+                font-weight: 500;
+                font-size: 1.5rem;
+              }
 
-    .experience-school-container {
+               .skill-hours {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                font-family: "Poppins", sans-serif;
+                font-weight: 500;
+                font-size: 1.5rem;
+              }
+    
+              .skill-img {
+                width: 48px;
+                height: 48px;
+              }
+    
+              .skill-level {
+                position: relative;
+                font-family: "Poppins", sans-serif;
+                font-weight: 500;
+                font-size: 1.3rem;
+                width: fit-content;
+    
+                &::before {
+                  position: absolute;
+                  content: "";
+                  display: block;
+                  left: 0;
+                  bottom: -5px;
+                  width: 100%;
+                  height: 4px;
+                  border-radius: 25px;
+                }
+              }
+            }
+          }
+        }
+
+      .experience-school-container {
       display: flex;
       flex-direction: column;
 

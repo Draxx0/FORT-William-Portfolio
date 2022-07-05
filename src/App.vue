@@ -43,6 +43,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 //----------------------------------------------------- IMPORTS -----------------------------------------------------
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
@@ -97,6 +98,7 @@ nav {
 
   .logo {
     width: auto;
+
     h1 {
       position: relative;
       font-family: "Montserrat Alternates", sans-serif;
@@ -226,6 +228,7 @@ nav {
 
 .stacks-container {
   margin-bottom: 100px;
+
   .section-list {
     list-style: none;
     padding: 0;
@@ -259,6 +262,7 @@ nav {
     text-decoration: none;
     gap: 15px;
     font-size: 1.3rem;
+
     i {
       transition: 0.3s ease-in-out;
     }
@@ -269,6 +273,7 @@ nav {
           transform: translateX(-10px);
         }
       }
+
       &:nth-child(2) {
         i {
           transform: translateX(10px);
@@ -346,6 +351,7 @@ nav {
       color: black;
     }
   }
+
   .links-container {
     a {
       color: $light-mode-text-color;
@@ -422,25 +428,26 @@ nav {
   .title {
     color: $dark-mode-text-color;
   }
+
   .text {
     color: $dark-mode-text-color;
   }
 
   .experience-school-card {
-    background-color: $dark-mode-background-color !important;
+    background-color: $dark-mode-background-color  !important;
     color: $dark-mode-text-color;
   }
 
   .contact-me-content {
     a {
       transition: 1s;
-      color: $dark-mode-text-color !important;
+      color: $dark-mode-text-color  !important;
     }
   }
 
   .themes-container {
-    background-color: $dark-mode-nav-background-color !important;
-    color: $dark-mode-text-color !important;
+    background-color: $dark-mode-nav-background-color  !important;
+    color: $dark-mode-text-color  !important;
   }
 
   .links-container {
@@ -476,11 +483,15 @@ nav {
     background-color: $green;
   }
 
-  .skill-level {
-    &::before {
-      background-color: $green;
-    }
+  .skill-type::before {
+    background-color: $green;
   }
+
+  .skill-hours {
+    color: $green;
+  }
+
+
   .colored {
     color: $green;
   }
@@ -493,6 +504,7 @@ nav {
     &::before {
       background-color: $green;
     }
+
     &::after {
       background-color: $green;
     }
@@ -510,6 +522,7 @@ nav {
     &::before {
       background-color: $green;
     }
+
     &::after {
       background-color: $green;
     }
@@ -520,6 +533,7 @@ nav {
       &:hover {
         color: $green;
       }
+
       &.router-link-exact-active {
         color: $green;
       }
@@ -532,6 +546,7 @@ nav {
         border-top: 4px solid $green;
         border-left: 4px solid $green;
       }
+
       &::after {
         border-bottom: 4px solid $green;
         border-right: 4px solid $green;
@@ -544,6 +559,7 @@ nav {
       border-top: 4px solid $green;
       border-left: 4px solid $green;
     }
+
     &::after {
       border-bottom: 4px solid $green;
       border-right: 4px solid $green;
@@ -574,11 +590,15 @@ nav {
   .btn {
     background-color: $orange;
   }
-  .skill-level {
-    &::before {
-      background-color: $orange;
-    }
+
+  .skill-type::before {
+    background-color: $green;
   }
+
+  .skill-hours {
+    color: $orange;
+  }
+
   .colored {
     color: $orange;
   }
@@ -587,6 +607,7 @@ nav {
     &::before {
       background-color: $orange;
     }
+
     &::after {
       background-color: $orange;
     }
@@ -597,6 +618,7 @@ nav {
       &:hover {
         color: $green;
       }
+
       &::before {
         background-color: $orange;
       }
@@ -611,6 +633,7 @@ nav {
     &::before {
       background-color: $orange;
     }
+
     &::after {
       background-color: $orange;
     }
@@ -621,6 +644,7 @@ nav {
       &:hover {
         color: $orange;
       }
+
       &.router-link-exact-active {
         color: $orange;
       }
@@ -633,6 +657,7 @@ nav {
         border-top: 4px solid $orange;
         border-left: 4px solid $orange;
       }
+
       &::after {
         border-bottom: 4px solid $orange;
         border-right: 4px solid $orange;
@@ -645,6 +670,7 @@ nav {
       border-top: 4px solid $orange;
       border-left: 4px solid $orange;
     }
+
     &::after {
       border-bottom: 4px solid $orange;
       border-right: 4px solid $orange;
@@ -676,11 +702,14 @@ nav {
     background-color: $pink;
   }
 
-  .skill-level {
-    &::before {
-      background-color: $pink;
-    }
+  .skill-type::before {
+    background-color: $pink;
   }
+
+  .skill-hours {
+    color: $pink;
+  }
+
   .colored {
     color: $pink;
   }
@@ -689,6 +718,7 @@ nav {
     &::before {
       background-color: $pink;
     }
+
     &::after {
       background-color: $pink;
     }
@@ -706,6 +736,7 @@ nav {
     &::before {
       background-color: $pink;
     }
+
     &::after {
       background-color: $pink;
     }
@@ -716,6 +747,7 @@ nav {
       &:hover {
         color: $pink;
       }
+
       &.router-link-exact-active {
         color: $pink;
       }
@@ -728,6 +760,7 @@ nav {
         border-top: 4px solid $pink;
         border-left: 4px solid $pink;
       }
+
       &::after {
         border-bottom: 4px solid $pink;
         border-right: 4px solid $pink;
@@ -740,6 +773,7 @@ nav {
       border-top: 4px solid $pink;
       border-left: 4px solid $pink;
     }
+
     &::after {
       border-bottom: 4px solid $pink;
       border-right: 4px solid $pink;
@@ -775,11 +809,14 @@ nav {
     background-color: $red;
   }
 
-  .skill-level {
-    &::before {
-      background-color: $red;
-    }
+  .skill-type::before {
+    background-color: $red;
   }
+
+  .skill-hours {
+    color: $red;
+  }
+
   .colored {
     color: $red;
   }
@@ -788,6 +825,7 @@ nav {
     &::before {
       background-color: $red;
     }
+
     &::after {
       background-color: $red;
     }
@@ -805,6 +843,7 @@ nav {
     &::before {
       background-color: $red;
     }
+
     &::after {
       background-color: $red;
     }
@@ -815,6 +854,7 @@ nav {
       &:hover {
         color: $red;
       }
+
       &.router-link-exact-active {
         color: $red;
       }
@@ -827,6 +867,7 @@ nav {
         border-top: 4px solid $red;
         border-left: 4px solid $red;
       }
+
       &::after {
         border-bottom: 4px solid $red;
         border-right: 4px solid $red;
@@ -843,6 +884,7 @@ nav {
       border-top: 4px solid $red;
       border-left: 4px solid $red;
     }
+
     &::after {
       border-bottom: 4px solid $red;
       border-right: 4px solid $red;
@@ -874,11 +916,14 @@ nav {
     background-color: $blue;
   }
 
-  .skill-level {
-    &::before {
-      background-color: $blue;
-    }
+  .skill-type::before {
+    background-color: $blue;
   }
+
+  .skill-hours {
+    color: $blue;
+  }
+
   .colored {
     color: $blue;
   }
@@ -887,6 +932,7 @@ nav {
     &::before {
       background-color: $blue;
     }
+
     &::after {
       background-color: $blue;
     }
@@ -908,6 +954,7 @@ nav {
     &::before {
       background-color: $blue;
     }
+
     &::after {
       background-color: $blue;
     }
@@ -918,6 +965,7 @@ nav {
       &:hover {
         color: $blue;
       }
+
       &.router-link-exact-active {
         color: $blue;
       }
@@ -930,6 +978,7 @@ nav {
         border-top: 4px solid $blue;
         border-left: 4px solid $blue;
       }
+
       &::after {
         border-bottom: 4px solid $blue;
         border-right: 4px solid $blue;
@@ -942,6 +991,7 @@ nav {
       border-top: 4px solid $blue;
       border-left: 4px solid $blue;
     }
+
     &::after {
       border-bottom: 4px solid $blue;
       border-right: 4px solid $blue;
@@ -972,10 +1022,13 @@ nav {
   .btn {
     background-color: $yellow;
   }
-  .skill-level {
-    &::before {
-      background-color: $yellow;
-    }
+
+  .skill-type::before {
+    background-color: $yellow;
+  }
+
+  .skill-hours {
+    color: $yellow;
   }
   .colored {
     color: $yellow;
