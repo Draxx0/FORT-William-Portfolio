@@ -38,7 +38,8 @@
       <div class="btn-container">
         <a class="btn" @click="downloadCV()">Télécharger mon CV</a>
         <router-link to="/contact" class="btn" @click="scrollToTop()">
-          Me contacter</router-link>
+          Me contacter</router-link
+        >
       </div>
 
       <!-- <div class="skills-container">
@@ -57,10 +58,14 @@
         <h3 class="skill-type">Frontend</h3>
 
         <div class="skills-row">
-          <div class="skill-flex" v-for="skill in skillsFront" :key="skill.name">
-            <span class="skill-name">{{skill.name}}</span>
-            <img :src="'img/' + skill.img" class="skill-img">
-            <span class="skill-hours">{{skill.hours}}</span>
+          <div
+            class="skill-flex"
+            v-for="skill in skillsFront"
+            :key="skill.name"
+          >
+            <span class="skill-name">{{ skill.name }}</span>
+            <img :src="'img/' + skill.img" class="skill-img" />
+            <span class="skill-hours">{{ skill.hours }}</span>
           </div>
         </div>
       </div>
@@ -70,9 +75,9 @@
 
         <div class="skills-row">
           <div class="skill-flex" v-for="skill in skillsBack" :key="skill.name">
-            <span class="skill-name">{{skill.name}}</span>
-            <img :src="'img/' + skill.img" class="skill-img">
-            <span class="skill-hours">{{skill.hours}}</span>
+            <span class="skill-name">{{ skill.name }}</span>
+            <img :src="'img/' + skill.img" class="skill-img" />
+            <span class="skill-hours">{{ skill.hours }}</span>
           </div>
         </div>
       </div>
@@ -81,10 +86,14 @@
         <h3 class="skill-type">Autre compétences</h3>
 
         <div class="skills-row">
-          <div class="skill-flex" v-for="skill in otherSkills" :key="skill.name">
-            <span class="skill-name">{{skill.name}}</span>
-            <img :src="'img/' + skill.img" class="skill-img">
-              <span class="skill-hours">{{skill.hours}}</span>
+          <div
+            class="skill-flex"
+            v-for="skill in otherSkills"
+            :key="skill.name"
+          >
+            <span class="skill-name">{{ skill.name }}</span>
+            <img :src="'img/' + skill.img" class="skill-img" />
+            <span class="skill-hours">{{ skill.hours }}</span>
           </div>
         </div>
       </div>
@@ -92,9 +101,15 @@
       <div class="experience-school-container">
         <h3 class="experience-school-title">Formations</h3>
         <div class="experience-school-card">
-          <div class="card-content" v-for="school in schools" :key="school.year">
-            <span class="card-year"><i class="fa-solid fa-calendar fa-lg"></i>
-              {{ school.year }}</span>
+          <div
+            class="card-content"
+            v-for="school in schools"
+            :key="school.year"
+          >
+            <span class="card-year"
+              ><i class="fa-solid fa-calendar fa-lg"></i>
+              {{ school.year }}</span
+            >
             <div class="card-info">
               <span class="card-type">{{ school.type }}</span>
               <span class="card-text">{{ school.text }}</span>
@@ -105,7 +120,9 @@
         <h3 class="experience-school-title">Expériences</h3>
         <div class="experience-school-card">
           <div class="card-content" v-for="stage in stages" :key="stage.year">
-            <span class="card-year"><i class="fa-solid fa-calendar fa-lg"></i> {{ stage.year }}</span>
+            <span class="card-year"
+              ><i class="fa-solid fa-calendar fa-lg"></i> {{ stage.year }}</span
+            >
             <div class="card-info">
               <span class="card-type">{{ stage.type }}</span>
               <span class="card-text">{{ stage.text }}</span>
@@ -128,89 +145,89 @@ export default {
       skills: [
         {
           name: "HTML",
-          type: "front", 
+          type: "front",
           img: "html.png",
-          hours: "125h"
+          hours: "125h",
         },
         {
           name: "CSS",
-          type: "front", 
+          type: "front",
           img: "CSS.png",
-          hours: "125h"
+          hours: "125h",
         },
         {
           name: "Javascript",
-          type: "front", 
+          type: "front",
           img: "Javascript.png",
-          hours: "65h"
+          hours: "65h",
         },
         {
           name: "Typescript",
-          type: "front", 
+          type: "front",
           img: "typescript.png",
-          hours: "10h"
+          hours: "10h",
         },
         {
           name: "Git",
-          type: "other", 
+          type: "other",
           img: "git.png",
         },
         {
           name: "Vue",
-          type: "front", 
+          type: "front",
           img: "vue.png",
-          hours: "45h"
+          hours: "45h",
         },
         {
           name: "React",
           type: "front",
           img: "React.png",
-          hours: "5h"
+          hours: "5h",
         },
         {
           name: "Angular",
           type: "front",
           img: "angular.png",
-          hours: "10h"
+          hours: "10h",
         },
         {
           name: "Node JS",
           type: "back",
           img: "nodejs.png",
-          hours: "10h"
+          hours: "10h",
         },
         {
           name: "PHP",
           type: "back",
           img: "php.png",
-          hours: "20h"
+          hours: "20h",
         },
         {
           name: "C#",
           type: "other",
           img: "csharp.svg",
-          hours: "5h"
+          hours: "5h",
         },
 
         {
           name: "Figma",
           type: "other",
           img: "figma.png",
-          hours: "35h"
+          hours: "35h",
         },
 
         {
           name: "Adobe XD",
           type: "other",
           img: "adobexd.png",
-          hours: "10h"
+          hours: "10h",
         },
-        
+
         {
           name: "Photoshop",
           type: "other",
           img: "photoshop.png",
-          hours: "15h"
+          hours: "15h",
         },
       ],
       skillsFront: [],
@@ -270,34 +287,16 @@ export default {
   },
 
   mounted() {
-    this.skillsFront = this.skills.filter(skill => skill.type === "front");
-    this.skillsBack = this.skills.filter(skill => skill.type === "back");
-    this.otherSkills = this.skills.filter(skill => skill.type === "other");
+    this.skillsFront = this.skills.filter((skill) => skill.type === "front");
+    this.skillsBack = this.skills.filter((skill) => skill.type === "back");
+    this.otherSkills = this.skills.filter((skill) => skill.type === "other");
 
     console.log(this.skillsBack);
-  }
+  },
 };
 </script>
 
 <style lang="scss">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @import "@/styles/variables.scss";
 
 .about {
@@ -320,126 +319,124 @@ export default {
       .text {
         font-family: "Poppins", sans-serif;
       }
+    }
+
+    .about-me-container {
+      display: flex;
+      flex-direction: column;
+      margin: 50px 0 45px 0;
+      gap: 25px;
+
+      .about-me-items {
+        position: relative;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+
+        &::before {
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          content: "";
+          display: block;
+          width: 500px;
+          height: 1px;
+          background-color: $border-color;
         }
-    
-        .about-me-container {
+      }
+    }
+
+    .btn-container {
+      display: flex;
+      gap: 50px;
+
+      a {
+        margin: 0;
+      }
+    }
+
+    .skills-container {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      width: 100%;
+      margin-top: 100px;
+
+      .skill-type {
+        position: relative;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-size: 36px;
+        width: fit-content;
+
+        &::before {
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          content: "";
+          display: block;
+          width: 30%;
+          height: 4px;
+        }
+      }
+
+      .skills-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 100px;
+        margin-top: 50px;
+
+        .skill-flex {
           display: flex;
-          flex-direction: column;
-          margin: 50px 0 45px 0;
+          align-items: center;
           gap: 25px;
-    
-          .about-me-items {
+
+          .skill-name {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-size: 1.5rem;
+          }
+
+          .skill-hours {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-size: 1.5rem;
+          }
+
+          .skill-img {
+            width: 48px;
+            height: 48px;
+          }
+
+          .skill-level {
             position: relative;
             font-family: "Poppins", sans-serif;
             font-weight: 500;
-    
-            &::before {
-              position: absolute;
-              left: 0;
-              bottom: -5px;
-              content: "";
-              display: block;
-              width: 500px;
-              height: 1px;
-              background-color: $border-color;
-            }
-          }
-        }
-    
-        .btn-container {
-          display: flex;
-          gap: 50px;
-    
-          a {
-            margin: 0;
-          }
-        }
-    
-        .skills-container {
-          display: flex;
-          flex-direction: column;
-          gap: 25px;
-          width: 100%;
-          margin-top: 100px;
-    
-    
-          .skill-type {
-            position: relative;
-            font-family: "Poppins", sans-serif;
-            font-weight: 500;
-            font-size: 36px;
+            font-size: 1.3rem;
             width: fit-content;
-    
+
             &::before {
               position: absolute;
-              left: 0;
-              bottom: -5px;
               content: "";
               display: block;
-              width: 30%;
+              left: 0;
+              bottom: -5px;
+              width: 100%;
               height: 4px;
-            }
-          }
-    
-    
-          .skills-row {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: auto;
-            grid-gap: 100px;
-            margin-top: 50px;
-    
-            .skill-flex {
-              display: flex;
-              align-items: center;
-              gap: 25px;
-    
-              .skill-name {
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                font-family: "Poppins", sans-serif;
-                font-weight: 500;
-                font-size: 1.5rem;
-              }
-
-               .skill-hours {
-                display: flex;
-                align-items: center;
-                gap: 15px;
-                font-family: "Poppins", sans-serif;
-                font-weight: 500;
-                font-size: 1.5rem;
-              }
-    
-              .skill-img {
-                width: 48px;
-                height: 48px;
-              }
-    
-              .skill-level {
-                position: relative;
-                font-family: "Poppins", sans-serif;
-                font-weight: 500;
-                font-size: 1.3rem;
-                width: fit-content;
-    
-                &::before {
-                  position: absolute;
-                  content: "";
-                  display: block;
-                  left: 0;
-                  bottom: -5px;
-                  width: 100%;
-                  height: 4px;
-                  border-radius: 25px;
-                }
-              }
+              border-radius: 25px;
             }
           }
         }
+      }
+    }
 
-      .experience-school-container {
+    .experience-school-container {
       display: flex;
       flex-direction: column;
 
@@ -517,6 +514,12 @@ export default {
   }
 }
 
+@media screen and (max-width: 1117px) {
+  .about .container .skills-container .skills-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media screen and (max-width: 1334px) {
   .about {
     width: 100%;
@@ -555,6 +558,13 @@ export default {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1117px) {
+  .about .container .skills-container .skills-row {
+    display: flex;
+    flex-direction: column;
   }
 }
 

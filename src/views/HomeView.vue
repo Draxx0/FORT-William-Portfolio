@@ -122,6 +122,12 @@ export default {
   }
 }
 
+@media screen and (min-width: 2000px) {
+  .home {
+    margin-bottom: 388px;
+  }
+}
+
 @media screen and (max-width: 1500px) {
   .home {
     .container {
