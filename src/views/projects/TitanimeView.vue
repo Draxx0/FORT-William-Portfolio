@@ -9,7 +9,7 @@
         J'ai donc décider de partir de cette bases afin de les réadapter au
         format desktop et j'ai crée plusieurs pages tout en restant dans le
         thèmes de départ. Le site à la forme d'un site de straming reprenant les
-        codes de bases, dans lequel il est possible de regarder des animes, mais
+        codes de bases, sur lequel il est possible de regarder des animes, mais
         également des films d'anime<br /><br />
       </p>
 
