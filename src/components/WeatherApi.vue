@@ -29,9 +29,7 @@ export default {
       navigator.geolocation.getCurrentPosition((position) => {
         this.userLat = position.coords.latitude.toString();
         this.userLong = position.coords.longitude.toString();
-        console.log("Log pendant fonction:", this.userLat, this.userLong);
         const url = `https://api.weatherapi.com/v1/current.json?key=11cd5cbd029b4c72b0e75746220806&q=${this.userLat},${this.userLong}`;
-        console.log(url);
         fetch(url)
           .then((response) => response.json())
           .then((data) => {
@@ -39,7 +37,6 @@ export default {
             this.weather.hour = data.current.condition.text;
             this.weather.temp = data.current.temp_c;
             this.weather.icon = data.current.condition.icon;
-            console.log(data);
           });
       });
     },

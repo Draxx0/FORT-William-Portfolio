@@ -4,7 +4,7 @@
       <div class="left-container">
         <h1 class="title">
           Bonjour, je suis <span class="art-text">William</span><br />
-          <span class="colored">Front End Developper</span>
+          <span class="colored txt-anim"></span>
         </h1>
         <p class="text">
           Étudiant en première année de développement web à l’école supérieure
@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import Typewriter from 'typewriter-effect/dist/core';
 export default {
   name: "HomeView",
 
@@ -39,6 +40,30 @@ export default {
       window.scrollTo(0, 0);
     },
   },
+
+  mounted(){
+    const txtAnim = document.querySelector('.txt-anim')
+    console.log(txtAnim);
+
+    new Typewriter(txtAnim, {
+      loop: true,
+      deleteSpeed: 20,
+      delay: 75,
+    })
+      .typeString('Développeur Front End')
+      .pauseFor(2500)
+      .deleteChars(9)
+      .typeString('<span style="color: #2fe0e0;">CSS</span>')
+      .pauseFor(2500)
+      .deleteChars(3)
+      .typeString('<span style="color: #c98530;">JavaScript</span>')
+      .pauseFor(2500)
+      .deleteAll()
+      .typeString('Heureux de vous rencontrer !')
+      .pauseFor(2500)
+      .deleteAll()
+      .start();
+  }
 };
 </script>
 
