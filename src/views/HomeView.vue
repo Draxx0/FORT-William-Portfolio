@@ -158,9 +158,21 @@ export default {
   }
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (max-width: 2560px) {
+  .home {
+    margin-bottom: 561px;
+  }
+}
+
+@media screen and (max-width: 2000px) {
   .home {
     margin-bottom: 388px;
+  }
+}
+
+@media screen and (max-width: 1920px) {
+  .home {
+    margin-bottom: 208px;
   }
 }
 
