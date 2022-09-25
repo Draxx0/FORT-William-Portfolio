@@ -53,7 +53,6 @@
 </template>
 
 <script>
-import { gsap } from "gsap";
 export default {
   name: "SettingsMenu",
 
@@ -138,12 +137,6 @@ export default {
 
   mounted() {
     this.hideSettingsMenuOnScroll();
-
-    gsap.from(".settings-menu", {
-      duration: 0.5,
-      opacity: 0,
-      y: 50,
-    });
   },
 };
 </script>
