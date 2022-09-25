@@ -42,6 +42,9 @@
 </template>
 
 <script>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 export default {
   name: "ProjectsView",
 
@@ -97,6 +100,26 @@ export default {
     scrollToTop() {
       window.scrollTo(0, 0);
     },
+  },
+
+  mounted() {
+    const projectsSection = document.querySelectorAll(".projects-section");
+
+    gsap.from(".section-title", {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+    });
+
+    gsap.from(projectsSection, {
+      scrollTrigger: {
+        trigger: projectsSection,
+        start: "top 80%",
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+    });
   },
 };
 </script>

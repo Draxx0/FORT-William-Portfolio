@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import { gsap } from "gsap";
 import Typewriter from 'typewriter-effect/dist/core';
 export default {
   name: "HomeView",
@@ -42,6 +43,8 @@ export default {
   },
 
   mounted(){
+    gsap.from(".container", {y: -50, duration: 1.5, ease: "power4.out",});
+
     const txtAnim = document.querySelector('.txt-anim')
     console.log(txtAnim);
 

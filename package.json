@@ -10,6 +10,7 @@
   "dependencies": {
     "core-js": "^3.8.3",
     "emailjs": "^4.0.0",
+    "gsap": "^3.11.1",
     "typewriter-effect": "^2.19.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"

@@ -42,8 +42,25 @@
 </template>
 
 <script>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 export default {
   name: "ContactView",
+
+  mounted() {
+    const contactContainer = document.querySelector(".container");
+
+    gsap.from(contactContainer, {
+      scrollTrigger: {
+        trigger: contactContainer,
+        start: "top 80%",
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+    });
+  },
 };
 </script>
 

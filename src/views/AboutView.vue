@@ -1,58 +1,49 @@
 <template>
   <div class="about">
     <div class="container">
-      <h1 class="section-title">Qui-suis-je ?</h1>
+      <div class="about-header">
+        <h1 class="section-title">Qui-suis-je ?</h1>
 
-      <div class="introduction-container">
-        <h2 class="title">
-          Je suis FORT William <span class="colored"> Frontend Developper</span>
-        </h2>
+        <div class="introduction-container">
+          <h2 class="title">
+            Je suis FORT William
+            <span class="colored"> Frontend Developper</span>
+          </h2>
 
-        <p class="text">
-          J’ai un attrait pour les jolis visuels, j’aime coder de belle
-          maquettes<br />
-          afin de leur donner vie ! Je suis quelqu’un de perseverant, quand
-          je<br />
-          fais des erreurs je ne lâche jamais avant d'avoir trouvé le
-          pourquoi<br />
-          du comment !
-        </p>
-      </div>
-
-      <div class="about-me-container">
-        <h3 class="about-me-items">
-          <span class="bold">Date de naissance :</span> 10 Janvier 2003
-        </h3>
-
-        <h3 class="about-me-items">
-          <span class="bold">Ville d'habitation :</span> Bordeaux
-        </h3>
-
-        <h3 class="about-me-items">
-          <span class="bold">École :</span> École supérieure du digital
-        </h3>
-
-        <h3 class="about-me-items"><span class="bold">Age :</span> 19 ans</h3>
-      </div>
-
-      <div class="btn-container">
-        <a class="btn" @click="downloadCV()">Télécharger mon CV</a>
-        <router-link to="/contact" class="btn" @click="scrollToTop()">
-          Me contacter</router-link
-        >
-      </div>
-
-      <!-- <div class="skills-container">
-        <div class="skills-grid">
-          <div class="skill" v-for="skill in skills" :key="skill.name">
-            <div class="skill-row">
-              <span class="skill-name">{{ skill.name }}
-                <img :src="'img/' + skill.img" class="skill-img" alt="" /></span>
-              <span class="skill-level">{{ skill.level }}</span>
-            </div>
-          </div>
+          <p class="text">
+            J’ai un attrait pour les jolis visuels, j’aime coder de belle
+            maquettes<br />
+            afin de leur donner vie ! Je suis quelqu’un de perseverant, quand
+            je<br />
+            fais des erreurs je ne lâche jamais avant d'avoir trouvé le
+            pourquoi<br />
+            du comment !
+          </p>
         </div>
-      </div> -->
+
+        <div class="about-me-container">
+          <h3 class="about-me-items">
+            <span class="bold">Date de naissance :</span> 10 Janvier 2003
+          </h3>
+
+          <h3 class="about-me-items">
+            <span class="bold">Ville d'habitation :</span> Bordeaux
+          </h3>
+
+          <h3 class="about-me-items">
+            <span class="bold">École :</span> École supérieure du digital
+          </h3>
+
+          <h3 class="about-me-items"><span class="bold">Age :</span> 19 ans</h3>
+        </div>
+
+        <div class="btn-container">
+          <a class="btn" @click="downloadCV()">Télécharger mon CV</a>
+          <router-link to="/contact" class="btn" @click="scrollToTop()">
+            Me contacter</router-link
+          >
+        </div>
+      </div>
 
       <div class="skills-container">
         <h3 class="skill-type">Frontend</h3>
@@ -137,6 +128,9 @@
 </template>
 
 <script>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 export default {
   name: "AboutView",
 
@@ -291,7 +285,43 @@ export default {
     this.skillsBack = this.skills.filter((skill) => skill.type === "back");
     this.otherSkills = this.skills.filter((skill) => skill.type === "other");
 
-    console.log(this.skillsBack);
+    const aboutHeader = document.querySelector(".about-header");
+    const experienceCards = document.querySelector(
+      ".experience-school-container"
+    );
+    const skillsContainer = document.querySelectorAll(".skills-container");
+
+    gsap.from(aboutHeader, {
+      scrollTrigger: {
+        trigger: aboutHeader,
+        start: "top 80%",
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+    });
+
+    gsap.from(experienceCards, {
+      scrollTrigger: {
+        trigger: experienceCards,
+        start: "top 80%",
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+    });
+
+    skillsContainer.forEach((element) => {
+      gsap.from(element, {
+        scrollTrigger: {
+          trigger: element,
+          start: "top 80%",
+        },
+        opacity: 0,
+        y: 50,
+        duration: 1,
+      });
+    });
   },
 };
 </script>

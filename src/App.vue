@@ -26,6 +26,7 @@
 <script>
 import SettingsMenu from "./components/SettingsMenu.vue";
 import WeatherApi from "./components/WeatherApi.vue";
+import { gsap } from "gsap";
 
 export default {
   name: "App",
@@ -39,6 +40,10 @@ export default {
       window.scrollTo(0, 0);
     },
   },
+
+  mounted(){
+    gsap.from("body", {opacity: 0, duration: 1});
+  }
 };
 </script>
 
