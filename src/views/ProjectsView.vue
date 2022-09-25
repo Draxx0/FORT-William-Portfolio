@@ -13,7 +13,7 @@
             :key="index"
           >
             <img :src="project.imgUrl" alt="" class="project-card-img" />
-            <router-link :to="'/projects/' + project.path"></router-link>
+            <router-link :to="'/projects/' + project.path" @click="scrollToTop()"></router-link>
             <h3 class="project-card-title">{{ project.title }}</h3>
           </div>
         </div>
@@ -70,13 +70,6 @@ export default {
             "https://cdn.discordapp.com/attachments/935969848230547551/983685136304463872/The-last-chance.png",
           title: "Digital Event 2022",
           path: "Digital-Event-2022",
-        },
-
-        {
-          imgUrl:
-            "https://cdn.discordapp.com/attachments/935969848230547551/983685135633358908/Cook-frichti.png",
-          title: "Cook by Frichti",
-          path: "Cook-by-Frichti",
         },
       ],
       myProjects: [

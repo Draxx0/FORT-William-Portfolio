@@ -41,14 +41,13 @@ export default {
     },
   },
 
-  mounted(){
-    gsap.from("body", {opacity: 0, duration: 1});
-  }
+  mounted() {
+    gsap.from("body", { opacity: 0, duration: 1 });
+  },
 };
 </script>
 
 <style lang="scss">
-
 //----------------------------------------------------- IMPORTS -----------------------------------------------------
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
@@ -439,20 +438,20 @@ nav {
   }
 
   .experience-school-card {
-    background-color: $dark-mode-background-color  !important;
+    background-color: $dark-mode-background-color !important;
     color: $dark-mode-text-color;
   }
 
   .contact-me-content {
     a {
       transition: 1s;
-      color: $dark-mode-text-color  !important;
+      color: $dark-mode-text-color !important;
     }
   }
 
   .themes-container {
-    background-color: $dark-mode-nav-background-color  !important;
-    color: $dark-mode-text-color  !important;
+    background-color: $dark-mode-nav-background-color !important;
+    color: $dark-mode-text-color !important;
   }
 
   .links-container {
@@ -495,7 +494,6 @@ nav {
   .skill-hours {
     color: $green;
   }
-
 
   .colored {
     color: $green;

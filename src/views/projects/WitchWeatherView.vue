@@ -37,15 +37,20 @@
         </ul>
       </div>
 
-      <h3 class="section-subtitle colored">Rendu</h3>
+      <div class="render-container">
+        <h3 class="section-subtitle colored">Rendu</h3>
 
-      <video
-        class="video-container"
-        controls
-        poster="../../../public/img/WitchWeather.png"
-      >
-        <source src="../../assets/video/WitchWeather.webm" type="video/webm" />
-      </video>
+        <video
+          class="video-container"
+          controls
+          poster="../../../public/img/WitchWeather.png"
+        >
+          <source
+            src="../../assets/video/WitchWeather.webm"
+            type="video/webm"
+          />
+        </video>
+      </div>
 
       <div class="links-container">
         <router-link to="/projects/Unity-Cave'scape" @click="scrollToTop()">
@@ -85,15 +90,52 @@
 </style>
 
 <script>
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 export default {
   name: "project-Witch-Weather",
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
     },
-    // goBack() {
-    //   this.$router.push("/projects");
-    // },
+  },
+  mounted() {
+    const renderContainer = document.querySelector(".render-container");
+    const presentationContainer = document.querySelector(
+      ".presentation-container"
+    );
+    const stacksContainer = document.querySelector(".stacks-container");
+
+    gsap.from(renderContainer, {
+      scrollTrigger: {
+        trigger: renderContainer,
+        start: "top 80%",
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+    });
+
+    gsap.from(presentationContainer, {
+      scrollTrigger: {
+        trigger: presentationContainer,
+        start: "top 80%",
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+    });
+
+    gsap.from(stacksContainer, {
+      scrollTrigger: {
+        trigger: stacksContainer,
+        start: "top 80%",
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+    });
   },
 };
 </script>

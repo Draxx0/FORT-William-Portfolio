@@ -28,7 +28,7 @@
 
 <script>
 import { gsap } from "gsap";
-import Typewriter from 'typewriter-effect/dist/core';
+import Typewriter from "typewriter-effect/dist/core";
 export default {
   name: "HomeView",
 
@@ -42,10 +42,18 @@ export default {
     },
   },
 
-  mounted(){
-    gsap.from(".container", {y: -50, duration: 1.5, ease: "power4.out",});
+  mounted() {
+    gsap.from(".container", {
+      scrollTrigger: {
+        trigger: ".container",
+        start: "top 80%",
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+    });
 
-    const txtAnim = document.querySelector('.txt-anim')
+    const txtAnim = document.querySelector(".txt-anim");
     console.log(txtAnim);
 
     new Typewriter(txtAnim, {
@@ -53,7 +61,7 @@ export default {
       deleteSpeed: 20,
       delay: 75,
     })
-      .typeString('Développeur Front End')
+      .typeString("Développeur Front End")
       .pauseFor(2500)
       .deleteChars(9)
       .typeString('<span style="color: #2fe0e0;">CSS</span>')
@@ -62,11 +70,11 @@ export default {
       .typeString('<span style="color: #c98530;">JavaScript</span>')
       .pauseFor(2500)
       .deleteAll()
-      .typeString('Heureux de vous rencontrer !')
+      .typeString("Heureux de vous rencontrer !")
       .pauseFor(2500)
       .deleteAll()
       .start();
-  }
+  },
 };
 </script>
 
