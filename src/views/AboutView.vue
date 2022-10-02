@@ -516,7 +516,7 @@ export default {
                 left: 30px;
                 display: block;
                 width: 10px;
-                height: 380px;
+                height: 366px;
                 margin-right: 10px;
               }
             }
