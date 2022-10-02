@@ -131,6 +131,7 @@ export default {
           width: 397px;
           height: 431px;
           object-fit: cover;
+          object-position: top;
           border-radius: 5px;
         }
 
