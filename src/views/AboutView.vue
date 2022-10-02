@@ -248,21 +248,21 @@ export default {
       ],
       stages: [
         {
+          year: "Maintenant",
+          type: "Contrat étudiant - Agence Backstages",
+          text: "Développement Frontend HTML / CSS / JS",
+        },
+
+        {
+          year: "2022",
+          type: "CDD - Agence Backstages",
+          text: "Développement du site Néo Process",
+        },
+
+        {
           year: "2022",
           type: "Stage - Agence Backstages",
-          text: "Développement Frontend HTML / CSS / JS refonte du site de l’agence - création du site SAGC",
-        },
-
-        {
-          year: "2019",
-          type: "Stage - Direction générale de l’armement",
-          text: "Aide au déploiement réseau",
-        },
-
-        {
-          year: "2019",
-          type: "Stage - Microtek",
-          text: "Montages / Dépannages / Déploiements sur sites de matériels informatiques",
+          text: "Refonte du site de l'agence, développement du site SAGC",
         },
       ],
     };
