@@ -7,11 +7,20 @@
           <span class="colored txt-anim"></span>
         </h1>
         <p class="text">
-          Étudiant en première année de développement web à l’école supérieure
+          Étudiant en deuxième année de développement web à l’école supérieure
           du digital, j’étais relativement curieux de savoir comment fonctionne
           un site web, par quel procédé passe-t-on pour créer tous ces super
           sites web modernes ?<br />
-          <br />Depuis, je suis rentrée en bachelor et je m’éclate !
+          <br />
+          Je travaille actuellement pour
+          <a
+            href="https://agencebackstages.fr/"
+            target="_blank"
+            class="company"
+          >
+            L'agence Backstages</a
+          >
+          en tant que développeur front end.
         </p>
         <router-link to="/about" class="btn" @click="scrollToTop()">
           Voir plus</router-link
@@ -98,6 +107,11 @@ export default {
       width: 50%;
       height: 100%;
       color: $light-mode-text-color;
+
+      .company {
+        position: relative;
+        text-decoration: none;
+      }
 
       .title {
         font-family: "Montserrat Alternates", sans-serif;

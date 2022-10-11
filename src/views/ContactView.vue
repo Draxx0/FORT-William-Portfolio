@@ -35,6 +35,17 @@
               >https://www.linkedin.com/in/william-fort/</a
             >
           </div>
+
+          <div class="contact-me-content">
+            <i class="fa-brands fa-github colored fa-2x"></i>
+            <h3 class="contact-me-content-title">Sur Github</h3>
+            <a
+              class="contact-me-content-text"
+              href="https://github.com/Draxx0"
+              target="_blank"
+              >https://github.com/Draxx0</a
+            >
+          </div>
         </div>
       </div>
     </div>
@@ -69,6 +80,7 @@ export default {
 .contact {
   width: 75%;
   height: 100vh;
+  margin-bottom: 250px;
 
   .container {
     width: 80%;
@@ -89,14 +101,14 @@ export default {
     }
 
     .contact-me-container {
-      margin-top: 150px;
+      margin-top: 75px;
       width: 100%;
 
       .wrapper {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        place-content: center;
-        grid-template-rows: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        row-gap: 100px;
       }
       .contact-me-content {
         display: flex;
@@ -105,11 +117,6 @@ export default {
         gap: 25px;
         font-family: "Popins", sans-serif;
         font-weight: 600;
-
-        &:nth-child(3) {
-          margin-top: 50px;
-          grid-column: 1 / span 2;
-        }
 
         a {
           position: relative;

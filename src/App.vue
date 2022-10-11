@@ -483,6 +483,9 @@ nav {
 //----------------------------------------------------- THEME COLORS -----------------------------------------------------
 
 .green {
+  .company {
+    color: $green;
+  }
   .btn {
     background-color: $green;
   }
@@ -590,6 +593,9 @@ nav {
 }
 
 .orange {
+  .company {
+    color: $orange;
+  }
   .btn {
     background-color: $orange;
   }
@@ -701,6 +707,9 @@ nav {
 }
 
 .pink {
+  .company {
+    color: $pink;
+  }
   .btn {
     background-color: $pink;
   }
@@ -808,6 +817,9 @@ nav {
 }
 
 .red {
+  .company {
+    color: $red;
+  }
   .btn {
     background-color: $red;
   }
@@ -915,6 +927,9 @@ nav {
 }
 
 .blue {
+  .company {
+    color: $blue;
+  }
   .btn {
     background-color: $blue;
   }
@@ -1022,6 +1037,9 @@ nav {
 }
 
 .yellow {
+  .company {
+    color: $yellow;
+  }
   .btn {
     background-color: $yellow;
   }

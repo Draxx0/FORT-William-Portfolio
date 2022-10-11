@@ -74,7 +74,7 @@
       </div>
 
       <div class="skills-container">
-        <h3 class="skill-type">Autre compétences</h3>
+        <h3 class="skill-type">Autres compétences</h3>
 
         <div class="skills-row">
           <div
