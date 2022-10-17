@@ -12,12 +12,9 @@
 
           <p class="text">
             J’ai un attrait pour les jolis visuels, j’aime coder de belle
-            maquettes<br />
-            afin de leur donner vie ! Je suis quelqu’un de perseverant, quand
-            je<br />
-            fais des erreurs je ne lâche jamais avant d'avoir trouvé le
-            pourquoi<br />
-            du comment !
+            maquettes afin de leur donner vie ! Je suis quelqu’un de
+            perseverant, quand je fais des erreurs je ne lâche jamais avant
+            d'avoir trouvé le pourquoi du comment !
           </p>
         </div>
 
@@ -43,6 +40,10 @@
             Me contacter</router-link
           >
         </div>
+      </div>
+
+      <div class="soft-skills-container tagcloud">
+        <h3 class="soft-skills-title">Mes Softs Skills</h3>
       </div>
 
       <div class="skills-container">
@@ -322,6 +323,40 @@ export default {
         duration: 1,
       });
     });
+
+    const TagCloud = require("TagCloud");
+
+    const container = ".tagcloud";
+    const softSkills = [
+      "Motivation",
+      "Autonome",
+      "Communicatif",
+      "Curieux",
+      "Animation",
+      "Travail d'équipe",
+      "Attentif",
+      "Rigueur",
+    ];
+    const options = {
+      radius: 250,
+      direction: 135,
+      maxSpeed: 5,
+      initSpeed: 2,
+    };
+
+    function tagCloundResponsive(mobileTagCloud) {
+      if (mobileTagCloud.matches) {
+        options.radius = 150;
+        options.direction = 90;
+      } else {
+        options.radius = 250;
+        options.direction = 135;
+      }
+    }
+
+    var mobileTagCloud = window.matchMedia("(max-width: 471px)");
+    tagCloundResponsive(mobileTagCloud);
+    TagCloud(container, softSkills, options);
   },
 };
 </script>
@@ -381,6 +416,38 @@ export default {
 
       a {
         margin: 0;
+      }
+    }
+
+    .soft-skills-container {
+      .soft-skills-title {
+        font-family: "Montserrat Alternates", sans-serif;
+        font-size: 2rem;
+        font-weight: 500;
+        margin: 100px 0;
+        position: relative;
+        width: fit-content;
+        &::before {
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          content: "";
+          display: block;
+          width: 30%;
+          height: 4px;
+        }
+      }
+      .tagcloud {
+        font-family: "Montserrat Alternates", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 500;
+        width: 100%;
+        margin: auto;
+
+        .tagcloud--item {
+          font-size: 2em;
+          transition: 0.3s ease-in-out;
+        }
       }
     }
 
@@ -648,6 +715,24 @@ export default {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 577px) {
+  .about {
+    .container {
+      .soft-skills-container {
+        .tagcloud {
+          width: fit-content !important;
+          .tagcloud--item {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+  .tagcloud--item {
+    font-size: 1rem;
   }
 }
 

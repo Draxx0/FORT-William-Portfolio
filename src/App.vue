@@ -483,6 +483,11 @@ nav {
 //----------------------------------------------------- THEME COLORS -----------------------------------------------------
 
 .green {
+  .soft-skills-title {
+    &::before {
+      background-color: $green;
+    }
+  }
   .company {
     color: $green;
   }
@@ -593,6 +598,11 @@ nav {
 }
 
 .orange {
+  .soft-skills-title {
+    &::before {
+      background-color: $orange;
+    }
+  }
   .company {
     color: $orange;
   }
@@ -707,6 +717,11 @@ nav {
 }
 
 .pink {
+  .soft-skills-title {
+    &::before {
+      background-color: $pink;
+    }
+  }
   .company {
     color: $pink;
   }
@@ -817,6 +832,11 @@ nav {
 }
 
 .red {
+  .soft-skills-title {
+    &::before {
+      background-color: $red;
+    }
+  }
   .company {
     color: $red;
   }
@@ -927,6 +947,11 @@ nav {
 }
 
 .blue {
+  .soft-skills-title {
+    &::before {
+      background-color: $blue;
+    }
+  }
   .company {
     color: $blue;
   }
@@ -1037,6 +1062,11 @@ nav {
 }
 
 .yellow {
+  .soft-skills-title {
+    &::before {
+      background-color: $yellow;
+    }
+  }
   .company {
     color: $yellow;
   }
