@@ -333,7 +333,8 @@ nav {
 
   .themes-menu-wrap,
   .mode-menu-wrap,
-  .mobile-nav-wrap {
+  .mobile-nav-wrap,
+  .mobile-weather-wrap {
     background-color: $light-mode-nav-background-color;
     color: $light-mode-text-color;
     transition: 0.2s all ease-in-out;
@@ -372,7 +373,8 @@ nav {
     }
   }
 
-  .mobile-nav-container {
+  .mobile-nav-container,
+  .mobile-weather-container {
     background-color: $light-mode-nav-background-color;
     border: solid 3px $border-color;
 
@@ -380,6 +382,14 @@ nav {
       color: $light-mode-text-color;
     }
   }
+}
+
+#app .weather-mobile-menu {
+  display: none;
+}
+
+#app .settings-menu .weather-mobile-menu {
+  display: flex;
 }
 
 .dark-mode {
@@ -411,7 +421,8 @@ nav {
 
   .themes-menu-wrap,
   .mode-menu-wrap,
-  .mobile-nav-wrap {
+  .mobile-nav-wrap,
+  .mobile-weather-wrap {
     background-color: $dark-mode-nav-background-color;
     transition: 0.2s ease-in-out;
 
@@ -470,7 +481,8 @@ nav {
     }
   }
 
-  .mobile-nav-container {
+  .mobile-nav-container,
+  .mobile-weather-container {
     background-color: $dark-mode-nav-background-color;
     border: solid 3px $border-color;
 

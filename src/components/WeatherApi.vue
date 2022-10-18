@@ -2,6 +2,14 @@
   <div class="weather-menu">
     <h1>{{ getTime() }}</h1>
     <h1>{{ weather.city }}</h1>
+    <h1 v-if="weather.temp">{{ weather.temp }}°</h1>
+    <h1 v-else></h1>
+    <img :src="weather.icon" alt="" />
+  </div>
+
+  <div class="weather-mobile-menu">
+    <h1>{{ getTime() }}</h1>
+    <h1>{{ weather.city }}</h1>
     <h1>{{ weather.temp }}°</h1>
     <img :src="weather.icon" alt="" />
   </div>
@@ -80,30 +88,26 @@ export default {
   }
 }
 
+.weather-mobile-menu {
+  display: none;
+}
+
 @media screen and (max-width: 1334px) {
   .weather-menu {
-    left: 3%;
-    bottom: 1%;
+    display: none;
+  }
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 25px;
-      filter: blur(2px);
-      z-index: -1;
-    }
-
-    h1 {
-      font-size: 0.9rem;
-      font-weight: bold;
-    }
+  .weather-mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.5em;
+    text-align: center;
 
     img {
       width: 48px;
+      margin: auto;
     }
   }
 }
