@@ -229,6 +229,12 @@ export default {
         },
 
         {
+          name: "Docker",
+          type: "back",
+          img: "docker.webp",
+        },
+
+        {
           name: "Figma",
           type: "other",
           img: "figma.png",
