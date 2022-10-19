@@ -163,7 +163,7 @@ export default {
           name: "💪 Motivé 💪",
         },
         {
-          name: "🤓 Sérieux 🤓",
+          name: "🧑‍💼 Sérieux 🧑‍💼",
         },
       ],
       skills: [
