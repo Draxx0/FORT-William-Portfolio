@@ -511,10 +511,6 @@ nav {
     background-color: $green;
   }
 
-  .skill-hours {
-    color: $green;
-  }
-
   .colored {
     color: $green;
   }
@@ -624,10 +620,6 @@ nav {
 
   .skill-type::before {
     background-color: $green;
-  }
-
-  .skill-hours {
-    color: $orange;
   }
 
   .colored {
@@ -745,10 +737,6 @@ nav {
     background-color: $pink;
   }
 
-  .skill-hours {
-    color: $pink;
-  }
-
   .colored {
     color: $pink;
   }
@@ -858,10 +846,6 @@ nav {
 
   .skill-type::before {
     background-color: $red;
-  }
-
-  .skill-hours {
-    color: $red;
   }
 
   .colored {
@@ -975,10 +959,6 @@ nav {
     background-color: $blue;
   }
 
-  .skill-hours {
-    color: $blue;
-  }
-
   .colored {
     color: $blue;
   }
@@ -1090,9 +1070,6 @@ nav {
     background-color: $yellow;
   }
 
-  .skill-hours {
-    color: $yellow;
-  }
   .colored {
     color: $yellow;
   }

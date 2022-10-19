@@ -42,8 +42,20 @@
         </div>
       </div>
 
-      <div class="soft-skills-container tagcloud">
+      <div class="soft-skills-container">
         <h3 class="soft-skills-title">Mes Softs Skills</h3>
+
+        <div class="soft-skills-grid">
+          <div
+            class="soft-skill"
+            v-for="softSkill in softSkills"
+            :key="softSkill.name"
+          >
+            <h4 class="soft-skill-name">
+              {{ softSkill.name }}
+            </h4>
+          </div>
+        </div>
       </div>
 
       <div class="skills-container">
@@ -57,7 +69,6 @@
           >
             <span class="skill-name">{{ skill.name }}</span>
             <img :src="'img/' + skill.img" class="skill-img" />
-            <span class="skill-hours">{{ skill.hours }}</span>
           </div>
         </div>
       </div>
@@ -69,7 +80,6 @@
           <div class="skill-flex" v-for="skill in skillsBack" :key="skill.name">
             <span class="skill-name">{{ skill.name }}</span>
             <img :src="'img/' + skill.img" class="skill-img" />
-            <span class="skill-hours">{{ skill.hours }}</span>
           </div>
         </div>
       </div>
@@ -85,7 +95,6 @@
           >
             <span class="skill-name">{{ skill.name }}</span>
             <img :src="'img/' + skill.img" class="skill-img" />
-            <span class="skill-hours">{{ skill.hours }}</span>
           </div>
         </div>
       </div>
@@ -137,30 +146,46 @@ export default {
 
   data() {
     return {
+      softSkills: [
+        {
+          name: "👥 Travail d'équipe 👥",
+        },
+        {
+          name: "🧑‍💻 Autonomie 🧑‍💻",
+        },
+        {
+          name: "✒️ Rigueur ✒️",
+        },
+        {
+          name: "🤔 Curiosité 🤔",
+        },
+        {
+          name: "💪 Motivé 💪",
+        },
+        {
+          name: "🤓 Sérieux 🤓",
+        },
+      ],
       skills: [
         {
           name: "HTML",
           type: "front",
           img: "html.png",
-          hours: "125h",
         },
         {
           name: "CSS",
           type: "front",
           img: "CSS.png",
-          hours: "125h",
         },
         {
           name: "Javascript",
           type: "front",
           img: "Javascript.png",
-          hours: "65h",
         },
         {
-          name: "Typescript",
+          name: "SASS",
           type: "front",
-          img: "typescript.png",
-          hours: "10h",
+          img: "sass.png",
         },
         {
           name: "Git",
@@ -171,70 +196,54 @@ export default {
           name: "Vue",
           type: "front",
           img: "vue.png",
-          hours: "45h",
         },
         {
           name: "React",
           type: "front",
           img: "React.png",
-          hours: "5h",
-        },
-        {
-          name: "Angular",
-          type: "front",
-          img: "angular.png",
-          hours: "10h",
         },
         {
           name: "Bootstrap",
           type: "front",
           img: "bootstrap.png",
-          hours: "15h",
         },
         {
           name: "Tailwind",
           type: "front",
           img: "tailwind.png",
-          hours: "5h",
+        },
+        {
+          name: "GSAP",
+          type: "front",
+          img: "gsap.png",
         },
         {
           name: "Node JS",
           type: "back",
           img: "nodejs.png",
-          hours: "10h",
         },
         {
           name: "PHP",
           type: "back",
           img: "php.png",
-          hours: "20h",
-        },
-        {
-          name: "C#",
-          type: "other",
-          img: "csharp.svg",
-          hours: "5h",
         },
 
         {
           name: "Figma",
           type: "other",
           img: "figma.png",
-          hours: "35h",
         },
 
         {
           name: "Adobe XD",
           type: "other",
           img: "adobexd.png",
-          hours: "10h",
         },
 
         {
           name: "Photoshop",
           type: "other",
           img: "photoshop.png",
-          hours: "15h",
         },
       ],
       skillsFront: [],
@@ -303,10 +312,23 @@ export default {
       ".experience-school-container"
     );
     const skillsContainer = document.querySelectorAll(".skills-container");
+    const softSkillsContainer = document.querySelector(
+      ".soft-skills-container"
+    );
 
     gsap.from(aboutHeader, {
       scrollTrigger: {
         trigger: aboutHeader,
+        start: "top 80%",
+      },
+      opacity: 0,
+      y: 50,
+      duration: 1,
+    });
+
+    gsap.from(softSkillsContainer, {
+      scrollTrigger: {
+        trigger: softSkillsContainer,
         start: "top 80%",
       },
       opacity: 0,
@@ -335,40 +357,6 @@ export default {
         duration: 1,
       });
     });
-
-    const TagCloud = require("TagCloud");
-
-    const container = ".tagcloud";
-    const softSkills = [
-      "Motivation",
-      "Autonome",
-      "Communicatif",
-      "Curieux",
-      "Animation",
-      "Travail d'équipe",
-      "Attentif",
-      "Rigueur",
-    ];
-    const options = {
-      radius: 250,
-      direction: 135,
-      maxSpeed: 5,
-      initSpeed: 2,
-    };
-
-    function tagCloundResponsive(mobileTagCloud) {
-      if (mobileTagCloud.matches) {
-        options.radius = 150;
-        options.direction = 90;
-      } else {
-        options.radius = 250;
-        options.direction = 135;
-      }
-    }
-
-    var mobileTagCloud = window.matchMedia("(max-width: 471px)");
-    tagCloundResponsive(mobileTagCloud);
-    TagCloud(container, softSkills, options);
   },
 };
 </script>
@@ -449,16 +437,19 @@ export default {
           height: 4px;
         }
       }
-      .tagcloud {
-        font-family: "Montserrat Alternates", sans-serif;
-        font-size: 1.2rem;
-        font-weight: 500;
-        width: 100%;
-        margin: auto;
+      .soft-skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        gap: 100px;
+        font-family: "Poppins", sans-serif;
+        font-size: 1.5rem;
 
-        .tagcloud--item {
-          font-size: 2em;
-          transition: 0.3s ease-in-out;
+        .soft-skill {
+          position: relative;
+          .soft-skill-name {
+            font-weight: 500;
+          }
         }
       }
     }
@@ -501,15 +492,6 @@ export default {
           gap: 25px;
 
           .skill-name {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            font-family: "Poppins", sans-serif;
-            font-weight: 500;
-            font-size: 1.5rem;
-          }
-
-          .skill-hours {
             display: flex;
             align-items: center;
             gap: 15px;
