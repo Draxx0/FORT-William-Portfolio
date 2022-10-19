@@ -186,6 +186,18 @@ export default {
           hours: "10h",
         },
         {
+          name: "Bootstrap",
+          type: "front",
+          img: "bootstrap.png",
+          hours: "15h",
+        },
+        {
+          name: "Tailwind",
+          type: "front",
+          img: "tailwind.png",
+          hours: "5h",
+        },
+        {
           name: "Node JS",
           type: "back",
           img: "nodejs.png",
@@ -509,6 +521,7 @@ export default {
           .skill-img {
             width: 48px;
             height: 48px;
+            object-fit: contain;
           }
 
           .skill-level {
