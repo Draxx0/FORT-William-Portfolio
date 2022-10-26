@@ -49,34 +49,20 @@
         >
       </div>
     </div>
-
-    <div class="mobile-weather-wrap" @click="openWeatherMobile()">
-      <i class="fa-solid fa-cloud"></i>
-    </div>
-
-    <div class="mobile-weather-container">
-      <h3>Météo</h3>
-
-      <WeatherApi />
-    </div>
   </div>
 </template>
 
 <script>
-import WeatherApi from "./WeatherApi.vue";
 export default {
   name: "SettingsMenu",
 
-  components: {
-    WeatherApi,
-  },
+  components: {},
 
   data: function () {
     return {
       colorTheme: ["green", "orange", "pink", "blue", "red", "yellow"],
       isDarkMode: true,
       isNavOpen: false,
-      isWeatherOpen: false,
     };
   },
 
@@ -99,7 +85,6 @@ export default {
       const themeWrap = document.querySelector(".themes-menu-wrap");
       const modeWrap = document.querySelector(".mode-menu-wrap");
       const navWrap = document.querySelector(".mobile-nav-wrap");
-      const weatherWrap = document.querySelector(".mobile-weather-wrap");
       const themesContainer = document.querySelector(".themes-container");
       themesContainer.classList.toggle("open");
 
@@ -107,12 +92,10 @@ export default {
         themeWrap.style.transform = "translateX(-200px)";
         modeWrap.style.transform = "translateX(-200px)";
         navWrap.style.transform = "translateX(-200px)";
-        weatherWrap.style.transform = "translateX(-200px)";
       } else {
         themeWrap.style.transform = "translateX(0)";
         modeWrap.style.transform = "translateX(0)";
         navWrap.style.transform = "translateX(0)";
-        weatherWrap.style.transform = "translateX(0)";
       }
     },
 
@@ -120,13 +103,6 @@ export default {
       const navContainer = document.querySelector(".mobile-nav-container");
       navContainer.classList.toggle("open");
       this.isNavOpen = !this.isNavOpen;
-    },
-
-    openWeatherMobile() {
-      const weatherContainer = document.querySelector(
-        ".mobile-weather-container"
-      );
-      weatherContainer.classList.toggle("open");
     },
 
     setColor(color) {
@@ -152,8 +128,6 @@ export default {
           modeWrap.style.transform = "translateX(0)";
           const mobileMenu = document.querySelector(".mobile-nav-wrap");
           mobileMenu.style.transform = "translateX(0)";
-          const weatherWrap = document.querySelector(".mobile-weather-wrap");
-          weatherWrap.style.transform = "translateX(0)";
         }
       });
     },
@@ -194,10 +168,6 @@ export default {
     display: none;
   }
 
-  .mobile-weather-wrap {
-    display: none;
-  }
-
   .themes-menu-wrap i {
     animation: settingsRunning infinite 2s;
   }
@@ -232,9 +202,6 @@ export default {
     display: none;
   }
 
-  .mobile-weather-container {
-    display: none;
-  }
 
   .mobile-menu {
     display: flex;
@@ -308,8 +275,7 @@ export default {
 
 @media screen and (max-width: 1334px) {
   .settings-menu {
-    .mobile-nav-wrap,
-    .mobile-weather-wrap {
+    .mobile-nav-wrap{
       display: block;
       border-radius: 50%;
       padding: 15px;
@@ -317,8 +283,7 @@ export default {
       cursor: pointer;
     }
 
-    .mobile-nav-container,
-    .mobile-weather-container {
+    .mobile-nav-container{
       display: flex;
       flex-direction: column;
       gap: 25px;
@@ -349,10 +314,6 @@ export default {
         font-weight: 600;
         text-decoration: none;
       }
-    }
-
-    .mobile-weather-container {
-      top: 60%;
     }
   }
 }

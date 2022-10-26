@@ -1,6 +1,5 @@
 <template>
   <SettingsMenu />
-  <WeatherApi />
   <nav>
     <div class="logo">
       <h1><span>W</span>illiam</h1>
@@ -25,14 +24,12 @@
 
 <script>
 import SettingsMenu from "./components/SettingsMenu.vue";
-import WeatherApi from "./components/WeatherApi.vue";
 import { gsap } from "gsap";
 
 export default {
   name: "App",
   components: {
     SettingsMenu,
-    WeatherApi,
   },
 
   methods: {
@@ -333,8 +330,7 @@ nav {
 
   .themes-menu-wrap,
   .mode-menu-wrap,
-  .mobile-nav-wrap,
-  .mobile-weather-wrap {
+  .mobile-nav-wrap {
     background-color: $light-mode-nav-background-color;
     color: $light-mode-text-color;
     transition: 0.2s all ease-in-out;
@@ -347,14 +343,6 @@ nav {
   .project-card {
     transition: 1s;
     border: 2px solid;
-  }
-
-  .weather-menu::before {
-    background-color: $light-mode-nav-background-color;
-
-    h1 {
-      color: black;
-    }
   }
 
   .links-container {
@@ -373,8 +361,7 @@ nav {
     }
   }
 
-  .mobile-nav-container,
-  .mobile-weather-container {
+  .mobile-nav-container {
     background-color: $light-mode-nav-background-color;
     border: solid 3px $border-color;
 
@@ -382,14 +369,6 @@ nav {
       color: $light-mode-text-color;
     }
   }
-}
-
-#app .weather-mobile-menu {
-  display: none;
-}
-
-#app .settings-menu .weather-mobile-menu {
-  display: flex;
 }
 
 .dark-mode {
@@ -409,10 +388,6 @@ nav {
     }
   }
 
-  .weather-menu::before {
-    background-color: $dark-mode-nav-background-color;
-  }
-
   .btn {
     &:hover {
       box-shadow: inset 0 0 0 2px #fff;
@@ -421,8 +396,7 @@ nav {
 
   .themes-menu-wrap,
   .mode-menu-wrap,
-  .mobile-nav-wrap,
-  .mobile-weather-wrap {
+  .mobile-nav-wrap {
     background-color: $dark-mode-nav-background-color;
     transition: 0.2s ease-in-out;
 
@@ -481,8 +455,7 @@ nav {
     }
   }
 
-  .mobile-nav-container,
-  .mobile-weather-container {
+  .mobile-nav-container {
     background-color: $dark-mode-nav-background-color;
     border: solid 3px $border-color;
 
@@ -1182,9 +1155,6 @@ nav {
     margin: 0;
   }
   nav {
-    display: none;
-  }
-  .weather-menu {
     display: none;
   }
 }

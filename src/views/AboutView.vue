@@ -666,6 +666,19 @@ export default {
   }
 }
 
+@media screen and (max-width: 809px) {
+  .about {
+    .container {
+      .soft-skills-container {
+        .soft-skills-grid {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 693px) {
   .about {
     .container {
@@ -810,6 +823,18 @@ export default {
               height: 666px;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 809px) {
+  .about {
+    .container {
+      .soft-skills-container {
+        .soft-skills-grid {
+          font-size: 1.3em;
         }
       }
     }
