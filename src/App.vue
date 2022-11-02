@@ -592,7 +592,7 @@ nav {
   }
 
   .skill-type::before {
-    background-color: $green;
+    background-color: $orange;
   }
 
   .colored {
