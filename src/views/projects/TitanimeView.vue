@@ -45,7 +45,7 @@
       </div>
 
       <div class="links-container">
-        <router-link to="/projects/Delivery" @click="scrollTop">
+        <router-link to="/projects/L&B" @click="scrollTop">
           Projets Suivant<i class="fa-solid fa-arrow-right-long"></i
         ></router-link>
       </div>

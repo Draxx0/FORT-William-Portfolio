@@ -3,15 +3,15 @@
     <div class="container">
       <div class="header">
         <h1 class="section-title">L&B Burgers</h1>
-        <h3 class="section-subtitle colored">Création d'une application Restaurant</h3>
+        <h3 class="section-subtitle colored">
+          Création d'une application Restaurant
+        </h3>
         <p class="section-description">
-          Quand j'ai du temps libre j'aime travailler sur des intégrations HTML
-          - CSS/SCSS - JS afin de me challenger je me balade souvent sur Dribble
-          afin de trouver la pépite que j'intégrerais, cette fois c'est sur
-          youtube que j'ai trouver cette template, j'ai récupèrer le projet from
-          scratch sur github et je me suis lancé.<br /><br />
-          Le speech est assez claire une landing page d'un site de livraison que
-          j'intégrerais en HTML SCSS JS avec un poil de GSAP.
+          L&B Burgers est une application de commande de burgers en ligne. Afin
+          de la développer j'ai utilisé le framework React, il est possible sur
+          l'application de commander des burgers, de les supprimer, de les
+          ajouter au panier, de simuler un paiement et de voir l'historique des
+          commandes. L'application est responsive et fonctionne sur mobile.
         </p>
       </div>
 
@@ -19,7 +19,7 @@
         <h3 class="section-subtitle colored">Stacks utilisées</h3>
         <ul class="section-list">
           <li class="section-list-item">
-            <img src="../../../public/img/React.png" alt="" /> HTML
+            <img src="../../../public/img/React.png" alt="" /> React
           </li>
           <li class="section-list-item">
             <img src="../../../public/img/sass.png" alt="" /> SASS
@@ -33,18 +33,9 @@
       <div class="render-container">
         <h3 class="section-subtitle colored">Rendu</h3>
 
-        <img
-          src="../../../public/img/lb.png"
-          alt=""
-          class="section-img"
-        />
+        <img src="../../../public/img/lb.png" alt="" class="section-img" />
 
-        <a
-          href="#"
-          class="project-link"
-          target="_blank"
-          >Voir plus</a
-        >
+        <a href="#" class="project-link" target="_blank">Voir plus</a>
       </div>
 
       <div class="links-container">
