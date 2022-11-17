@@ -13,7 +13,10 @@
             :key="index"
           >
             <img :src="project.imgUrl" alt="" class="project-card-img" />
-            <router-link :to="'/projects/' + project.path" @click="scrollToTop()"></router-link>
+            <router-link
+              :to="'/projects/' + project.path"
+              @click="scrollToTop()"
+            ></router-link>
             <h3 class="project-card-title">{{ project.title }}</h3>
           </div>
         </div>
@@ -82,9 +85,9 @@ export default {
 
         {
           imgUrl:
-            "https://cdn.discordapp.com/attachments/935969848230547551/985916561430814770/Delivery.png",
-          title: "Delivery Intégration",
-          path: "Delivery",
+            "https://cdn.discordapp.com/attachments/935969848230547551/1042753628181643355/lb.png",
+          title: "L&B Restaurant",
+          path: "L&B",
         },
       ],
     };

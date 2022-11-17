@@ -10,8 +10,10 @@
           Étudiant en deuxième année de développement web à l’école supérieure
           du digital, j’étais relativement curieux de savoir comment fonctionne
           un site web, par quel procédé passe-t-on pour créer tous ces super
-          sites web modernes ?<br />
-          <br />
+          sites modernes ?
+        </p>
+
+        <p class="text">
           Je travaille actuellement pour
           <a
             href="https://agencebackstages.fr/"
@@ -73,10 +75,10 @@ export default {
       .typeString("Développeur Front End")
       .pauseFor(2500)
       .deleteChars(9)
-      .typeString('<span style="color: #2fe0e0;">CSS</span>')
+      .typeString('<span style="color: #2fe0e0;">React</span>')
       .pauseFor(2500)
-      .deleteChars(3)
-      .typeString('<span style="color: #c98530;">JavaScript</span>')
+      .deleteChars(5)
+      .typeString('<span style="color: #c98530;">NodeJS</span>')
       .pauseFor(2500)
       .deleteAll()
       .typeString("Heureux de vous rencontrer !")

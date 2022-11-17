@@ -13,8 +13,7 @@
           <p class="text">
             J’ai un attrait pour les jolis visuels, j’aime coder de belle
             maquettes afin de leur donner vie ! Je suis quelqu’un de
-            perseverant, quand je fais des erreurs je ne lâche jamais avant
-            d'avoir trouvé le pourquoi du comment !
+            perseverant, toutes erreurs est une opportunité d'apprendre.
           </p>
         </div>
 
@@ -148,22 +147,22 @@ export default {
     return {
       softSkills: [
         {
-          name: "👥 Travail d'équipe 👥",
+          name: "Travail d'équipe",
         },
         {
-          name: "🧑‍💻 Autonomie 🧑‍💻",
+          name: "Autonomie",
         },
         {
-          name: "✒️ Rigueur ✒️",
+          name: "Rigueur",
         },
         {
-          name: "🤔 Curiosité 🤔",
+          name: "Curiosité",
         },
         {
-          name: "💪 Motivé 💪",
+          name: "Motivé",
         },
         {
-          name: "🧑‍💼 Sérieux 🧑‍💼",
+          name: "Sérieux",
         },
       ],
       skills: [
@@ -222,11 +221,6 @@ export default {
           type: "back",
           img: "nodejs.png",
         },
-        {
-          name: "PHP",
-          type: "back",
-          img: "php.png",
-        },
 
         {
           name: "Docker",
@@ -244,12 +238,6 @@ export default {
           name: "Adobe XD",
           type: "other",
           img: "adobexd.png",
-        },
-
-        {
-          name: "Photoshop",
-          type: "other",
-          img: "photoshop.png",
         },
       ],
       skillsFront: [],

@@ -6,7 +6,7 @@ import ContactView from "../views/ContactView.vue";
 import UnityCavescapeView from "../views/projects/UnityCavescapeView.vue";
 import WitchWeatherView from "../views/projects/WitchWeatherView.vue";
 import DigitalEvent2022View from "../views/projects/DigitalEvent2022View.vue";
-import DeliveryView from "../views/projects/DeliveryView.vue";
+import LBView from "../views/projects/LBView.vue";
 import TitanimeView from "../views/projects/TitanimeView.vue";
 
 const routes = [
@@ -50,9 +50,9 @@ const routes = [
   },
 
   {
-    path: "/projects/Delivery",
-    name: "projects-Delivery",
-    component: DeliveryView,
+    path: "/projects/L&B",
+    name: "projects-L&B",
+    component: LBView,
   },
 
   {

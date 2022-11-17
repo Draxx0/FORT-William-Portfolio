@@ -1,9 +1,9 @@
 <template>
-  <div class="Delivery">
+  <div class="LB">
     <div class="container">
       <div class="header">
-        <h1 class="section-title">Delivery</h1>
-        <h3 class="section-subtitle colored">Intégration d'une maquette</h3>
+        <h1 class="section-title">L&B Burgers</h1>
+        <h3 class="section-subtitle colored">Création d'une application Restaurant</h3>
         <p class="section-description">
           Quand j'ai du temps libre j'aime travailler sur des intégrations HTML
           - CSS/SCSS - JS afin de me challenger je me balade souvent sur Dribble
@@ -16,16 +16,13 @@
       </div>
 
       <div class="stacks-container">
-        <h3 class="section-subtitle colored">Stack utilisées</h3>
+        <h3 class="section-subtitle colored">Stacks utilisées</h3>
         <ul class="section-list">
           <li class="section-list-item">
-            <img src="../../../public/img/html.png" alt="" /> HTML
+            <img src="../../../public/img/React.png" alt="" /> HTML
           </li>
           <li class="section-list-item">
             <img src="../../../public/img/sass.png" alt="" /> SASS
-          </li>
-          <li class="section-list-item">
-            <img src="../../../public/img/Javascript.png" alt="" /> JavaScript
           </li>
           <li class="section-list-item">
             <img src="../../../public/img/gsap.png" alt="" /> GSAP
@@ -37,13 +34,13 @@
         <h3 class="section-subtitle colored">Rendu</h3>
 
         <img
-          src="../../../public/img/Delivery.png"
+          src="../../../public/img/lb.png"
           alt=""
           class="section-img"
         />
 
         <a
-          href="https://draxx0.github.io/Delivery/"
+          href="#"
           class="project-link"
           target="_blank"
           >Voir plus</a
@@ -65,7 +62,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 export default {
-  name: "project-Delivery",
+  name: "project-L&B",
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
@@ -111,7 +108,7 @@ export default {
 </script>
 
 <style lang="scss">
-.Delivery {
+.LB {
   width: 75%;
 
   .container {

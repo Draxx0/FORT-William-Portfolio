@@ -16,7 +16,7 @@
       </div>
 
       <div class="stacks-container">
-        <h3 class="section-subtitle colored">Stack utilisées</h3>
+        <h3 class="section-subtitle colored">Stacks utilisées</h3>
         <ul class="section-list">
           <li class="section-list-item">
             <img src="../../../public/img/html.png" alt="" /> HTML
