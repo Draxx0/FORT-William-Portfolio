@@ -125,6 +125,7 @@ export default {
 
 .projects {
   width: 75%;
+  margin-bottom: 75px;
 
   .container {
     width: 80%;

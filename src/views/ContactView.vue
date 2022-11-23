@@ -80,7 +80,6 @@ export default {
 .contact {
   width: 75%;
   height: 100vh;
-  margin-bottom: 250px;
 
   .container {
     width: 80%;

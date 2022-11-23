@@ -59,6 +59,7 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  // background-color: $dark-mode-background-color;
 
   &::before,
   ::after {
@@ -82,6 +83,14 @@ p {
   height: 100%;
   margin-left: 400px;
   transition: 0.5s ease-in-out;
+}
+
+body:has(.dark-mode) {
+  background-color: $dark-mode-background-color;
+}
+
+body:has(.light-mode) {
+  background-color: $light-mode-background-color;
 }
 
 nav {

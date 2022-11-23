@@ -93,8 +93,8 @@ export default {
 @import "@/styles/variables.scss";
 
 .home {
+  margin-bottom: 75px;
   width: 75%;
-  margin-bottom: 202px;
 
   .container {
     width: 80%;
@@ -172,24 +172,6 @@ export default {
         }
       }
     }
-  }
-}
-
-@media screen and (max-width: 2560px) {
-  .home {
-    margin-bottom: 561px;
-  }
-}
-
-@media screen and (max-width: 2000px) {
-  .home {
-    margin-bottom: 388px;
-  }
-}
-
-@media screen and (max-width: 1920px) {
-  .home {
-    margin-bottom: 208px;
   }
 }
 
