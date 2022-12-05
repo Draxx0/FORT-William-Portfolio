@@ -35,7 +35,7 @@
 
         <img src="../../../public/img/lb.png" alt="" class="section-img" />
 
-        <a href="#" class="project-link" target="_blank">Voir plus</a>
+        <a href="https://lb-burgers.vercel.app/" class="project-link" target="_blank">Voir plus</a>
       </div>
 
       <div class="links-container">
@@ -113,7 +113,7 @@ export default {
 }
 
 @media screen and (max-width: 1334px) {
-  .Delivery {
+  .LB {
     width: 100%;
   }
 }

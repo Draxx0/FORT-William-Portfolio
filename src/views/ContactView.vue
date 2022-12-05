@@ -11,12 +11,6 @@
       <div class="contact-me-container">
         <div class="wrapper">
           <div class="contact-me-content">
-            <i class="fa-solid fa-phone fa-2x colored"></i>
-            <h3 class="contact-me-content-title">Par téléphone</h3>
-            <h3 class="contact-me-content-text">06 83 10 03 51</h3>
-          </div>
-
-          <div class="contact-me-content">
             <i class="fa-solid fa-envelope fa-2x colored"></i>
             <h3 class="contact-me-content-title">Par mail</h3>
             <a
