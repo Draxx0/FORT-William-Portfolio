@@ -98,7 +98,7 @@ export default {
 
   .container {
     width: 80%;
-    margin: 300px auto auto auto;
+    margin: 200px auto auto auto;
     display: flex;
     gap: 50px;
 

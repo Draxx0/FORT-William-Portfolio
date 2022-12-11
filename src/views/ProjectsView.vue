@@ -23,7 +23,7 @@
       </div>
 
       <div class="projects-section">
-        <h2 class="section-subtitle">Projets Autodidacte</h2>
+        <h2 class="section-subtitle">Projets Personnel</h2>
 
         <div class="projects-container">
           <div
