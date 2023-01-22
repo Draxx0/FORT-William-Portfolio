@@ -6,6 +6,7 @@ import ContactView from "../views/ContactView.vue";
 import UnityCavescapeView from "../views/projects/UnityCavescapeView.vue";
 import WitchWeatherView from "../views/projects/WitchWeatherView.vue";
 import DigitalEvent2022View from "../views/projects/DigitalEvent2022View.vue";
+import DigitalEvent2023View from "../views/projects/DigitalEvent2023View.vue";
 import LBView from "../views/projects/LBView.vue";
 import TitanimeView from "../views/projects/TitanimeView.vue";
 
@@ -47,6 +48,12 @@ const routes = [
     path: "/projects/Digital-Event-2022",
     name: "projects-Digital-Event-2022",
     component: DigitalEvent2022View,
+  },
+
+  {
+    path: "/projects/Digital-Event-2023",
+    name: "projects-Digital-Event-2023",
+    component: DigitalEvent2023View,
   },
 
   {

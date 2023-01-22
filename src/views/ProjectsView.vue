@@ -74,6 +74,13 @@ export default {
           title: "Digital Event 2022",
           path: "Digital-Event-2022",
         },
+
+        {
+          imgUrl:
+            "https://cdn.discordapp.com/attachments/935969848230547551/1066771407104651284/pixelwar.png",
+          title: "Digital Event 2023",
+          path: "Digital-Event-2023",
+        },
       ],
       myProjects: [
         {
