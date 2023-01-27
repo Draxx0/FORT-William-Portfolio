@@ -18,9 +18,6 @@
         </div>
 
         <div class="about-me-container">
-          <h3 class="about-me-items">
-            <span class="bold">Date de naissance :</span> 10 Janvier 2003
-          </h3>
 
           <h3 class="about-me-items">
             <span class="bold">Ville d'habitation :</span> Bordeaux
@@ -30,11 +27,10 @@
             <span class="bold">École :</span> École supérieure du digital
           </h3>
 
-          <h3 class="about-me-items"><span class="bold">Age :</span> 19 ans</h3>
+          <h3 class="about-me-items"><span class="bold">Age :</span> 20 ans</h3>
         </div>
 
         <div class="btn-container">
-          <a class="btn" @click="downloadCV()">Télécharger mon CV</a>
           <router-link to="/contact" class="btn" @click="scrollToTop()">
             Me contacter</router-link
           >
@@ -285,12 +281,6 @@ export default {
   },
 
   methods: {
-    downloadCV() {
-      const link = document.createElement("a");
-      link.href = "CV - FORT William.pdf";
-      link.setAttribute("download", "CV - FORT William.pdf");
-      link.click();
-    },
     scrollToTop() {
       window.scrollTo(0, 0);
     },

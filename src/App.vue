@@ -477,6 +477,9 @@ nav {
 //----------------------------------------------------- THEME COLORS -----------------------------------------------------
 
 .green {
+  ::selection {
+    background-color: $green;
+  }
   .soft-skills-title {
     &::before {
       background-color: $green;
@@ -588,6 +591,9 @@ nav {
 }
 
 .orange {
+  ::selection {
+    background-color: $orange;
+  }
   .soft-skills-title {
     &::before {
       background-color: $orange;
@@ -703,6 +709,9 @@ nav {
 }
 
 .pink {
+  ::selection {
+    background-color: $pink;
+  }
   .soft-skills-title {
     &::before {
       background-color: $pink;
@@ -814,6 +823,9 @@ nav {
 }
 
 .red {
+  ::selection {
+    background-color: $red;
+  }
   .soft-skills-title {
     &::before {
       background-color: $red;
@@ -925,6 +937,9 @@ nav {
 }
 
 .blue {
+  ::selection {
+    background-color: $blue;
+  }
   .soft-skills-title {
     &::before {
       background-color: $blue;
@@ -1036,6 +1051,9 @@ nav {
 }
 
 .yellow {
+  ::selection {
+    background-color: $yellow;
+  }
   .soft-skills-title {
     &::before {
       background-color: $yellow;
