@@ -169,7 +169,7 @@ export default {
   }
 
   .themes-menu-wrap i {
-    animation: settingsRunning infinite 2s;
+    animation: settingsRunning infinite linear 3s;
   }
 
   .themes-container {
