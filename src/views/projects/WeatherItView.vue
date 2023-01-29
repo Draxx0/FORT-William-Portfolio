@@ -1,17 +1,29 @@
 <template>
-  <div class="LB">
+  <div class="WIT">
     <div class="container">
       <div class="header">
-        <h1 class="section-title">L&B Burgers</h1>
-        <h3 class="section-subtitle colored">
-          Création d'une application Restaurant
-        </h3>
+        <h1 class="section-title">Weather It</h1>
+        <h3 class="section-subtitle colored">Création d'une interface météo</h3>
         <p class="section-description">
-          L&B Burgers est une application de commande de burgers en ligne. Afin
-          de la développer j'ai utilisé le framework React, il est possible sur
-          l'application de commander des burgers, de les supprimer, de les
-          ajouter au panier, de simuler un paiement et de voir l'historique des
-          commandes. L'application est responsive et fonctionne sur mobile.
+          S'il y a bien une chose que j'aime c'est consommer des API, c'est
+          pourquoi j'ai décidé de créer une application qui permet de consulter
+          la météo d'une ville et les prévisions de celle-ci sur 3 jours (
+          Limite freemium de l'api ).
+
+          <br />
+          <br />
+
+          Pour la réalisation de cette application j'ai utilisé le framework
+          React, j'ai utilisé l'API
+          <a
+            href="https://www.weatherapi.com/"
+            target="_blank"
+            class="colored bold"
+            >Weatherapi</a
+          >
+          pour récupérer les données météo. Il est donc possible de consulter
+          plusieurs informations relatives à la météo comme la température en °C
+          ou en °F, la qualité de l'air, la vitesse du vent, le ressenti etc...
         </p>
       </div>
 
@@ -24,29 +36,22 @@
           <li class="section-list-item">
             <img src="../../../public/img/sass.png" alt="" /> SASS
           </li>
-          <li class="section-list-item">
-            <img src="../../../public/img/gsap.png" alt="" /> GSAP
-          </li>
         </ul>
       </div>
 
       <div class="render-container">
         <h3 class="section-subtitle colored">Rendu</h3>
 
-        <img src="../../../public/img/lb.png" alt="" class="section-img" />
+        <img src="../../../public/img/Weather-it.png" alt="" class="section-img" />
 
-        <a href="https://lb-burgers.vercel.app/" class="project-link" target="_blank">Voir plus</a>
+        <a href="https://weather-it-indol.vercel.app/" class="project-link" target="_blank">Voir plus</a>
       </div>
 
       <div class="links-container">
-        <router-link to="/projects/Titanime" @click="scrollToTop()">
+        <router-link to="/projects/L&B" @click="scrollToTop()">
           <i class="fa-solid fa-arrow-left-long"></i>Projets
           Précèdents</router-link
         >
-
-        <router-link to="/projects/Weather-it" @click="scrollToTop()">
-          Projets Suivant<i class="fa-solid fa-arrow-right-long"></i
-        ></router-link>
       </div>
     </div>
   </div>
@@ -57,7 +62,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 export default {
-  name: "project-L&B",
+  name: "Weather-it",
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
@@ -103,7 +108,7 @@ export default {
 </script>
 
 <style lang="scss">
-.LB {
+.WIT {
   width: 75%;
 
   .container {

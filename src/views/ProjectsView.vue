@@ -96,6 +96,13 @@ export default {
           title: "L&B Restaurant",
           path: "L&B",
         },
+
+        {
+          imgUrl:
+            "https://cdn.discordapp.com/attachments/935969848230547551/1069286540741718089/Weather-it.png",
+          title: "Weather It",
+          path: "Weather-it",
+        },
       ],
     };
   },
