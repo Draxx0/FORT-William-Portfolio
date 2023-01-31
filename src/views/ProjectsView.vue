@@ -179,12 +179,13 @@ export default {
           transition: 0.5s ease-in-out;
 
           &:hover > .project-card-title {
-            animation: fromBottom 0.6s ease-in-out;
+            bottom: 40%;
+            transform: translate(-50%, -50%);
             opacity: 1;
           }
 
           &:hover > .project-card-img {
-            filter: brightness(50%);
+            filter: brightness(30%);
           }
 
           .project-card-img {
@@ -199,16 +200,18 @@ export default {
           }
 
           .project-card-title {
-            font-family: "Popins", sans-serif;
-            font-weight: 600;
+            font-family: 'Montserrat Alternates', sans-serif;
             position: absolute;
-            position: absolute;
-            top: 35%;
-            left: 25%;
+            bottom: 35%;
+            left: 50%;
+            transform: translate(-50%, 50%);
             opacity: 0;
+            width: 100%;
+            text-align: center;
             color: $dark-mode-text-color;
             font-weight: 500;
             font-size: 2rem;
+            transition: 0.3s ease-in-out all;
           }
 
           a {
@@ -242,15 +245,15 @@ export default {
   }
 }
 
-@keyframes fromBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
-  }
+// @keyframes fromBottom {
+//   0% {
+//     opacity: 0;
+//     transform: translate(0, 50px);
+//   }
 
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+//   100% {
+//     opacity: 1;
+//     transform: translate(50%, 0);
+//   }
+// }
 </style>
