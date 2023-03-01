@@ -178,6 +178,11 @@ export default {
           img: "Javascript.png",
         },
         {
+          name: "Typescript",
+          type: "front",
+          img: "typescript.png",
+        },
+        {
           name: "SASS",
           type: "front",
           img: "sass.png",

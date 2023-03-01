@@ -122,7 +122,7 @@ export default {
 }
 
 @media screen and (max-width: 1334px) {
-  .LB {
+  .WIT {
     width: 100%;
   }
 }
