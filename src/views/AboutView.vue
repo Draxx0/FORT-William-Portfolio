@@ -648,18 +648,17 @@ export default {
   }
 }
 
-@media screen and (max-width: 1117px) {
-  .about .container .skills-container .skills-row {
-    display: flex;
-    flex-direction: column;
-  }
-}
-
 @media screen and (max-width: 809px) {
   .about {
     .container {
       .soft-skills-container {
         .soft-skills-grid {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .skills-container{
+        .skills-row{
           display: flex;
           flex-direction: column;
         }

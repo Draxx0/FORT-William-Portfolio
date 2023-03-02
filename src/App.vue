@@ -40,6 +40,23 @@ export default {
 
   mounted() {
     gsap.from("body", { opacity: 0, duration: 1 });
+
+    const app = document.querySelector("#app");
+
+    if (localStorage.getItem("colorTheme")) {
+      app.classList.remove("green");
+      app.classList.add(localStorage.getItem("colorTheme"));
+    } else {
+      app.classList.add("green");
+    }
+
+    if (localStorage.getItem("isDarkMode") === "false") {
+      app.classList.remove("dark-mode");
+      app.classList.add("light-mode");
+    } else {
+      app.classList.remove("light-mode");
+      app.classList.add("dark-mode");
+    }
   },
 };
 </script>

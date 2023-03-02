@@ -61,7 +61,7 @@ export default {
   data: function () {
     return {
       colorTheme: ["green", "orange", "pink", "blue", "red", "yellow"],
-      isDarkMode: true,
+      isDarkMode: localStorage.getItem("isDarkMode") === "true" ? true : false,
       isNavOpen: false,
     };
   },
@@ -73,9 +73,11 @@ export default {
       if (this.isDarkMode) {
         app.classList.remove("dark-mode");
         app.classList.add("light-mode");
+        localStorage.setItem("isDarkMode", false);
       } else {
         app.classList.remove("light-mode");
         app.classList.add("dark-mode");
+        localStorage.setItem("isDarkMode", true);
       }
 
       this.isDarkMode = !this.isDarkMode;
@@ -107,6 +109,8 @@ export default {
 
     setColor(color) {
       const app = document.querySelector("#app");
+
+      localStorage.setItem("colorTheme", color);
 
       app.classList.forEach((appClass) => {
         if (appClass !== "light-mode" && appClass !== "dark-mode") {
@@ -202,7 +206,6 @@ export default {
     display: none;
   }
 
-
   .mobile-menu {
     display: flex;
     flex-direction: column;
@@ -275,7 +278,7 @@ export default {
 
 @media screen and (max-width: 1334px) {
   .settings-menu {
-    .mobile-nav-wrap{
+    .mobile-nav-wrap {
       display: block;
       border-radius: 50%;
       padding: 15px;
@@ -283,7 +286,7 @@ export default {
       cursor: pointer;
     }
 
-    .mobile-nav-container{
+    .mobile-nav-container {
       display: flex;
       flex-direction: column;
       gap: 25px;
