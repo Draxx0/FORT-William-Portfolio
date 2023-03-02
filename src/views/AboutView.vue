@@ -230,6 +230,12 @@ export default {
         },
 
         {
+          name: "Firebase",
+          type: "back",
+          img: "firebase.png",
+        },
+
+        {
           name: "Figma",
           type: "other",
           img: "figma.png",
