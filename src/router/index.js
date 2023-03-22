@@ -10,6 +10,7 @@ import DigitalEvent2023View from "../views/projects/DigitalEvent2023View.vue";
 import WeatherItView from "../views/projects/WeatherItView.vue";
 import LBView from "../views/projects/LBView.vue";
 import TitanimeView from "../views/projects/TitanimeView.vue";
+import HomerunView from "../views/projects/HomerunView.vue";
 
 const routes = [
   {
@@ -73,6 +74,12 @@ const routes = [
     path: "/projects/Titanime",
     name: "projects-Titanime",
     component: TitanimeView,
+  },
+
+  {
+    path: "/projects/Homerun",
+    name: "projects-Homerun",
+    component: HomerunView,
   },
 ];
 

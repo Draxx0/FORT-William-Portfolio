@@ -103,6 +103,11 @@ export default {
           title: "Weather It",
           path: "Weather-it",
         },
+        {
+          imgUrl: "https://cdn.discordapp.com/attachments/1081252530975150160/1088050564262285372/homerun-shot.jpg",
+          title: "Homerun",
+          path: "Homerun",
+        }
       ],
     };
   },
