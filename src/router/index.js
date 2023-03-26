@@ -3,7 +3,6 @@ import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import ProjectsView from "../views/ProjectsView.vue";
 import ContactView from "../views/ContactView.vue";
-import UnityCavescapeView from "../views/projects/UnityCavescapeView.vue";
 import WitchWeatherView from "../views/projects/WitchWeatherView.vue";
 import DigitalEvent2022View from "../views/projects/DigitalEvent2022View.vue";
 import DigitalEvent2023View from "../views/projects/DigitalEvent2023View.vue";
@@ -11,6 +10,7 @@ import WeatherItView from "../views/projects/WeatherItView.vue";
 import LBView from "../views/projects/LBView.vue";
 import TitanimeView from "../views/projects/TitanimeView.vue";
 import HomerunView from "../views/projects/HomerunView.vue";
+import JungleReflexView from "../views/projects/JungleReflexView.vue";
 
 const routes = [
   {
@@ -35,9 +35,9 @@ const routes = [
   },
 
   {
-    path: "/projects/Unity-Cave'scape",
-    name: "project-Unity-Cave'scape",
-    component: UnityCavescapeView,
+    path: "/projects/Jungle-Reflex",
+    name: "Jungle-Reflex",
+    component: JungleReflexView,
   },
 
   {

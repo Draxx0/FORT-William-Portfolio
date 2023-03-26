@@ -56,13 +56,6 @@ export default {
       projectsEsd: [
         {
           imgUrl:
-            "https://cdn.discordapp.com/attachments/935969848230547551/983651904968073237/Unity.png",
-          title: "Unity - Cave'scape",
-          path: "Unity-Cave'scape",
-        },
-
-        {
-          imgUrl:
             "https://cdn.discordapp.com/attachments/935969848230547551/984098251571601518/WitchWeather.png",
           title: "Witch Weather ?",
           path: "Witch-Weather",
@@ -80,6 +73,13 @@ export default {
             "https://cdn.discordapp.com/attachments/935969848230547551/1066771407104651284/pixelwar.png",
           title: "Digital Event 2023",
           path: "Digital-Event-2023",
+        },
+
+        {
+          imgUrl:
+            "https://cdn.discordapp.com/attachments/935969848230547551/1088076600546971658/jungle-reflex-shot.jpg",
+          title: "Jungle Reflex",
+          path: "Jungle-Reflex",
         },
       ],
       myProjects: [
@@ -104,10 +104,11 @@ export default {
           path: "Weather-it",
         },
         {
-          imgUrl: "https://cdn.discordapp.com/attachments/1081252530975150160/1088050564262285372/homerun-shot.jpg",
+          imgUrl:
+            "https://cdn.discordapp.com/attachments/1081252530975150160/1088050564262285372/homerun-shot.jpg",
           title: "Homerun",
           path: "Homerun",
-        }
+        },
       ],
     };
   },
@@ -205,7 +206,7 @@ export default {
           }
 
           .project-card-title {
-            font-family: 'Montserrat Alternates', sans-serif;
+            font-family: "Montserrat Alternates", sans-serif;
             position: absolute;
             bottom: 35%;
             left: 50%;

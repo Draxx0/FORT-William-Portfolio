@@ -59,10 +59,6 @@
       </div>
 
       <div class="links-container">
-        <router-link to="/projects/Unity-Cave'scape" @click="scrollToTop()">
-          <i class="fa-solid fa-arrow-left-long"></i>Projets
-          Précèdents</router-link
-        >
         <router-link to="/projects/Digital-Event-2022" @click="scrollToTop()">
           Projets Suivant<i class="fa-solid fa-arrow-right-long"></i
         ></router-link>
@@ -80,6 +76,14 @@
 
   .colored {
     text-decoration: none;
+  }
+
+  .links-container {
+    justify-content: end;
+
+    &:hover a > i {
+      transform: translateX(10px);
+    }
   }
 
   .container {
