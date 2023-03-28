@@ -18,7 +18,6 @@
         </div>
 
         <div class="about-me-container">
-
           <h3 class="about-me-items">
             <span class="bold">Ville d'habitation :</span> Bordeaux
           </h3>
@@ -173,6 +172,11 @@ export default {
           img: "CSS.png",
         },
         {
+          name: "Angular",
+          type: "front",
+          img: "angular.png",
+        },
+        {
           name: "Javascript",
           type: "front",
           img: "Javascript.png",
@@ -203,9 +207,9 @@ export default {
           img: "React.png",
         },
         {
-          name: "Bootstrap",
-          type: "front",
-          img: "bootstrap.png",
+          name: "MongoDB",
+          type: "back",
+          img: "mongodb.webp",
         },
         {
           name: "Tailwind",
@@ -657,8 +661,8 @@ export default {
           flex-direction: column;
         }
       }
-      .skills-container{
-        .skills-row{
+      .skills-container {
+        .skills-row {
           display: flex;
           flex-direction: column;
         }
