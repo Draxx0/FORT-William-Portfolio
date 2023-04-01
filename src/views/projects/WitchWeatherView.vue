@@ -2,6 +2,10 @@
   <div class="WitchWeather">
     <div class="container">
       <div class="presentation-container">
+        <div class="row">
+          <i class="fa-solid fa-arrow-left-long"></i>
+          <p @click="goBack" class="back">Revenir aux projets</p>
+        </div>
         <h1 class="section-title">Witch Weather ?</h1>
         <h3 class="section-subtitle colored">
           Créer une application web consommant une API en Angular/NodeJs
@@ -112,6 +116,10 @@ export default {
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
+    },
+
+    goBack() {
+      this.$router.push("/projects");
     },
   },
   mounted() {

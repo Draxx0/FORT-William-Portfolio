@@ -2,6 +2,10 @@
   <div class="Titanime">
     <div class="container">
       <div class="header">
+        <div class="row">
+          <i class="fa-solid fa-arrow-left-long"></i>
+          <p @click="goBack" class="back">Revenir aux projets</p>
+        </div>
         <h1 class="section-title">Titanime</h1>
         <h3 class="section-subtitle colored">Un site de "Streaming d'Anime"</h3>
         <p class="section-description">
@@ -97,6 +101,10 @@ export default {
   methods: {
     scrollTop() {
       window.scrollTo(0, 0);
+    },
+
+    goBack() {
+      this.$router.push("/projects");
     },
   },
 

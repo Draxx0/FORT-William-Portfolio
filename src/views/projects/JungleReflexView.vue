@@ -2,6 +2,10 @@
   <div class="JungleReflex">
     <div class="container">
       <div class="header">
+        <div class="row">
+          <i class="fa-solid fa-arrow-left-long"></i>
+          <p @click="goBack" class="back">Revenir aux projets</p>
+        </div>
         <h1 class="section-title">Jungle Reflex</h1>
         <h3 class="section-subtitle colored">Digitaliser un jeu de société</h3>
         <p class="section-description">
@@ -68,6 +72,10 @@ export default {
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
+    },
+
+    goBack() {
+      this.$router.push("/projects");
     },
   },
 

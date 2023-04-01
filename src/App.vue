@@ -110,6 +110,27 @@ body:has(.light-mode) {
   background-color: $light-mode-background-color;
 }
 
+.back {
+  font-size: 1.1rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+
+  i {
+    transition: 0.3s ease-in-out;
+  }
+
+  &:hover > i {
+    transform: translateX(-10px);
+  }
+}
+
 nav {
   display: flex;
   flex-direction: column;

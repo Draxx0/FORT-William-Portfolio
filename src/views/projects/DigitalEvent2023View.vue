@@ -2,6 +2,10 @@
   <div class="DigitalEvent">
     <div class="container">
       <div class="header">
+        <div class="row">
+          <i class="fa-solid fa-arrow-left-long"></i>
+          <p @click="goBack" class="back">Revenir aux projets</p>
+        </div>
         <h1 class="section-title">Pixel War</h1>
         <h3 class="section-subtitle colored">Deux Semaines, une Pixel war.</h3>
         <p class="section-description">
@@ -17,9 +21,9 @@
           <br /><br />
 
           Pour ce projet j'ai fait partis de l'équipe des développeurs. Nous
-          avions le groupe des développeurs back et celui des développeurs front.
-          Ayant un attrait particulier pour le front-end j'ai donc fais partie
-          de cette équipe et en tant que
+          avions le groupe des développeurs back et celui des développeurs
+          front. Ayant un attrait particulier pour le front-end j'ai donc fais
+          partie de cette équipe et en tant que
           <span class="colored bold">Lead des développeurs front.</span>
           Un rôle que j'ai vraiment pris à coeur et qui m'a plus de part-là
           gestion des tâches mais également la gestion des conflits et des
@@ -29,10 +33,10 @@
 
           Nous avons mis en place un système d'authentification, de niveaux il
           est possible également de consulter le classement en temps réel, de
-          voir les personnes qui ont posé en pixel en temps réel, il est possible
-          en passant votre curseur sur un pixel posé de voir qui l'a posé,
-          chaque partie était streamer, un chat twitch a été implémenté afin de
-          pouvoir interagir directement sur le live.
+          voir les personnes qui ont posé en pixel en temps réel, il est
+          possible en passant votre curseur sur un pixel posé de voir qui l'a
+          posé, chaque partie était streamer, un chat twitch a été implémenté
+          afin de pouvoir interagir directement sur le live.
 
           <br /><br />
 
@@ -96,6 +100,10 @@ export default {
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
+    },
+
+    goBack() {
+      this.$router.push("/projects");
     },
   },
 

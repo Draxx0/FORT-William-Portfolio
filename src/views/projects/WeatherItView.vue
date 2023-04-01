@@ -2,6 +2,10 @@
   <div class="WIT">
     <div class="container">
       <div class="header">
+        <div class="row">
+          <i class="fa-solid fa-arrow-left-long"></i>
+          <p @click="goBack" class="back">Revenir aux projets</p>
+        </div>
         <h1 class="section-title">Weather It</h1>
         <h3 class="section-subtitle colored">Création d'une interface météo</h3>
         <p class="section-description">
@@ -42,9 +46,18 @@
       <div class="render-container">
         <h3 class="section-subtitle colored">Rendu</h3>
 
-        <img src="../../../public/img/Weather-it.png" alt="" class="section-img" />
+        <img
+          src="../../../public/img/Weather-it.png"
+          alt=""
+          class="section-img"
+        />
 
-        <a href="https://weather-it-indol.vercel.app/" class="project-link" target="_blank">Voir plus</a>
+        <a
+          href="https://weather-it-indol.vercel.app/"
+          class="project-link"
+          target="_blank"
+          >Voir plus</a
+        >
       </div>
 
       <div class="links-container">
@@ -70,6 +83,10 @@ export default {
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
+    },
+
+    goBack() {
+      this.$router.push("/projects");
     },
   },
 

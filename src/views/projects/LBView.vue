@@ -2,6 +2,10 @@
   <div class="LB">
     <div class="container">
       <div class="header">
+        <div class="row">
+          <i class="fa-solid fa-arrow-left-long"></i>
+          <p @click="goBack" class="back">Revenir aux projets</p>
+        </div>
         <h1 class="section-title">L&B Burgers</h1>
         <h3 class="section-subtitle colored">
           Création d'une application Restaurant
@@ -35,7 +39,12 @@
 
         <img src="../../../public/img/lb.png" alt="" class="section-img" />
 
-        <a href="https://lb-burgers.vercel.app/" class="project-link" target="_blank">Voir plus</a>
+        <a
+          href="https://lb-burgers.vercel.app/"
+          class="project-link"
+          target="_blank"
+          >Voir plus</a
+        >
       </div>
 
       <div class="links-container">
@@ -61,6 +70,10 @@ export default {
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
+    },
+
+    goBack() {
+      this.$router.push("/projects");
     },
   },
 

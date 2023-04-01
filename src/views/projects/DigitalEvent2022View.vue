@@ -2,6 +2,10 @@
   <div class="DigitalEvent">
     <div class="container">
       <div class="header">
+        <div class="row">
+          <i class="fa-solid fa-arrow-left-long"></i>
+          <p @click="goBack" class="back">Revenir aux projets</p>
+        </div>
         <h1 class="section-title">The Last Chance</h1>
         <h3 class="section-subtitle colored">
           Deux Semaines, un escape game virtuel
@@ -76,6 +80,10 @@ export default {
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
+    },
+
+    goBack() {
+      this.$router.push("/projects");
     },
   },
 

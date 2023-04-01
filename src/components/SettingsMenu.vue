@@ -53,6 +53,9 @@
 </template>
 
 <script>
+import { watch } from "vue";
+import { useRoute } from "vue-router";
+
 export default {
   name: "SettingsMenu",
 
@@ -132,6 +135,17 @@ export default {
           modeWrap.style.transform = "translateX(0)";
           const mobileMenu = document.querySelector(".mobile-nav-wrap");
           mobileMenu.style.transform = "translateX(0)";
+        } else if (
+          document
+            .querySelector(".mobile-nav-container")
+            .classList.contains("open")
+        ) {
+          document
+            .querySelector(".mobile-nav-container")
+            .classList.remove("open");
+          const mobileMenu = document.querySelector(".mobile-nav-wrap");
+          mobileMenu.style.transform = "translateX(0)";
+          this.isNavOpen = !this.isNavOpen;
         }
       });
     },
@@ -143,6 +157,17 @@ export default {
 
   mounted() {
     this.hideSettingsMenuOnScroll();
+    const route = useRoute();
+    watch(route, () => {
+      if (this.isNavOpen) {
+        document
+          .querySelector(".mobile-nav-container")
+          .classList.remove("open");
+        const mobileMenu = document.querySelector(".mobile-nav-wrap");
+        mobileMenu.style.transform = "translateX(0)";
+        this.isNavOpen = false;
+      }
+    });
   },
 };
 </script>

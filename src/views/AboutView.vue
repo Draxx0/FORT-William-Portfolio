@@ -30,6 +30,7 @@
         </div>
 
         <div class="btn-container">
+          <a class="btn" @click="downloadCV()">Télécharger mon CV</a>
           <router-link to="/contact" class="btn" @click="scrollToTop()">
             Me contacter</router-link
           >
@@ -296,6 +297,12 @@ export default {
   },
 
   methods: {
+    downloadCV() {
+      const link = document.createElement("a");
+      link.href = "CV-FORT-William.jpg";
+      link.setAttribute("download", "CV-FORT-William.jpg");
+      link.click();
+    },
     scrollToTop() {
       window.scrollTo(0, 0);
     },

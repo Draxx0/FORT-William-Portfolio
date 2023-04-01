@@ -65,7 +65,6 @@ export default {
     });
 
     const txtAnim = document.querySelector(".txt-anim");
-    console.log(txtAnim);
 
     new Typewriter(txtAnim, {
       loop: true,
