@@ -10,8 +10,7 @@
           Ce projet d'application web m'a nécessité l'utilisation de plusieurs
           compétences techniques pour sa réalisation. Tout d'abord, j'ai utilisé
           React TypeScript pour construire l'interface utilisateur, ce qui a
-          nécessité une bonne connaissance de la programmation orientée objet
-          ainsi qu'une compréhension approfondie de la syntaxe TypeScript. J'ai
+          nécessité une bonne connaissance de la syntaxe TypeScript. J'ai
           également utilisé Node.js et MongoDB pour le back-end, nécessitant une
           bonne compréhension de la gestion des bases de données, de la gestion
           des requêtes et des protocoles de communication client-serveur.

@@ -172,11 +172,6 @@ export default {
           img: "CSS.png",
         },
         {
-          name: "Angular",
-          type: "front",
-          img: "angular.png",
-        },
-        {
           name: "Javascript",
           type: "front",
           img: "Javascript.png",
@@ -205,6 +200,11 @@ export default {
           name: "React",
           type: "front",
           img: "React.png",
+        },
+        {
+          name: "Angular",
+          type: "front",
+          img: "angular.png",
         },
         {
           name: "MongoDB",
