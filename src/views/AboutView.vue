@@ -161,19 +161,19 @@ export default {
       ],
       skills: [
         {
-          name: "HTML",
+          name: "React",
           type: "front",
-          img: "html.png",
+          img: "React.png",
         },
         {
-          name: "CSS",
+          name: "Vue",
           type: "front",
-          img: "CSS.png",
+          img: "vue.png",
         },
         {
-          name: "Javascript",
+          name: "Angular",
           type: "front",
-          img: "Javascript.png",
+          img: "angular.png",
         },
         {
           name: "Typescript",
@@ -189,21 +189,6 @@ export default {
           name: "Git",
           type: "other",
           img: "git.png",
-        },
-        {
-          name: "Vue",
-          type: "front",
-          img: "vue.png",
-        },
-        {
-          name: "React",
-          type: "front",
-          img: "React.png",
-        },
-        {
-          name: "Angular",
-          type: "front",
-          img: "angular.png",
         },
         {
           name: "MongoDB",
@@ -755,8 +740,6 @@ export default {
           font-size: 0.8rem;
         }
       }
-
-  
     }
   }
 }
@@ -781,7 +764,6 @@ export default {
         &:last-of-type {
           .card-year {
             &::after {
-
               height: 440px;
             }
           }
