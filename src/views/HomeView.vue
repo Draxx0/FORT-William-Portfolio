@@ -14,19 +14,9 @@
         </p>
 
         <p class="text">
-          Je travaille actuellement pour
-          <a
-            href="https://agencebackstages.fr/"
-            target="_blank"
-            class="company"
-          >
-            L'agence Backstages</a
-          >
-          en tant que développeur front end.
+          <span class="colored">Je suis actuellement à la recherche d'un stage</span>, alors si mon profil vous
+          intéresse, n'hésitez pas à me contacter !
         </p>
-        <router-link to="/about" class="btn" @click="scrollToTop()">
-          Voir plus</router-link
-        >
       </div>
       <div class="right-container">
         <div class="img-wrap">

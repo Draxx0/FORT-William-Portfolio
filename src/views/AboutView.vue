@@ -19,7 +19,7 @@
 
         <div class="about-me-container">
           <h3 class="about-me-items">
-            <span class="bold">Ville d'habitation :</span> Bordeaux
+            <span class="bold">Réside à :</span> Bordeaux
           </h3>
 
           <h3 class="about-me-items">
@@ -126,8 +126,6 @@
           </div>
         </div>
       </div>
-
-      <div class="school-experience-containe"></div>
     </div>
   </div>
 </template>
@@ -276,15 +274,9 @@ export default {
       ],
       stages: [
         {
-          year: "Maintenant",
+          year: "Septembre 2022 - Mars 2023",
           type: "Contrat étudiant - Agence Backstages",
-          text: "Développement Frontend HTML / CSS / JS",
-        },
-
-        {
-          year: "2022",
-          type: "CDD - Agence Backstages",
-          text: "Développement du site Néo Process",
+          text: "Développement Frontend de plusieurs sites, DPDA Bordeaux, Neo-Process, Rock Hill ainsi que la refonte du site de l'agence backstages.",
         },
 
         {
@@ -552,6 +544,58 @@ export default {
         width: 50%;
         padding: 40px 60px;
 
+        &:first-of-type {
+          .card-year {
+            &::before {
+              position: absolute;
+              left: 25px;
+              content: "";
+              display: block;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              margin-right: 10px;
+            }
+
+            &::after {
+              position: absolute;
+              content: "";
+              top: 50px;
+              left: 30px;
+              display: block;
+              width: 10px;
+              height: 230px;
+              margin-right: 10px;
+            }
+          }
+        }
+
+        &:last-of-type {
+          .card-year {
+            &::before {
+              position: absolute;
+              left: 25px;
+              content: "";
+              display: block;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              margin-right: 10px;
+            }
+
+            &::after {
+              position: absolute;
+              content: "";
+              top: 50px;
+              left: 30px;
+              display: block;
+              width: 10px;
+              height: 160px;
+              margin-right: 10px;
+            }
+          }
+        }
+
         .card-content {
           display: flex;
           flex-direction: column;
@@ -564,30 +608,6 @@ export default {
             font-family: "Poppins", sans-serif;
             font-size: 1.1rem;
             font-weight: 600;
-
-            &:nth-child(1) {
-              &::before {
-                position: absolute;
-                left: 25px;
-                content: "";
-                display: block;
-                width: 20px;
-                height: 20px;
-                border-radius: 50%;
-                margin-right: 10px;
-              }
-
-              &::after {
-                position: absolute;
-                content: "";
-                top: 50px;
-                left: 30px;
-                display: block;
-                width: 10px;
-                height: 366px;
-                margin-right: 10px;
-              }
-            }
           }
 
           .card-text {
@@ -652,7 +672,7 @@ export default {
         width: fit-content;
 
         .experience-school-card {
-          width: fit-content;
+          width: initial;
         }
       }
     }
@@ -678,53 +698,12 @@ export default {
   }
 }
 
-@media screen and (max-width: 693px) {
-  .about {
-    .container {
-      .experience-school-container {
-        .experience-school-card {
-          .card-content {
-            .card-year:nth-child(1)::after {
-              height: 410px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 659px) {
-  .about {
-    .container {
-      .experience-school-container {
-        .experience-school-card {
-          .card-content {
-            .card-year:nth-child(1)::after {
-              height: 430px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 618px) {
   .about {
     .container {
       .btn-container {
         a {
           padding: 10px;
-        }
-      }
-      .experience-school-container {
-        .experience-school-card {
-          .card-content {
-            .card-year:nth-child(1)::after {
-              height: 440px;
-            }
-          }
         }
       }
     }
@@ -742,6 +721,25 @@ export default {
           }
         }
       }
+
+      .experience-school-container .experience-school-card {
+        &:first-of-type {
+          .card-year {
+            &::after {
+              height: 280px;
+            }
+          }
+        }
+
+        &:last-of-type {
+          .card-year {
+            &::after {
+              top: 70px;
+              height: 250px;
+            }
+          }
+        }
+      }
     }
   }
   .tagcloud--item {
@@ -749,22 +747,6 @@ export default {
   }
 }
 
-@media screen and (max-width: 547px) {
-  .about {
-    .container {
-      .experience-school-container {
-        .experience-school-card {
-          .card-content {
-            .card-year:nth-child(1)::after {
-              height: 500px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 468px) {
   .about {
     .container {
@@ -773,36 +755,8 @@ export default {
           font-size: 0.8rem;
         }
       }
-      .experience-school-container {
-        .experience-school-card {
-          .card-content {
-            .card-year:nth-child(1)::after {
-              height: 520px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
 
-@media screen and (max-width: 468px) {
-  .about {
-    .container {
-      .btn-container {
-        a {
-          font-size: 0.8rem;
-        }
-      }
-      .experience-school-container {
-        .experience-school-card {
-          .card-content {
-            .card-year:nth-child(1)::after {
-              height: 550px;
-            }
-          }
-        }
-      }
+  
     }
   }
 }
@@ -815,11 +769,20 @@ export default {
           font-size: 0.7rem;
         }
       }
-      .experience-school-container {
-        .experience-school-card {
-          .card-content {
-            .card-year:nth-child(1)::after {
-              height: 666px;
+
+      .experience-school-container .experience-school-card {
+        &:first-of-type {
+          .card-year {
+            &::after {
+              height: 355px;
+            }
+          }
+        }
+        &:last-of-type {
+          .card-year {
+            &::after {
+
+              height: 440px;
             }
           }
         }
