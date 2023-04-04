@@ -37,22 +37,6 @@
         </div>
       </div>
 
-      <div class="soft-skills-container">
-        <h3 class="soft-skills-title">Mes Softs Skills</h3>
-
-        <div class="soft-skills-grid">
-          <div
-            class="soft-skill"
-            v-for="softSkill in softSkills"
-            :key="softSkill.name"
-          >
-            <h4 class="soft-skill-name">
-              {{ softSkill.name }}
-            </h4>
-          </div>
-        </div>
-      </div>
-
       <div class="skills-container">
         <h3 class="skill-type">Frontend</h3>
 
@@ -90,6 +74,22 @@
           >
             <span class="skill-name">{{ skill.name }}</span>
             <img :src="'img/' + skill.img" class="skill-img" />
+          </div>
+        </div>
+      </div>
+
+      <div class="soft-skills-container">
+        <h3 class="soft-skills-title">Mes Softs Skills</h3>
+
+        <div class="soft-skills-grid">
+          <div
+            class="soft-skill"
+            v-for="softSkill in softSkills"
+            :key="softSkill.name"
+          >
+            <h4 class="soft-skill-name">
+              {{ softSkill.name }}
+            </h4>
           </div>
         </div>
       </div>

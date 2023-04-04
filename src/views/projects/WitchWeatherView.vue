@@ -2,7 +2,7 @@
   <div class="WitchWeather">
     <div class="container">
       <div class="presentation-container">
-        <div class="row" @click="goBack">
+        <div class="row pointer" @click="goBack">
           <i class="fa-solid fa-arrow-left-long"></i>
           <p class="back">Revenir aux projets</p>
         </div>

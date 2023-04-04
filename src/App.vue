@@ -116,6 +116,10 @@ body:has(.light-mode) {
   cursor: pointer;
 }
 
+.pointer{
+  cursor: pointer;
+}
+
 .row {
   display: flex;
   align-items: center;
