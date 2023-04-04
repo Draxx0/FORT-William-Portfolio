@@ -2,9 +2,9 @@
   <div class="DigitalEvent">
     <div class="container">
       <div class="header">
-        <div class="row">
+        <div class="row" @click="goBack">
           <i class="fa-solid fa-arrow-left-long"></i>
-          <p @click="goBack" class="back">Revenir aux projets</p>
+          <p class="back">Revenir aux projets</p>
         </div>
         <h1 class="section-title">The Last Chance</h1>
         <h3 class="section-subtitle colored">

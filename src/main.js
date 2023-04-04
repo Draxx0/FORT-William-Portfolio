@@ -6,6 +6,7 @@ createApp(App).use(router).mount("#app");
 
 // SCRIPT GOOGLE ANALYTICS
 const asyncScript = document.createElement("script");
+asyncScript.setAttribute("async", "true");
 asyncScript.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.VUE_APP_NOT_GOOGLE_ANALYTICS_ID}`;
 document.head.appendChild(asyncScript);
 
