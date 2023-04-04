@@ -76,7 +76,6 @@ body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  // background-color: $dark-mode-background-color;
 
   &::before,
   ::after {
