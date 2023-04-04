@@ -7,7 +7,7 @@
         <div class="introduction-container">
           <h2 class="title">
             Je suis FORT William
-            <span class="colored"> Frontend Developper</span>
+            <span class="colored"> Développeur Web </span>
           </h2>
 
           <p class="text">

@@ -1,5 +1,19 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
 
-createApp(App).use(router).mount('#app')
+createApp(App).use(router).mount("#app");
+
+// SCRIPT GOOGLE ANALYTICS
+const asyncScript = document.createElement("script");
+asyncScript.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.VUE_APP_NOT_GOOGLE_ANALYTICS_ID}`;
+document.head.appendChild(asyncScript);
+
+const script = document.createElement("script");
+script.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${process.env.VUE_APP_NOT_GOOGLE_ANALYTICS_ID}'
+    `;
+document.head.appendChild(script);
