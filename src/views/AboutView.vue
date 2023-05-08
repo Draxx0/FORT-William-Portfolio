@@ -171,11 +171,6 @@ export default {
           img: "vue.png",
         },
         {
-          name: "Angular",
-          type: "front",
-          img: "angular.png",
-        },
-        {
           name: "Typescript",
           type: "front",
           img: "typescript.png",
