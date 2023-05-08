@@ -64,12 +64,12 @@
       </div>
 
       <div class="skills-container">
-        <h3 class="skill-type">Autres compétences</h3>
+        <h3 class="skill-type">Devops</h3>
 
         <div class="skills-row">
           <div
             class="skill-flex"
-            v-for="skill in otherSkills"
+            v-for="skill in skillsDevops"
             :key="skill.name"
           >
             <span class="skill-name">{{ skill.name }}</span>
@@ -181,16 +181,6 @@ export default {
           img: "sass.png",
         },
         {
-          name: "Git",
-          type: "other",
-          img: "git.png",
-        },
-        {
-          name: "MongoDB",
-          type: "back",
-          img: "mongodb.webp",
-        },
-        {
           name: "Tailwind",
           type: "front",
           img: "tailwind.png",
@@ -205,34 +195,50 @@ export default {
           type: "back",
           img: "nodejs.png",
         },
-
+        {
+          name: "Nest JS",
+          type: "back",
+          img: "NestJS.png",
+        },
+        {
+          name: "PostgreSQL",
+          type: "back",
+          img: "Postgresql_elephant.svg",
+        },
+        {
+          name: "MongoDB",
+          type: "back",
+          img: "mongodb.webp",
+        },
         {
           name: "Docker",
-          type: "back",
+          type: "devops",
           img: "docker.webp",
         },
-
+        {
+          name: "Git",
+          type: "devops",
+          img: "git.png",
+        },
+        {
+          name: "Github",
+          type: "devops",
+          img: "github.png",
+        },
+        {
+          name: "Gitlab",
+          type: "devops",
+          img: "gitlab.webp",
+        },
         {
           name: "Firebase",
           type: "back",
           img: "firebase.png",
         },
-
-        {
-          name: "Figma",
-          type: "other",
-          img: "figma.png",
-        },
-
-        {
-          name: "Adobe XD",
-          type: "other",
-          img: "adobexd.png",
-        },
       ],
       skillsFront: [],
       skillsBack: [],
-      otherSkills: [],
+      skillsDevops: [],
       schools: [
         {
           year: "2021 - 2024",
@@ -283,7 +289,7 @@ export default {
   mounted() {
     this.skillsFront = this.skills.filter((skill) => skill.type === "front");
     this.skillsBack = this.skills.filter((skill) => skill.type === "back");
-    this.otherSkills = this.skills.filter((skill) => skill.type === "other");
+    this.skillsDevops = this.skills.filter((skill) => skill.type === "devops");
 
     const aboutHeader = document.querySelector(".about-header");
     const experienceCards = document.querySelector(

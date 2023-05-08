@@ -12,11 +12,6 @@
           un site web, par quel procédé passe-t-on pour créer tous ces super
           sites modernes ?
         </p>
-
-        <p class="text">
-          <span class="colored">Je suis actuellement à la recherche d'un stage</span>, alors si mon profil vous
-          intéresse, n'hésitez pas à me contacter !
-        </p>
       </div>
       <div class="right-container">
         <div class="img-wrap">
