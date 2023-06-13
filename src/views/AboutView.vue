@@ -166,11 +166,6 @@ export default {
           img: "React.png",
         },
         {
-          name: "Vue",
-          type: "front",
-          img: "vue.png",
-        },
-        {
           name: "Typescript",
           type: "front",
           img: "typescript.png",
@@ -184,16 +179,6 @@ export default {
           name: "Tailwind",
           type: "front",
           img: "tailwind.png",
-        },
-        {
-          name: "GSAP",
-          type: "front",
-          img: "gsap.png",
-        },
-        {
-          name: "Node JS",
-          type: "back",
-          img: "nodejs.png",
         },
         {
           name: "Nest JS",
