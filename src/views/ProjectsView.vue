@@ -4,15 +4,15 @@
       <h1 class="section-title">Projets</h1>
 
       <div class="projects-section">
-        <h2 class="section-subtitle">Projets École</h2>
+        <h2 class="section-subtitle">Projets Personnel</h2>
 
         <div class="projects-container">
           <div
             class="project-card"
-            v-for="(project, index) in projectsEsd"
+            v-for="(project, index) in myProjects"
             :key="index"
           >
-            <img :src="project.imgUrl" alt="" class="project-card-img" />
+            <img :src="project.imgUrl" class="project-card-img" />
             <router-link
               :to="'/projects/' + project.path"
               @click="scrollToTop()"
@@ -23,15 +23,15 @@
       </div>
 
       <div class="projects-section">
-        <h2 class="section-subtitle">Projets Personnel</h2>
+        <h2 class="section-subtitle">Projets École</h2>
 
         <div class="projects-container">
           <div
             class="project-card"
-            v-for="(project, index) in myProjects"
+            v-for="(project, index) in projectsEsd"
             :key="index"
           >
-            <img :src="project.imgUrl" class="project-card-img" />
+            <img :src="project.imgUrl" alt="" class="project-card-img" />
             <router-link
               :to="'/projects/' + project.path"
               @click="scrollToTop()"

@@ -96,6 +96,19 @@
       </div>
 
       <div class="experience-school-container">
+        <h3 class="experience-school-title">Expériences</h3>
+        <div class="experience-school-card">
+          <div class="card-content" v-for="stage in stages" :key="stage.year">
+            <span class="card-year"
+              ><i class="fa-solid fa-calendar fa-lg"></i> {{ stage.year }}</span
+            >
+            <div class="card-info">
+              <span class="card-type">{{ stage.type }}</span>
+              <span class="card-text">{{ stage.text }}</span>
+            </div>
+          </div>
+        </div>
+
         <h3 class="experience-school-title">Formations</h3>
         <div class="experience-school-card">
           <div
@@ -110,19 +123,6 @@
             <div class="card-info">
               <span class="card-type">{{ school.type }}</span>
               <span class="card-text">{{ school.text }}</span>
-            </div>
-          </div>
-        </div>
-
-        <h3 class="experience-school-title">Expériences</h3>
-        <div class="experience-school-card">
-          <div class="card-content" v-for="stage in stages" :key="stage.year">
-            <span class="card-year"
-              ><i class="fa-solid fa-calendar fa-lg"></i> {{ stage.year }}</span
-            >
-            <div class="card-info">
-              <span class="card-type">{{ stage.type }}</span>
-              <span class="card-text">{{ stage.text }}</span>
             </div>
           </div>
         </div>
