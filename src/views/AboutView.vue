@@ -11,9 +11,10 @@
           </h2>
 
           <p class="text">
-            J’ai un attrait pour les jolis visuels, j’aime coder de belle
-            maquettes afin de leur donner vie ! Je suis quelqu’un de
-            perseverant, toutes erreurs est une opportunité d'apprendre.
+            J'ai développé une vraie passion pour les web-applications,
+            j'investis beaucoup de temps à construire des projets personnels
+            afin de mettre à l'épreuve mes connaissances ! Je suis quelqu’un de
+            perseverant, toute erreur est une opportunité d'apprendre.
           </p>
         </div>
 
@@ -244,6 +245,12 @@ export default {
         },
       ],
       stages: [
+        {
+          year: "Avril 2023 - Juillet 2023",
+          type: "Stage - Yabawt",
+          text: "Développement Fullstack JS - React / NestJS - Développement en micro-services du SaaS Webmarketer, Ajout de fonctionnalitées & Correction de bugs sur une web-app de gestion des demandes clients.",
+        },
+
         {
           year: "Septembre 2022 - Mars 2023",
           type: "Contrat étudiant - Agence Backstages",
@@ -515,55 +522,16 @@ export default {
         width: 50%;
         padding: 40px 60px;
 
-        &:first-of-type {
-          .card-year {
-            &::before {
-              position: absolute;
-              left: 25px;
-              content: "";
-              display: block;
-              width: 20px;
-              height: 20px;
-              border-radius: 50%;
-              margin-right: 10px;
-            }
-
-            &::after {
-              position: absolute;
-              content: "";
-              top: 50px;
-              left: 30px;
-              display: block;
-              width: 10px;
-              height: 230px;
-              margin-right: 10px;
-            }
-          }
-        }
-
-        &:last-of-type {
-          .card-year {
-            &::before {
-              position: absolute;
-              left: 25px;
-              content: "";
-              display: block;
-              width: 20px;
-              height: 20px;
-              border-radius: 50%;
-              margin-right: 10px;
-            }
-
-            &::after {
-              position: absolute;
-              content: "";
-              top: 50px;
-              left: 30px;
-              display: block;
-              width: 10px;
-              height: 160px;
-              margin-right: 10px;
-            }
+        .card-year {
+          &::before {
+            position: absolute;
+            left: 25px;
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 10px;
           }
         }
 
@@ -692,25 +660,6 @@ export default {
           }
         }
       }
-
-      .experience-school-container .experience-school-card {
-        &:first-of-type {
-          .card-year {
-            &::after {
-              height: 280px;
-            }
-          }
-        }
-
-        &:last-of-type {
-          .card-year {
-            &::after {
-              top: 70px;
-              height: 250px;
-            }
-          }
-        }
-      }
     }
   }
   .tagcloud--item {
@@ -736,23 +685,6 @@ export default {
       .btn-container {
         a {
           font-size: 0.7rem;
-        }
-      }
-
-      .experience-school-container .experience-school-card {
-        &:first-of-type {
-          .card-year {
-            &::after {
-              height: 355px;
-            }
-          }
-        }
-        &:last-of-type {
-          .card-year {
-            &::after {
-              height: 440px;
-            }
-          }
         }
       }
     }

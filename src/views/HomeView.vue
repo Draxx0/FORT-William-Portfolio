@@ -12,6 +12,13 @@
           un site web, par quel procédé passe-t-on pour créer tous ces super
           sites modernes ?
         </p>
+        <p class="text">
+          Je suis actuellement à la recherche d'une alternance pour la rentrée
+          de l'année scolaire !
+          <router-link to="/contact" class="colored" @click="scrollToTop()">
+            Rencontrons-nous ?</router-link
+          >
+        </p>
       </div>
       <div class="right-container">
         <div class="img-wrap">
