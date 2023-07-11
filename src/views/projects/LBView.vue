@@ -13,9 +13,9 @@
         <p class="section-description">
           L&B Burgers est une application de commande de burgers en ligne. Afin
           de la développer j'ai utilisé le framework React, il est possible sur
-          l'application de commander des burgers, de les supprimer, de les
-          ajouter au panier, de simuler un paiement et de voir l'historique des
-          commandes. L'application est responsive et fonctionne sur mobile.
+          l'application de commander des burgers, de les supprimer et de les
+          ajouter au panier. L'application est responsive et fonctionne sur
+          mobile.
         </p>
       </div>
 
@@ -48,7 +48,7 @@
       </div>
 
       <div class="links-container">
-        <router-link to="/projects/Titanime" @click="scrollToTop()">
+        <router-link to="/projects/V-analyser" @click="scrollToTop()">
           <i class="fa-solid fa-arrow-left-long"></i>Projets
           Précèdents</router-link
         >

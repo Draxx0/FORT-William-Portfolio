@@ -85,9 +85,9 @@ export default {
       myProjects: [
         {
           imgUrl:
-            "https://cdn.discordapp.com/attachments/935969848230547551/985925825377501184/titanime.png",
-          title: "Titanime - Anime",
-          path: "Titanime",
+            "https://cdn.discordapp.com/attachments/935969848230547551/1128380356710645821/v-analyser.jpg",
+          title: "V-analyser",
+          path: "V-analyser",
         },
 
         {

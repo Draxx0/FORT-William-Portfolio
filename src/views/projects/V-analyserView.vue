@@ -1,21 +1,23 @@
 <template>
-  <div class="Titanime">
+  <div class="V-analyser">
     <div class="container">
       <div class="header">
         <div class="row pointer" @click="goBack">
           <i class="fa-solid fa-arrow-left-long"></i>
           <p class="back">Revenir aux projets</p>
         </div>
-        <h1 class="section-title">Titanime</h1>
-        <h3 class="section-subtitle colored">Un site de "Streaming d'Anime"</h3>
+        <h1 class="section-title">V-Analyser</h1>
+        <h3 class="section-subtitle colored">
+          L'outil d'analyse de statistiques VALORANT.
+        </h3>
         <p class="section-description">
-          En me baladant sur Dribble je suis tombé sur une maquette mobile de
-          quelques pages auxquelles j'ai tout de suite accroché.<br />
-          J'ai donc décider de partir de cette bases afin de les réadapter au
-          format desktop et j'ai crée plusieurs pages tout en restant dans le
-          thèmes de départ. Le site à la forme d'un site de straming reprenant
-          les codes de bases, sur lequel il est possible de regarder des animes,
-          mais également des films d'anime<br /><br />
+          Il m'arrive de jouer au jeu VALORANT, un jeu que j'aime autant que je
+          déteste 😂. A partir d'une api me permettant de récupérer les
+          statistiques des joueurs, il m'est venus à l'idée de créer une
+          interface leur permettant d'analyser plusieurs de leur
+          statistiques.<br /><br />
+
+          J'ai réalisé ce projet en React, Typescript, Tailwind CSS.
         </p>
       </div>
 
@@ -23,29 +25,32 @@
         <h3 class="section-subtitle colored">Stacks utilisées</h3>
         <ul class="section-list">
           <li class="section-list-item">
-            <img src="../../../public/img/html.png" alt="" /> HTML
+            <img src="../../../public/img/React.png" alt="" /> React
           </li>
           <li class="section-list-item">
-            <img src="../../../public/img/sass.png" alt="" /> SASS
+            <img src="../../../public/img/typescript.png" alt="" /> Typescript
           </li>
           <li class="section-list-item">
-            <img src="../../../public/img/Javascript.png" alt="" /> JavaScript
+            <img src="../../../public/img/tailwind.png" alt="" /> Tailwind CSS
           </li>
         </ul>
       </div>
 
       <div class="render-container">
         <h3 class="section-subtitle colored">Rendu</h3>
-        <video
-          class="video-container"
-          controls
-          poster="../../../public/img/titanime.png"
+
+        <img
+          src="../../../public/img/v-analyser.jpg"
+          alt=""
+          class="section-img"
+        />
+
+        <a
+          href="https://v-analyser.vercel.app/"
+          class="project-link"
+          target="_blank"
+          >Voir plus</a
         >
-          <source
-            src="https://cdn.discordapp.com/attachments/935969848230547551/985919646806995004/screen-capture.webm"
-            type="video/webm"
-          />
-        </video>
       </div>
 
       <div class="links-container">
@@ -59,7 +64,7 @@
 
 <style lang="scss">
 @import "@/styles/variables.scss";
-.Titanime {
+.V-analyser {
   width: 75%;
 
   .container {
@@ -85,7 +90,7 @@
 }
 
 @media screen and (max-width: 1334px) {
-  .Titanime {
+  .V-analyser {
     width: 100%;
   }
 }
@@ -96,7 +101,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 export default {
-  name: "project-Titanime",
+  name: "V-analyser",
 
   methods: {
     scrollTop() {

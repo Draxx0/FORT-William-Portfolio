@@ -8,7 +8,7 @@ import DigitalEvent2022View from "../views/projects/DigitalEvent2022View.vue";
 import DigitalEvent2023View from "../views/projects/DigitalEvent2023View.vue";
 import WeatherItView from "../views/projects/WeatherItView.vue";
 import LBView from "../views/projects/LBView.vue";
-import TitanimeView from "../views/projects/TitanimeView.vue";
+import VanalyserView from "../views/projects/V-analyserView.vue";
 import HomerunView from "../views/projects/HomerunView.vue";
 import JungleReflexView from "../views/projects/JungleReflexView.vue";
 
@@ -71,9 +71,9 @@ const routes = [
   },
 
   {
-    path: "/projects/Titanime",
-    name: "projects-Titanime",
-    component: TitanimeView,
+    path: "/projects/V-analyser",
+    name: "projects-v-analyser",
+    component: VanalyserView,
   },
 
   {
