@@ -14,7 +14,7 @@
           Il m'arrive de jouer au jeu VALORANT, un jeu que j'aime autant que je
           déteste 😂. A partir d'une api me permettant de récupérer les
           statistiques des joueurs, il m'est venus à l'idée de créer une
-          interface leur permettant d'analyser plusieurs de leur
+          interface leur permettant d'analyser plusieurs de leurs
           statistiques.<br /><br />
 
           J'ai réalisé ce projet en React, Typescript, Tailwind CSS.
