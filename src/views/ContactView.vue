@@ -72,6 +72,7 @@ export default {
 <style lang="scss">
 @import "@/styles/variables.scss";
 .contact {
+  margin-left: 450px;
   width: 75%;
   height: 100vh;
 
@@ -187,6 +188,7 @@ export default {
   .contact {
     width: 100%;
     height: 100%;
+    margin: 0;
 
     .container {
       .contact-me-container {
@@ -197,17 +199,19 @@ export default {
         align-items: center;
         padding-bottom: 50px;
 
-        .wrapper {
-          display: flex;
-          flex-direction: column;
-          gap: 75px;
-        }
-
         .contact-me-content {
           align-items: flex-start;
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .contact .container .contact-me-container .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
   }
 }
 

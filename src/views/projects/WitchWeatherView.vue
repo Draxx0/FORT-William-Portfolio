@@ -75,6 +75,7 @@
 @import "@/styles/variables.scss";
 
 .WitchWeather {
+  margin-left: 450px;
   width: 75%;
   font-family: "Poppins", sans-serif;
 
@@ -103,6 +104,7 @@
 @media screen and (max-width: 1334px) {
   .WitchWeather {
     width: 100%;
+    margin: 0;
   }
 }
 </style>

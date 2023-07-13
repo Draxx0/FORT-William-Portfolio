@@ -117,6 +117,7 @@ export default {
 
 <style lang="scss">
 .LB {
+  margin-left: 450px;
   width: 75%;
 
   .container {
@@ -131,6 +132,7 @@ export default {
 
 @media screen and (max-width: 1334px) {
   .LB {
+    margin: 0;
     width: 100%;
   }
 }

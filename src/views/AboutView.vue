@@ -341,6 +341,7 @@ export default {
 @import "@/styles/variables.scss";
 
 .about {
+  margin-left: 450px;
   width: 75%;
 
   .container {
@@ -579,13 +580,11 @@ export default {
 
 @media screen and (max-width: 1334px) {
   .about {
+    margin: 0;
     width: 100%;
     .container {
       .experience-school-container {
         width: fit-content;
-        .experience-school-card {
-          width: auto;
-        }
       }
     }
   }
@@ -641,29 +640,10 @@ export default {
   .about {
     .container {
       .btn-container {
-        a {
-          padding: 10px;
-        }
+        flex-wrap: wrap;
+        gap: 25px;
       }
     }
-  }
-}
-
-@media screen and (max-width: 577px) {
-  .about {
-    .container {
-      .soft-skills-container {
-        .tagcloud {
-          width: fit-content !important;
-          .tagcloud--item {
-            font-size: 1.2rem;
-          }
-        }
-      }
-    }
-  }
-  .tagcloud--item {
-    font-size: 1rem;
   }
 }
 
@@ -673,6 +653,16 @@ export default {
       .btn-container {
         a {
           font-size: 0.8rem;
+        }
+      }
+
+      .experience-school-container .experience-school-card {
+        padding: 20px;
+
+        .card-year {
+          &::before {
+            display: none;
+          }
         }
       }
     }

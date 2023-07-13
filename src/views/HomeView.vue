@@ -84,18 +84,21 @@ export default {
 @import "@/styles/variables.scss";
 
 .home {
-  margin-bottom: 75px;
+  margin-left: 450px;
   width: 75%;
+  overflow: hidden;
 
   .container {
     width: 80%;
-    margin: 300px auto auto auto;
+    height: 100vh;
+    margin: auto;
     display: flex;
     gap: 50px;
 
     .left-container {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       gap: 15px;
       width: 50%;
       height: 100%;
@@ -126,7 +129,7 @@ export default {
 
     .right-container {
       display: flex;
-      justify-content: center;
+      align-items: center;
       width: 50%;
       height: 100%;
 
@@ -169,15 +172,21 @@ export default {
 @media screen and (max-width: 1500px) {
   .home {
     .container {
+      height: auto;
       flex-direction: column-reverse;
-      margin: 50px auto auto auto;
+      padding: 50px;
 
       .left-container {
         width: 100%;
       }
 
       .right-container {
-        justify-content: flex-start;
+        .img-wrap::before {
+          display: none;
+        }
+        .img-wrap::after {
+          display: none;
+        }
       }
 
       .profil-picture {
@@ -187,27 +196,12 @@ export default {
   }
 }
 
-@media screen and (max-width: 1419px) {
+@media screen and (max-width: 1334px) {
   .home {
-    .container {
-      .right-container {
-        .img-wrap::before {
-          display: none;
-        }
-        .img-wrap::after {
-          display: none;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1304px) {
-  .home {
+    margin: 0;
     width: 100%;
     .container {
       width: 80%;
-      margin: 50px auto 0 auto;
     }
   }
 }
