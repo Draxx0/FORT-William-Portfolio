@@ -97,7 +97,6 @@ p {
   display: flex;
   width: 100%;
   height: 100%;
-  margin-left: 400px;
   transition: 0.5s ease-in-out;
 }
 
@@ -115,7 +114,7 @@ body:has(.light-mode) {
   cursor: pointer;
 }
 
-.pointer{
+.pointer {
   cursor: pointer;
 }
 
@@ -573,7 +572,8 @@ nav {
     }
   }
 
-  nav {
+  nav,
+  .mobile-nav-container {
     a {
       &:hover {
         color: $green;
@@ -691,7 +691,8 @@ nav {
     }
   }
 
-  nav {
+  nav,
+  .mobile-nav-container {
     a {
       &:hover {
         color: $orange;
@@ -801,7 +802,8 @@ nav {
     }
   }
 
-  nav {
+  nav,
+  .mobile-nav-container {
     a {
       &:hover {
         color: $pink;
@@ -915,7 +917,8 @@ nav {
     }
   }
 
-  nav {
+  nav,
+  .mobile-nav-container {
     a {
       &:hover {
         color: $red;
@@ -1033,7 +1036,8 @@ nav {
     }
   }
 
-  nav {
+  nav,
+  .mobile-nav-container {
     a {
       &:hover {
         color: $blue;
@@ -1145,7 +1149,8 @@ nav {
     }
   }
 
-  nav {
+  nav,
+  .mobile-nav-container {
     a {
       &:hover {
         color: $yellow;
@@ -1219,9 +1224,6 @@ nav {
 // --------------------------------------------------RESPONSIVE--------------------------------------------------
 
 @media screen and (max-width: 1334px) {
-  #app {
-    margin: 0;
-  }
   nav {
     display: none;
   }

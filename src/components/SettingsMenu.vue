@@ -10,8 +10,8 @@
       <div class="colors-container">
         <div
           :class="['colors', color]"
-          v-for="color in colorTheme"
-          :key="color"
+          v-for="(color, index) in colorTheme"
+          :key="index"
           @click="setColor(color)"
         ></div>
       </div>
@@ -32,7 +32,7 @@
     </div>
 
     <div class="mobile-nav-container">
-      <h3>Menu</h3>
+      <h3 class="colored">Menu</h3>
 
       <div class="mobile-menu">
         <router-link to="/" @click="scrollToTop">
@@ -107,7 +107,7 @@ export default {
     openNavMobile() {
       const navContainer = document.querySelector(".mobile-nav-container");
       navContainer.classList.toggle("open");
-      this.isNavOpen = !this.isNavOpen;
+      this.isNavOpen = true;
     },
 
     setColor(color) {
@@ -144,8 +144,8 @@ export default {
             .querySelector(".mobile-nav-container")
             .classList.remove("open");
           const mobileMenu = document.querySelector(".mobile-nav-wrap");
+          this.isNavOpen = false;
           mobileMenu.style.transform = "translateX(0)";
-          this.isNavOpen = !this.isNavOpen;
         }
       });
     },
@@ -232,61 +232,44 @@ export default {
   }
 
   .mobile-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
   }
 
   .colors-container {
     display: flex;
     gap: 10px;
 
-    .colors:nth-child(1) {
+    .colors {
       width: 24px;
       height: 24px;
       border-radius: 50%;
-      background-color: $green;
       cursor: pointer;
+    }
+
+    .colors:nth-child(1) {
+      background-color: $green;
     }
 
     .colors:nth-child(2) {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
       background-color: $orange;
-      cursor: pointer;
     }
 
     .colors:nth-child(3) {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
       background-color: $pink;
-      cursor: pointer;
     }
 
     .colors:nth-child(4) {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
       background-color: $blue;
-      cursor: pointer;
     }
 
     .colors:nth-child(5) {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
       background-color: $red;
-      cursor: pointer;
     }
 
     .colors:nth-child(6) {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
       background-color: $yellow;
-      cursor: pointer;
     }
   }
 
@@ -314,14 +297,16 @@ export default {
     .mobile-nav-container {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: 25px;
       position: fixed;
-      top: 50%;
-      right: 0%;
+      bottom: 0;
+      left: 0;
+      width: 100%;
       z-index: 9999;
       transition: all 0.3s ease-in-out;
-      padding: 15px;
-      transform: translateX(200%);
+      padding: 35px 15px;
+      transform: translateY(200%);
 
       &.open {
         transform: translateX(0%);
@@ -331,13 +316,14 @@ export default {
         font-family: "Clicker-script", cursive;
         font-weight: 600;
         text-align: center;
+        font-size: 1.6rem;
       }
       a {
         display: flex;
         align-items: center;
         gap: 10px;
         margin: 0;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         font-family: "Montserrat", sans-serif;
         font-weight: 600;
         text-decoration: none;

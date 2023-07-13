@@ -65,6 +65,7 @@
 <style lang="scss">
 @import "@/styles/variables.scss";
 .V-analyser {
+  margin-left: 450px;
   width: 75%;
 
   .container {
@@ -91,6 +92,7 @@
 
 @media screen and (max-width: 1334px) {
   .V-analyser {
+    margin: 0;
     width: 100%;
   }
 }

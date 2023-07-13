@@ -144,8 +144,8 @@ export default {
 @import "@/styles/variables.scss";
 
 .projects {
+  margin-left: 450px;
   width: 75%;
-  margin-bottom: 75px;
 
   .container {
     width: 80%;
@@ -236,6 +236,7 @@ export default {
 @media screen and (max-width: 1334px) {
   .projects {
     width: 100%;
+    margin: 0;
   }
 }
 

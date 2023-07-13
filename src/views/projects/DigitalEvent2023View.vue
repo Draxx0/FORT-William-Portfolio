@@ -147,6 +147,7 @@ export default {
 
 <style lang="scss">
 .DigitalEvent {
+  margin-left: 450px;
   width: 75%;
 
   .container {
@@ -161,6 +162,7 @@ export default {
 
 @media screen and (max-width: 1334px) {
   .DigitalEvent {
+    margin: 0;
     width: 100%;
   }
 }
