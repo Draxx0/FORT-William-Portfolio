@@ -412,7 +412,7 @@ nav {
 
   .mobile-nav-container {
     background-color: $light-mode-nav-background-color;
-    border: solid 3px $border-color;
+    border-top: solid 3px $border-color;
 
     a {
       color: $light-mode-text-color;
@@ -506,7 +506,7 @@ nav {
 
   .mobile-nav-container {
     background-color: $dark-mode-nav-background-color;
-    border: solid 3px $border-color;
+    border-top: solid 3px $border-color;
 
     a {
       color: $dark-mode-text-color;

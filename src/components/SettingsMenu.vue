@@ -72,7 +72,7 @@ export default {
   methods: {
     toggleMode() {
       const app = document.querySelector("#app");
-
+      console.log(this.isDarkMode);
       if (this.isDarkMode) {
         app.classList.remove("dark-mode");
         app.classList.add("light-mode");
@@ -107,7 +107,7 @@ export default {
     openNavMobile() {
       const navContainer = document.querySelector(".mobile-nav-container");
       navContainer.classList.toggle("open");
-      this.isNavOpen = true;
+      this.isNavOpen = !this.isNavOpen;
     },
 
     setColor(color) {
@@ -135,7 +135,9 @@ export default {
           modeWrap.style.transform = "translateX(0)";
           const mobileMenu = document.querySelector(".mobile-nav-wrap");
           mobileMenu.style.transform = "translateX(0)";
-        } else if (
+        }
+
+        if (
           document
             .querySelector(".mobile-nav-container")
             .classList.contains("open")
@@ -145,6 +147,7 @@ export default {
             .classList.remove("open");
           const mobileMenu = document.querySelector(".mobile-nav-wrap");
           this.isNavOpen = false;
+          console.log("TRIGGERED :", this.isNavOpen);
           mobileMenu.style.transform = "translateX(0)";
         }
       });
@@ -306,7 +309,7 @@ export default {
       z-index: 9999;
       transition: all 0.3s ease-in-out;
       padding: 35px 15px;
-      transform: translateY(200%);
+      transform: translateY(100%);
 
       &.open {
         transform: translateX(0%);
