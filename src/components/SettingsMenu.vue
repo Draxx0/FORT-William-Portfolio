@@ -72,7 +72,6 @@ export default {
   methods: {
     toggleMode() {
       const app = document.querySelector("#app");
-      console.log(this.isDarkMode);
       if (this.isDarkMode) {
         app.classList.remove("dark-mode");
         app.classList.add("light-mode");
@@ -147,7 +146,6 @@ export default {
             .classList.remove("open");
           const mobileMenu = document.querySelector(".mobile-nav-wrap");
           this.isNavOpen = false;
-          console.log("TRIGGERED :", this.isNavOpen);
           mobileMenu.style.transform = "translateX(0)";
         }
       });
