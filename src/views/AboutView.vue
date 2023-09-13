@@ -229,19 +229,19 @@ export default {
         {
           year: "2021 - 2024",
           type: "Bachelor",
-          text: "Bachelor Développeur Web ( ESD Bordeaux )",
+          text: "Bachelor Développeur Web ( ESD Bordeaux ).",
         },
 
         {
           year: "2021",
           type: "English Certificate",
-          text: "Cambridge english certificate ( CEC ) Niveau B1 +",
+          text: "Cambridge english certificate ( CEC ) Niveau B1 +.",
         },
 
         {
           year: "2021",
           type: "Baccalauréat",
-          text: "Baccalauréat Professionnel Système Numérique Option Réseaux informatiques et systèmes communicants - Mention Bien",
+          text: "Baccalauréat Professionnel Système Numérique Option Réseaux informatiques et systèmes communicants - Mention Bien.",
         },
       ],
       stages: [
@@ -258,9 +258,9 @@ export default {
         },
 
         {
-          year: "2022",
+          year: "Février 2022 - Avril 2022",
           type: "Stage - Agence Backstages",
-          text: "Refonte du site de l'agence, développement du site SAGC",
+          text: "Refonte du site de l'agence, développement du site SAGC.",
         },
       ],
     };
@@ -398,7 +398,7 @@ export default {
 
     .soft-skills-container {
       .soft-skills-title {
-        font-family: "Montserrat Alternates", sans-serif;
+        font-family: "Poppins", sans-serif;
         font-size: 2rem;
         font-weight: 500;
         margin: 100px 0;

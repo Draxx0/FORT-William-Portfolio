@@ -7,7 +7,7 @@
           <span class="colored txt-anim"></span>
         </h1>
         <p class="text">
-          Étudiant en deuxième année de développement web à l’école supérieure
+          Étudiant en troisième année de développement web à l’école supérieure
           du digital, j’étais relativement curieux de savoir comment fonctionne
           un site web, par quel procédé passe-t-on pour créer tous ces super
           sites modernes ?

@@ -391,7 +391,7 @@ nav {
 
   .project-card {
     transition: 1s;
-    border: 2px solid;
+    border: 3px solid;
   }
 
   .links-container {
@@ -460,7 +460,7 @@ nav {
 
   .project-card {
     transition: 1s;
-    border: 4px solid;
+    border: 3px solid;
   }
 
   .title {
