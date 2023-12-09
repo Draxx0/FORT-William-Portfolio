@@ -1,5 +1,4 @@
-<template>
-  <div class="home">
+<template>  <div class="home">
     <div class="container">
       <div class="left-container">
         <h1 class="title">
@@ -12,13 +11,6 @@
           un site web, par quel procédé passe-t-on pour créer tous ces super
           sites modernes ?
         </p>
-        <p class="text">
-          Je suis actuellement à la recherche d'une alternance pour la rentrée
-          de l'année scolaire !
-          <router-link to="/contact" class="colored" @click="scrollToTop()">
-            Rencontrons-nous ?</router-link
-          >
-        </p>
       </div>
       <div class="right-container">
         <div class="img-wrap">
@@ -30,10 +22,10 @@
 </template>
 
 <script>
-import { gsap } from "gsap";
-import Typewriter from "typewriter-effect/dist/core";
+import { gsap } from 'gsap';
+import Typewriter from 'typewriter-effect/dist/core';
 export default {
-  name: "HomeView",
+  name: 'HomeView',
 
   data: function () {
     return {};
@@ -46,24 +38,24 @@ export default {
   },
 
   mounted() {
-    gsap.from(".container", {
+    gsap.from('.container', {
       scrollTrigger: {
-        trigger: ".container",
-        start: "top 80%",
+        trigger: '.container',
+        start: 'top 80%',
       },
       opacity: 0,
       y: 50,
       duration: 1,
     });
 
-    const txtAnim = document.querySelector(".txt-anim");
+    const txtAnim = document.querySelector('.txt-anim');
 
     new Typewriter(txtAnim, {
       loop: true,
       deleteSpeed: 20,
       delay: 75,
     })
-      .typeString("Développeur Web")
+      .typeString('Développeur Web')
       .pauseFor(2500)
       .deleteChars(3)
       .typeString('<span style="color: #2fe0e0;">React</span>')
@@ -72,7 +64,7 @@ export default {
       .typeString('<span style="color: #d92b2b;">Nest JS</span>')
       .pauseFor(2500)
       .deleteAll()
-      .typeString("Heureux de vous rencontrer !")
+      .typeString('Heureux de vous rencontrer !')
       .pauseFor(2500)
       .deleteAll()
       .start();
@@ -81,7 +73,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/styles/variables.scss";
+@import '@/styles/variables.scss';
 
 .home {
   margin-left: 450px;
@@ -110,19 +102,19 @@ export default {
       }
 
       .title {
-        font-family: "Montserrat Alternates", sans-serif;
+        font-family: 'Montserrat Alternates', sans-serif;
         font-size: 2rem;
         font-weight: 500;
 
         .art-text {
-          font-family: "Clicker Script", cursive;
+          font-family: 'Clicker Script', cursive;
           font-size: 3rem;
           font-weight: 600;
         }
       }
 
       .text {
-        font-family: "Poppins", sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-weight: 500;
       }
     }
@@ -150,7 +142,7 @@ export default {
           top: -25px;
           left: -25px;
           display: block;
-          content: "";
+          content: '';
           width: 65px;
           height: 65px;
         }
@@ -160,7 +152,7 @@ export default {
           bottom: -25px;
           right: -25px;
           display: block;
-          content: "";
+          content: '';
           width: 65px;
           height: 65px;
         }
