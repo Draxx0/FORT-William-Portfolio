@@ -27,7 +27,7 @@
             <span class="bold">École :</span> École supérieure du digital
           </h3>
 
-          <h3 class="about-me-items"><span class="bold">Age :</span> 20 ans</h3>
+          <h3 class="about-me-items"><span class="bold">Age :</span> 21 ans</h3>
         </div>
 
         <div class="btn-container">
@@ -246,6 +246,11 @@ export default {
       ],
       stages: [
         {
+          year: "Octobre 2023 - Aujourd'hui",
+          type: "Alternance - Agence Marketing Box",
+          text: "Développement web & mobile - web app, application mobile native, sites statiques, automatisations...",
+        },
+        {
           year: "Avril 2023 - Juillet 2023",
           type: "Stage - Yabawt",
           text: "Développement Fullstack JS - React / NestJS - Développement en micro-services du SaaS Webmarketer, Ajout de fonctionnalitées & Correction de bugs sur une web-app de gestion des demandes clients.",
@@ -256,7 +261,6 @@ export default {
           type: "Contrat étudiant - Agence Backstages",
           text: "Développement Frontend de plusieurs sites, DPDA Bordeaux, Neo-Process, Rock Hill ainsi que la refonte du site de l'agence backstages.",
         },
-
         {
           year: "Février 2022 - Avril 2022",
           type: "Stage - Agence Backstages",
