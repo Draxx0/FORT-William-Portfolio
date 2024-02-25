@@ -1,5 +1,4 @@
-<template>
-  <div class="DigitalEvent">
+<template>  <div class="DigitalEvent">
     <div class="container">
       <div class="header">
         <div class="row pointer" @click="goBack">
@@ -26,8 +25,8 @@
           partie de cette équipe et en tant que
           <span class="colored bold">Lead des développeurs front.</span>
           Un rôle que j'ai vraiment pris à coeur et qui m'a plus de part-là
-          gestion des tâches mais également la gestion des conflits et des
-          problèmes rencontrés par l'équipe.
+          gestion des tâches mais également la gestion des problèmes rencontrés
+          par l'équipe.
 
           <br /><br />
 
@@ -92,30 +91,30 @@
 </template>
 
 <script>
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 export default {
-  name: "project-Digital-Event-2023",
+  name: 'project-Digital-Event-2023',
   methods: {
     scrollToTop() {
       window.scrollTo(0, 0);
     },
 
     goBack() {
-      this.$router.push("/projects");
+      this.$router.push('/projects');
     },
   },
 
   mounted() {
-    const renderContainer = document.querySelector(".render-container");
-    const header = document.querySelector(".header");
-    const stacksContainer = document.querySelector(".stacks-container");
+    const renderContainer = document.querySelector('.render-container');
+    const header = document.querySelector('.header');
+    const stacksContainer = document.querySelector('.stacks-container');
 
     gsap.from(renderContainer, {
       scrollTrigger: {
         trigger: renderContainer,
-        start: "top 80%",
+        start: 'top 80%',
       },
       opacity: 0,
       y: 50,
@@ -125,7 +124,7 @@ export default {
     gsap.from(header, {
       scrollTrigger: {
         trigger: header,
-        start: "top 80%",
+        start: 'top 80%',
       },
       opacity: 0,
       y: 50,
@@ -135,7 +134,7 @@ export default {
     gsap.from(stacksContainer, {
       scrollTrigger: {
         trigger: stacksContainer,
-        start: "top 80%",
+        start: 'top 80%',
       },
       opacity: 0,
       y: 50,
