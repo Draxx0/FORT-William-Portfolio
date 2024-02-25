@@ -1,5 +1,4 @@
-<template>
-  <div class="projects">
+<template>  <div class="projects">
     <div class="container">
       <h1 class="section-title">Projets</h1>
 
@@ -45,69 +44,61 @@
 </template>
 
 <script>
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 export default {
-  name: "ProjectsView",
+  name: 'ProjectsView',
 
   data: () => {
     return {
       projectsEsd: [
         {
-          imgUrl:
-            "https://cdn.discordapp.com/attachments/935969848230547551/984098251571601518/WitchWeather.png",
-          title: "Witch Weather ?",
-          path: "Witch-Weather",
+          imgUrl: './img/WitchWeather2.png',
+          title: 'Witch Weather ?',
+          path: 'Witch-Weather',
         },
 
         {
-          imgUrl:
-            "https://cdn.discordapp.com/attachments/935969848230547551/983685136304463872/The-last-chance.png",
-          title: "Digital Event 2022",
-          path: "Digital-Event-2022",
+          imgUrl: './img/The-last-chance.png',
+          title: 'Digital Event 2022',
+          path: 'Digital-Event-2022',
         },
 
         {
-          imgUrl:
-            "https://cdn.discordapp.com/attachments/935969848230547551/1066771407104651284/pixelwar.png",
-          title: "Digital Event 2023",
-          path: "Digital-Event-2023",
+          imgUrl: './img/pixelwar.png',
+          title: 'Digital Event 2023',
+          path: 'Digital-Event-2023',
         },
 
         {
-          imgUrl:
-            "https://cdn.discordapp.com/attachments/935969848230547551/1088076600546971658/jungle-reflex-shot.jpg",
-          title: "Jungle Reflex",
-          path: "Jungle-Reflex",
+          imgUrl: './img/jungle-reflex-shot.jpg',
+          title: 'Jungle Reflex',
+          path: 'Jungle-Reflex',
         },
       ],
       myProjects: [
         {
-          imgUrl:
-            "https://cdn.discordapp.com/attachments/935969848230547551/1128380356710645821/v-analyser.jpg",
-          title: "V-analyser",
-          path: "V-analyser",
+          imgUrl: './img/v-analyser.jpg',
+          title: 'V-analyser',
+          path: 'V-analyser',
         },
 
         {
-          imgUrl:
-            "https://cdn.discordapp.com/attachments/935969848230547551/1042753628181643355/lb.png",
-          title: "L&B Restaurant",
-          path: "L&B",
+          imgUrl: './img/lb.png',
+          title: 'L&B Restaurant',
+          path: 'L&B',
         },
 
         {
-          imgUrl:
-            "https://cdn.discordapp.com/attachments/935969848230547551/1069286540741718089/Weather-it.png",
-          title: "Weather It",
-          path: "Weather-it",
+          imgUrl: './img/Weather-it.png',
+          title: 'Weather It',
+          path: 'Weather-it',
         },
         {
-          imgUrl:
-            "https://cdn.discordapp.com/attachments/1081252530975150160/1088050564262285372/homerun-shot.jpg",
-          title: "Homerun",
-          path: "Homerun",
+          imgUrl: './img/homerun-app.jpg',
+          title: 'Homerun',
+          path: 'Homerun',
         },
       ],
     };
@@ -119,9 +110,9 @@ export default {
   },
 
   mounted() {
-    const projectsSection = document.querySelectorAll(".projects-section");
+    const projectsSection = document.querySelectorAll('.projects-section');
 
-    gsap.from(".section-title", {
+    gsap.from('.section-title', {
       opacity: 0,
       y: 50,
       duration: 1,
@@ -130,7 +121,7 @@ export default {
     gsap.from(projectsSection, {
       scrollTrigger: {
         trigger: projectsSection,
-        start: "top 80%",
+        start: 'top 80%',
       },
       opacity: 0,
       y: 50,
@@ -141,7 +132,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/styles/variables.scss";
+@import '@/styles/variables.scss';
 
 .projects {
   margin-left: 450px;
@@ -157,7 +148,7 @@ export default {
       text-align: center;
 
       &::before {
-        content: "";
+        content: '';
         display: block;
         width: 100%;
         height: 2px;
@@ -206,7 +197,7 @@ export default {
           }
 
           .project-card-title {
-            font-family: "Montserrat Alternates", sans-serif;
+            font-family: 'Montserrat Alternates', sans-serif;
             position: absolute;
             bottom: 35%;
             left: 50%;
